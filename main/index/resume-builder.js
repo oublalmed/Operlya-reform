@@ -767,9 +767,9 @@ const Landing_translationsHero = {
     "btn-primary": "Build My Resume",
     "btn-secondary": "Select a Template",
 
-    "trust-users": "Used by 50K+ job seekers",
-    "trust-rating": "4.9/5 User Rating",
-    "trust-top": "Top Rated Resume Builder",
+    "trust-users": "ATS-friendly templates",
+    "trust-rating": "Free to get started",
+    "trust-top": "Multi-language support",
 
     "card1-title": "ATS Optimized",
     "card1-desc": "Pass automated screenings and reach recruiters faster.",
@@ -792,9 +792,9 @@ const Landing_translationsHero = {
     "btn-primary": "Créer mon CV",
     "btn-secondary": "Choisir un modèle",
 
-    "trust-users": "Utilisé par 50K+ candidats",
-    "trust-rating": "Note 4.9/5",
-    "trust-top": "Top générateur de CV",
+    "trust-users": "Modèles compatibles ATS",
+    "trust-rating": "Gratuit pour commencer",
+    "trust-top": "Support multilingue",
 
     "card1-title": "Optimisé ATS",
     "card1-desc": "Passez les filtres automatiques et atteignez les recruteurs plus vite.",
@@ -817,9 +817,9 @@ const Landing_translationsHero = {
     "btn-primary": "أنشئ سيرتي",
     "btn-secondary": "اختر نموذج",
 
-    "trust-users": "يستخدمه أكثر من 50 ألف باحث عن عمل",
-    "trust-rating": "تقييم 4.9/5",
-    "trust-top": "أفضل منشئ سيرة ذاتية",
+    "trust-users": "قوالب متوافقة مع ATS",
+    "trust-rating": "مجاني للبدء",
+    "trust-top": "دعم متعدد اللغات",
 
     "card1-title": "متوافق مع ATS",
     "card1-desc": "تجاوز أنظمة الفرز والوصول إلى أصحاب العمل بسرعة.",
@@ -842,9 +842,9 @@ const Landing_translationsHero = {
     "btn-primary": "Crear Mi Currículum",
     "btn-secondary": "Seleccionar una Plantilla",
 
-    "trust-users": "Usado por más de 50 mil buscadores de empleo",
-    "trust-rating": "Calificación 4.9/5",
-    "trust-top": "Mejor Creador de Currículums",
+    "trust-users": "Plantillas compatibles con ATS",
+    "trust-rating": "Gratis para empezar",
+    "trust-top": "Soporte multiidioma",
 
     "card1-title": "Optimizado para ATS",
     "card1-desc": "Supera los filtros automáticos y llega a los reclutadores más rápido.",
@@ -867,9 +867,9 @@ const Landing_translationsHero = {
     "btn-primary": "创建我的简历",
     "btn-secondary": "选择模板",
 
-    "trust-users": "已有超过5万名求职者使用",
-    "trust-rating": "用户评分4.9/5",
-    "trust-top": "顶级简历生成器",
+    "trust-users": "兼容ATS的模板",
+    "trust-rating": "免费开始使用",
+    "trust-top": "多语言支持",
 
     "card1-title": "ATS优化",
     "card1-desc": "通过自动筛选，更快触达招聘官。",
@@ -892,9 +892,9 @@ const Landing_translationsHero = {
     "btn-primary": "Meinen Lebenslauf Erstellen",
     "btn-secondary": "Vorlage Auswählen",
 
-    "trust-users": "Von über 50.000 Bewerbern genutzt",
-    "trust-rating": "Bewertung 4.9/5",
-    "trust-top": "Bestbewerteter Lebenslauf-Builder",
+    "trust-users": "ATS-freundliche Vorlagen",
+    "trust-rating": "Kostenloser Einstieg",
+    "trust-top": "Mehrsprachige Unterstützung",
 
     "card1-title": "ATS-optimiert",
     "card1-desc": "Bestehen Sie automatisierte Screenings und erreichen Sie Recruiter schneller.",
@@ -917,9 +917,9 @@ const Landing_translationsHero = {
     "btn-primary": "Criar Meu Currículo",
     "btn-secondary": "Selecionar um Modelo",
 
-    "trust-users": "Usado por mais de 50 mil candidatos",
-    "trust-rating": "Avaliação 4.9/5",
-    "trust-top": "Construtor de Currículos Mais Bem Avaliado",
+    "trust-users": "Modelos compatíveis com ATS",
+    "trust-rating": "Grátis para começar",
+    "trust-top": "Suporte multilíngue",
 
     "card1-title": "Otimizado para ATS",
     "card1-desc": "Passe por triagens automatizadas e alcance recrutadores mais rapidamente.",
@@ -942,9 +942,9 @@ const Landing_translationsHero = {
     "btn-primary": "履歴書を作成",
     "btn-secondary": "テンプレートを選択",
 
-    "trust-users": "5万人以上の求職者が利用",
-    "trust-rating": "ユーザー評価4.9/5",
-    "trust-top": "最高評価の履歴書ビルダー",
+    "trust-users": "ATS対応テンプレート",
+    "trust-rating": "無料で始められる",
+    "trust-top": "多言語対応",
 
     "card1-title": "ATS最適化",
     "card1-desc": "自動選考を通過し、採用担当者により早くリーチします。",
@@ -967,9 +967,9 @@ const Landing_translationsHero = {
     "btn-primary": "Создать моё резюме",
     "btn-secondary": "Выбрать шаблон",
 
-    "trust-users": "Используют более 50 000 соискателей",
-    "trust-rating": "Рейтинг 4.9/5",
-    "trust-top": "Лучший конструктор резюме",
+    "trust-users": "Шаблоны, совместимые с ATS",
+    "trust-rating": "Бесплатный старт",
+    "trust-top": "Поддержка нескольких языков",
 
     "card1-title": "Оптимизировано для ATS",
     "card1-desc": "Проходите автоматические проверки и быстрее достигайте рекрутеров.",

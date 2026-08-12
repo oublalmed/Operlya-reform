@@ -876,7 +876,7 @@ const AuthForm_translations = {
     "overlay-text": "Operlya connects talent, ambition, and real-world needs into a dynamic ecosystem.\nEarn, collaborate, and grow through meaningful opportunities designed to accelerate your journey.",
     "footer-privacy": "Privacy Policy",
     "footer-terms": "Terms of Use",
-    "footer-faq": "FAQ",
+    "footer-faq": "Help Center",
     "footer-copyright": "© 2026 Operlya. All rights reserved."
   },
   fr: {
@@ -899,7 +899,7 @@ const AuthForm_translations = {
     "overlay-text": "Operlya connecte les talents, l'ambition et les besoins réels dans un écosystème dynamique.\nGagnez, collaborez et développez-vous grâce à des opportunités conçues pour accélérer votre parcours.",
     "footer-privacy": "Politique de confidentialité",
     "footer-terms": "Conditions d'utilisation",
-    "footer-faq": "FAQ",
+    "footer-faq": "Centre d'aide",
     "footer-copyright": "© 2026 Operlya. Tous droits réservés."
   },
   ar: {
@@ -922,7 +922,7 @@ const AuthForm_translations = {
     "overlay-text": "يُربط Operlya بين المواهب والطموح والاحتياجات الواقعية في نظام بيئي ديناميكي.\nاكسب وتعاون ونمُّ من خلال فرص مصممة لتسريع مسارك.",
     "footer-privacy": "سياسة الخصوصية",
     "footer-terms": "شروط الاستخدام",
-    "footer-faq": "الأسئلة الشائعة",
+    "footer-faq": "مركز المساعدة",
     "footer-copyright": "© 2026 Operlya. جميع الحقوق محفوظة."
   },
   es: {
@@ -945,7 +945,7 @@ const AuthForm_translations = {
     "overlay-text": "Operlya conecta talento, ambición y necesidades reales en un ecosistema dinámico.\nGana, colabora y crece a través de oportunidades diseñadas para acelerar tu trayectoria.",
     "footer-privacy": "Política de Privacidad",
     "footer-terms": "Términos de Uso",
-    "footer-faq": "Preguntas Frecuentes",
+    "footer-faq": "Centro de Ayuda",
     "footer-copyright": "© 2026 Operlya. Todos los derechos reservados."
   },
   zh: {
@@ -968,7 +968,7 @@ const AuthForm_translations = {
     "overlay-text": "Operlya 将人才、抱负和真实需求连接成一个动态生态系统。\n通过旨在加速您旅程的有意义机会，赚取、协作和成长。",
     "footer-privacy": "隐私政策",
     "footer-terms": "使用条款",
-    "footer-faq": "常见问题",
+    "footer-faq": "帮助中心",
     "footer-copyright": "© 2026 Operlya。保留所有权利。"
   },
   de: {
@@ -991,7 +991,7 @@ const AuthForm_translations = {
     "overlay-text": "Operlya verbindet Talent, Ehrgeiz und reale Bedürfnisse in einem dynamischen Ökosystem.\nVerdienen, zusammenarbeiten und wachsen Sie durch sinnvolle Möglichkeiten, die Ihre Reise beschleunigen sollen.",
     "footer-privacy": "Datenschutzrichtlinie",
     "footer-terms": "Nutzungsbedingungen",
-    "footer-faq": "FAQ",
+    "footer-faq": "Hilfezentrum",
     "footer-copyright": "© 2026 Operlya. Alle Rechte vorbehalten."
   },
   pt: {
@@ -1014,7 +1014,7 @@ const AuthForm_translations = {
     "overlay-text": "Operlya conecta talento, ambição e necessidades reais em um ecossistema dinâmico.\nGanhe, colabore e cresça através de oportunidades significativas projetadas para acelerar sua jornada.",
     "footer-privacy": "Política de Privacidade",
     "footer-terms": "Termos de Uso",
-    "footer-faq": "FAQ",
+    "footer-faq": "Central de Ajuda",
     "footer-copyright": "© 2026 Operlya. Todos os direitos reservados."
   },
   ja: {
@@ -1037,7 +1037,7 @@ const AuthForm_translations = {
     "overlay-text": "Operlyaは、才能、野心、現実のニーズをダイナミックなエコシステムに結びつけます。\nあなたの旅を加速するために設計された意味のある機会を通じて、獲得、協力、成長を実現します。",
     "footer-privacy": "プライバシーポリシー",
     "footer-terms": "利用規約",
-    "footer-faq": "よくある質問",
+    "footer-faq": "ヘルプセンター",
     "footer-copyright": "© 2026 Operlya。無断転載を禁じます。"
   },
   ru: {
@@ -1060,7 +1060,7 @@ const AuthForm_translations = {
     "overlay-text": "Operlya соединяет таланты, амбиции и реальные потребности в динамичную экосистему.\nЗарабатывайте, сотрудничайте и развивайтесь через значимые возможности, созданные для ускорения вашего пути.",
     "footer-privacy": "Политика конфиденциальности",
     "footer-terms": "Условия использования",
-    "footer-faq": "Часто задаваемые вопросы",
+    "footer-faq": "Центр помощи",
     "footer-copyright": "© 2026 Operlya. Все права защищены."
   }
 };

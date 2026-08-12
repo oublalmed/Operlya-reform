@@ -42,29 +42,48 @@
         color: #f2f2f5;
         border-radius: 14px;
         box-shadow: 0 12px 32px rgba(0,0,0,0.25);
-        padding: 20px 22px;
+        padding: 18px 20px;
         display: none;
         font-family: "Roboto", sans-serif;
       }
-      .cookie-consent-banner.is-visible { display: block; }
+      .cookie-consent-banner.is-visible { display: flex; align-items: center; gap: 16px; }
       .cookie-consent-banner p {
-        margin: 0 0 14px;
-        font-size: 14px;
-        line-height: 1.5;
+        margin: 0;
+        font-size: 13.5px;
+        line-height: 1.45;
         color: #d6d6de;
+        flex: 1 1 auto;
       }
       .cookie-consent-banner a { color: #9db4ff; text-decoration: underline; }
-      .cookie-consent-actions { display: flex; gap: 10px; flex-wrap: wrap; }
+      .cookie-consent-actions { display: flex; gap: 8px; flex: none; }
       .cookie-consent-actions button {
         cursor: pointer;
         border: none;
         border-radius: 8px;
-        padding: 10px 18px;
-        font-size: 14px;
+        padding: 9px 14px;
+        font-size: 13px;
         font-weight: 600;
+        white-space: nowrap;
       }
       #cookieConsentAccept { background: #6c5ce7; color: #fff; }
       #cookieConsentReject { background: transparent; color: #d6d6de; border: 1px solid #3a3a45; }
+
+      @media (max-width: 640px) {
+        .cookie-consent-banner {
+          left: 10px;
+          right: 10px;
+          bottom: 10px;
+          padding: 14px;
+        }
+        .cookie-consent-banner.is-visible {
+          flex-direction: column;
+          align-items: stretch;
+          gap: 10px;
+        }
+        .cookie-consent-banner p { font-size: 12.5px; }
+        .cookie-consent-actions { gap: 8px; }
+        .cookie-consent-actions button { flex: 1 1 0; padding: 10px 8px; font-size: 12.5px; }
+      }
     </style>
 </head>
 
@@ -72,12 +91,12 @@
 
 <div class="cookie-consent-banner" id="cookieConsentBanner">
   <p>
-    We use cookies to run Operlya and, with your permission, to measure traffic and improve our marketing.
-    See our <a href="cookies.html">Cookie Policy</a> for details.
+    We use cookies to run Operlya, and with consent, to measure traffic and improve marketing.
+    <a href="cookies.html">Cookie Policy</a>
   </p>
   <div class="cookie-consent-actions">
     <button id="cookieConsentAccept" type="button">Accept</button>
-    <button id="cookieConsentReject" type="button">Reject non-essential</button>
+    <button id="cookieConsentReject" type="button">Reject</button>
   </div>
 </div>
 
