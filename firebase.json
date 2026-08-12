@@ -1,0 +1,36 @@
+{
+  "hosting": {
+    "public": "main",
+    "cleanUrls": true,
+
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+
+    "rewrites": [
+      {
+        "source": "/opportunities/**",
+        "destination": "/opportunities/opportunities.html"
+      }
+    ],
+
+    "headers": [
+      {
+        "source": "**",
+        "headers": [
+          { "key": "X-Content-Type-Options", "value": "nosniff" },
+          { "key": "X-Frame-Options", "value": "SAMEORIGIN" },
+          { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
+          { "key": "Permissions-Policy", "value": "camera=(), microphone=(), geolocation=()" },
+          { "key": "Strict-Transport-Security", "value": "max-age=31536000" },
+          {
+            "key": "Content-Security-Policy-Report-Only",
+            "value": "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://connect.facebook.net https://apis.google.com https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://www.gstatic.com https://www.google.com https://accounts.google.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.jsdelivr.net https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com https://cdn.jsdelivr.net https://cdnjs.cloudflare.com data:; img-src 'self' data: blob: https:; connect-src 'self' https://*.googleapis.com https://*.google.com https://www.google-analytics.com https://www.facebook.com https://*.firebaseio.com wss://*.firebaseio.com https://operlya.firebaseapp.com; frame-src 'self' https://accounts.google.com https://operlya.firebaseapp.com https://www.facebook.com; object-src 'none'; base-uri 'self'; frame-ancestors 'self'"
+          }
+        ]
+      }
+    ]
+  }
+}

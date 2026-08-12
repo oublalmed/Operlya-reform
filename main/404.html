@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+<title>Operlya - Page Not Found</title>
+<meta name="robots" content="noindex, nofollow">
+<style>
+
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  background: #f9f9f9;
+  overflow: auto;
+  color: #1c4e80;
+}
+
+body::before,
+body::after {
+  content: "";
+  position: fixed;
+  width: 500px;
+  min-height: 500px;
+  border-radius: 50%;
+  z-index: 0;
+  filter: blur(80px);
+  opacity: 0.25;
+}
+
+body::before {
+  background: #3178d3;
+  top: -150px;
+  left: -150px;
+}
+
+body::after {
+  background: #ce78fc;
+  bottom: -150px;
+  right: -150px;
+}
+
+#bgCanvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.container {
+  position: relative;
+  z-index: 2;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.card {
+  background: #ffffff;
+  border: 1px solid #e3e9f2;
+  border-radius: 16px;
+  padding: 50px 40px;
+  text-align: center;
+  max-width: 480px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+  animation: fadeInUp 0.8s ease;
+}
+
+.title-404 {
+  font-size: 100px;
+  font-weight: 700;
+  margin: 0;
+  letter-spacing: -3px;
+  background: linear-gradient(135deg, #3178d3, #7acbfd);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+h1 {
+  margin: 10px 0;
+  font-weight: 600;
+  font-size: 26px;
+  color: #1c4e80;
+}
+
+p {
+  color: #5f6368;
+  font-size: 14px;
+  margin-bottom: 25px;
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 9px 18px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.btn-primary {
+  background: #3178d3;
+  color: white;
+  box-shadow: 0 4px 12px rgba(49,120,211,0.25);
+}
+
+.btn-primary:hover {
+  background: #28a745;
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  border: 1px solid #3178d3;
+  color: #1c4e80;
+  background: white;
+}
+
+.btn-outline:hover {
+  background: #3178d3;
+  color: white;
+}
+
+.languageSelect404 {
+  outline:none;
+  margin-bottom:20px;
+  padding:6px 10px;
+  border-radius:6px;
+  border-color: #d1d1d1;
+  font-weight:600;
+}
+
+@keyframes glow {
+  from { text-shadow: 0 0 8px rgba(49,120,211,0.3); }
+  to { text-shadow: 0 0 18px rgba(49,120,211,0.6); }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 600px) {
+  .title-404 {
+    font-size: 70px;
+  }
+}
+
+</style>
+</head>
+
+<body>
+
+<canvas id="bgCanvas"></canvas>
+
+<div class="container">
+  <div class="card">
+
+    <select title="Language Select" class="languageSelect404" id="languageSelect404">
+      <option value="en">English</option>
+      <option value="fr">Français</option>
+      <option value="ar">العربية</option>
+      <option value="es">Español</option>
+      <option value="de">Deutsch</option>
+      <option value="pt">Português</option>
+      <option value="ja">日本語</option>
+      <option value="zh">中文</option>
+      <option value="ru">Русский</option>
+    </select>
+
+    <h2 class="title-404">404</h2>
+    <h1 id="text-404-title">Page Not Found</h1>
+    <p id="text-404-desc">This page doesn’t exist or has been moved.<br>Let’s get you back on track.</p>
+
+    <div class="actions">
+      <a id="btn-go-home" href="/" class="btn btn-primary">Go Home</a>
+      <a id="btn-open-app" href="feed.html" class="btn btn-outline">Open Operlya</a>
+    </div>
+  </div>
+</div>
+
+<script>
+  const cvb404Translations = {
+    en: { title: "Page Not Found", desc: "This page doesn’t exist or has been moved.<br>Let’s get you back on track.", goHome: "Go Home", openApp: "Open Operlya" },
+    fr: { title: "Page non trouvée", desc: "Cette page n’existe pas ou a été déplacée.<br>Revenons sur la bonne voie.", goHome: "Accueil", openApp: "Ouvrir Operlya" },
+    ar: { title: "الصفحة غير موجودة", desc: "هذه الصفحة غير موجودة أو تم نقلها.<br>لنعد إلى المسار الصحيح.", goHome: "الصفحة الرئيسية", openApp: "فتح Operlya" },
+    es: { title: "Página no encontrada", desc: "Esta página no existe o ha sido movida.<br>Volvamos al camino.", goHome: "Ir a Inicio", openApp: "Abrir Operlya" },
+    de: { title: "Seite nicht gefunden", desc: "Diese Seite existiert nicht oder wurde verschoben.<br>Zurück auf den richtigen Weg.", goHome: "Startseite", openApp: "Operlya öffnen" },
+    pt: { title: "Página não encontrada", desc: "Esta página não existe ou foi movida.<br>Vamos colocá-lo de volta nos trilhos.", goHome: "Página Inicial", openApp: "Abrir Operlya" },
+    ja: { title: "ページが見つかりません", desc: "このページは存在しないか移動されました。<br>元のページに戻りましょう。", goHome: "ホームに戻る", openApp: "Operlyaを開く" },
+    zh: { title: "页面未找到", desc: "此页面不存在或已被移动。<br>让我们回到正轨。", goHome: "返回首页", openApp: "打开 Operlya" },
+    ru: { title: "Страница не найдена", desc: "Эта страница не существует или была перемещена.<br>Давайте вернемся на путь.", goHome: "На главную", openApp: "Открыть Operlya" }
+  };
+
+  function apply404Translations(lang) {
+    const t = cvb404Translations[lang] || cvb404Translations.en;
+    document.getElementById('text-404-title').innerHTML = t.title;
+    document.getElementById('text-404-desc').innerHTML = t.desc;
+    document.getElementById('btn-go-home').innerText = t.goHome;
+    document.getElementById('btn-open-app').innerText = t.openApp;
+  }
+
+  const languageSelect = document.getElementById('languageSelect404');
+  
+  const savedLang = sessionStorage.getItem('mynextcv-language') || 'en';
+  languageSelect.value = savedLang;
+  apply404Translations(savedLang);
+
+  languageSelect.addEventListener('change', () => {
+    const lang = languageSelect.value;
+    sessionStorage.setItem('mynextcv-language', lang);
+    apply404Translations(lang);
+  });
+
+  const canvas = document.getElementById("bgCanvas");
+  const ctx = canvas.getContext("2d");
+
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+
+  let particles = [];
+
+  for (let i = 0; i < 80; i++) {
+    particles.push({
+      x: Math.random() * canvas.width,
+      y: Math.random() * canvas.height,
+      radius: Math.random() * 2 + 1,
+      dx: (Math.random() - 0.5) * 0.5,
+      dy: (Math.random() - 0.5) * 0.5
+    });
+  }
+
+  function animate() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    particles.forEach(p => {
+      p.x += p.dx;
+      p.y += p.dy;
+
+      if (p.x < 0 || p.x > canvas.width) p.dx *= -1;
+      if (p.y < 0 || p.y > canvas.height) p.dy *= -1;
+
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+      ctx.fillStyle = "rgba(255,255,255,0.5)";
+      ctx.fill();
+    });
+
+    requestAnimationFrame(animate);
+  }
+
+  animate();
+
+  window.addEventListener("resize", () => {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+  });
+
+</script>
+
+</body>
+</html>

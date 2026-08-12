@@ -1,0 +1,1947 @@
+/* ===================================== BUTTONS ======================================= */
+.btn-default {
+  margin-top: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 9px 15px;
+  background: #3178d3;
+  color: white;
+  border: none;
+  border-radius: 9px;
+  cursor: pointer;
+  font-size: 15px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.12);
+}
+.btn-default i {
+  font-size: 15px;
+}
+.btn-default:hover {
+  background: #1e5bab;
+}
+
+.btn-danger {
+  width: fit-content;
+  justify-self: end;
+  padding: 10px 20px;
+  border-radius: 8px;
+  background: #ff4d4f;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-outline {
+  padding: 10px;
+  border-radius: 10px;
+  background: transparent;
+  border: 1px solid #d0d7e2;
+  place-self: end;
+  grid-column-end: none;
+  cursor: pointer;
+}
+.btn-outline i {
+  font-size: 16px;
+  color: #3b82f6;
+}
+
+/* =================================== Forms Cards 1 ==================================== */
+
+.navCard {
+  background: var(--bg);
+  padding: 25px 25px 30px 25px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+}
+
+.navCard-sub {
+  display: grid;
+}
+
+.navCard input[type="checkbox"] {
+  transform: scale(1.2);
+  cursor: pointer;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  outline: none;
+  border: 2px solid #007bff;
+  border-radius: 4px;
+  background-color: var(--bg);
+  display: inline-block;
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+.navCard input[type="checkbox"]:checked {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.navCard input[type="checkbox"]:checked::before {
+  content: '';
+  position: absolute;
+  top: 0px;
+  left: 4px;
+  width: 4px;
+  height: 10px;
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.navCard input[type="checkbox"]:hover {
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.3);
+}
+
+.navCard::-webkit-scrollbar {
+  width: 8px;
+}
+.navCard::-webkit-scrollbar-thumb {
+  background-color: #bbb;
+  border-radius: 5px;
+}
+.navCard::-webkit-scrollbar-track {
+  background-color: #eee;
+}
+
+.navCard h2 {
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    font-weight: 700 !important;
+    font-size: 18px !important;
+    margin: 0px 0px 20px 0px !important;
+    color: var(--text-blured);
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 0.5rem;
+}
+
+.navCard h3 {
+    font-weight: 600 !important;
+    font-size: 14px !important;
+    margin: 0px 0px 10px 0px !important;
+    color: var(--text-soft);
+}
+
+.navCard-desc {
+    margin-top: -6px;
+    margin-bottom: 16px;
+    font-size: 13px;
+    color: var(--text-muted);
+    line-height: 1.5;
+}
+
+.navCard-footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.navCard-content > .cvb-tab-pane {
+  display: none;
+}
+.navCard-content > .cvb-tab-pane.active {
+  display: block;
+}
+
+.navCard-inputGroup_x2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.navCard-inputGroup_x7030 {
+  display: grid;
+  grid-template-columns: 70% 1fr;
+  gap: 20px;
+}
+
+.navCard-inputGroup_x2Auto {
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  gap: 15px;
+}
+
+.navCard-inputGroup_x2Auto1 {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 15px;
+}
+
+.navCard-inputGroup_x2Auto2 {
+    display: grid;
+    grid-template-columns: max-content max-content 70px;
+    gap: 15px;
+    align-items: center;
+}
+
+.navCard-inputGroup_x2Auto3 {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 15px;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+  .navCard-inputGroup_x2 {
+    grid-template-columns: 1fr;
+    gap: 5px;
+  }
+
+  .navCard-inputGroup_x2Auto1 {
+    grid-template-columns: 1fr;
+  }
+
+  .navCard-inputGroup_x2Auto3 {
+    grid-template-columns: 1fr;
+  }
+  
+  .navCard {
+      padding: 20px 20px 20px 20px;
+  }
+
+  .navCard-footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .navCard-footer .navCard-btn {
+    flex: 1 1 140px;
+    min-width: 140px;
+    max-width: max-content;
+  }
+}
+
+/* =================================== Forms Cards 1 (Buttons) ==================================== */
+
+.navCard-btn {
+    font-family: inherit;
+    font-size: 0.95rem;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.25s ease, box-shadow 0.25s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-weight: 500;
+    text-align: center;
+    margin: 5px 0px;
+    background-color: #3178d3;
+    color: white;
+}
+
+.navCard-subBtn {
+    font-family: inherit;
+    font-size: 0.95rem;
+    padding: 0.55rem 1.3rem;
+    border: 1px solid var(--border);
+    border-radius: 7px;
+    cursor: pointer;
+    transition: background-color 0.25s ease, box-shadow 0.25s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: 500;
+    text-align: center;
+    margin: 5px 0px;
+    background-color: var(--bg-btn1);
+    color: var(--text-blured);
+}
+
+.navCard-subBtn i,
+.navCard-btn i {
+    font-size: 18px;
+}
+
+.btn-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: start;
+  line-height: 1.2;
+}
+
+.btn-content small {
+  font-size: 11px;
+  background: rgba(255,255,255,0.15);
+  padding: 2px 6px;
+  border-radius: 6px;
+  margin-top: 3px;
+}
+
+.btn-content small i {
+  font-size: 11px;
+}
+
+.navCard-btnDelete {
+  margin-left: auto;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: #d9534f;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.navCard-btnDelete i {
+  pointer-events: none;
+}
+
+.navCard-btnDelete:hover {
+  color: #b52b27;
+  transform: scale(1.2);
+}
+
+/* =============================== Forms Cards 1 (Navigator) ============================== */
+
+.navCard-navBar {
+    display: flex;
+    overflow-x: auto;
+    max-width: 100%;
+    gap: 10px;
+    padding: 10px 0;
+    margin-bottom: 10px;
+}
+
+.navCard-content {
+    margin-bottom: 10px;
+}
+
+.navCard-navBar::-webkit-scrollbar {
+  height: 6px;
+}
+
+.navCard-navBar::-webkit-scrollbar-thumb {
+  background: var(--bg-btn1);
+  border-radius: 6px;
+}
+
+.navCard-navBar::-webkit-scrollbar-thumb:hover {
+  background: var(--box-soft);
+  transition: all 0.3s ease;
+}
+
+.navCard-button {
+    flex: 0 0 auto;
+    background: var(--bg-btn1);
+    color: var(--text-soft);
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    white-space: nowrap;
+    font-size: 0.9rem;
+    border: none;
+    transition: background 0.2s ease;
+}
+.navCard-button.active {
+    background: #0056d2;
+    color: white;
+}
+.navCard-button:hover {
+    background-color: #007bff;
+    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.25);
+    color: white;
+}
+  
+/* ================================ Forms Cards 1 (Inputs) ================================ */
+
+.navCard-inputGroup {
+    margin-bottom: 1rem;
+}
+
+.navCard-inputGroup.double2 {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 6px 15px;
+}
+
+.navCard-inputGroup label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+    color: var(--text-soft);
+    align-content: center;
+}
+
+.navCard-inputGroup.double2 label {
+    margin: 0;
+}
+
+.navCard-inputGroup.double2 input,
+.navCard-inputGroup.double2 select {
+    width: min-content;
+}
+
+.navCard-inputGroup input[type="text"],
+.navCard-inputGroup input[type="email"],
+.navCard-inputGroup input[type="date"],
+.navCard-inputGroup input[type="datetime-local"],
+.navCard-inputGroup input[type="file"],
+.navCard-inputGroup input[type="password"],
+.navCard-inputGroup input[type="number"],
+.navCard-inputGroup textarea {
+    color: var(--text);
+    width: 100%;
+    min-width: 100px;
+    box-sizing: border-box;
+    padding: 7px 8px;
+    font-size: medium;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    background-color: var(--bg-soft);
+    font-family: sans-serif;
+    transition: all 0.25s ease;
+    outline: none;
+}
+
+.navCard-inputGroup input[type="text"]:hover,
+.navCard-inputGroup input[type="email"]:hover,
+.navCard-inputGroup input[type="date"]:hover,
+.navCard-inputGroup input[type="datetime-local"]:hover,
+.navCard-inputGroup input[type="file"]:hover,
+.navCard-inputGroup input[type="password"]:hover,
+.navCard-inputGroup input[type="number"]:hover,
+.navCard-inputGroup textarea:hover {
+    border-color: var(--border);
+    background-color: var(--bg);
+}
+
+.navCard-inputGroup input[type="text"]:focus,
+.navCard-inputGroup input[type="email"]:focus,
+.navCard-inputGroup input[type="date"]:focus,
+.navCard-inputGroup input[type="datetime-local"]:focus,
+.navCard-inputGroup input[type="file"]:focus,
+.navCard-inputGroup input[type="password"]:focus,
+.navCard-inputGroup input[type="number"]:focus,
+.navCard-inputGroup textarea:focus {
+    border-color: var(--border-blured);
+    background-color: var(--bg);
+    box-shadow: 0 0 1px 2px var(--shadow-blured);
+}
+
+.navCard-inputGroup textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.navCard-inputGroup select {
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+    padding: 7px 8px;
+    font-size: medium;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    background-color: var(--bg-soft);
+    color: var(--text);
+    font-family: sans-serif;
+    transition: all 0.25s ease;
+    outline: none;
+    appearance: none;
+}
+
+.navCard-inputGroup select:hover {
+    border-color: var(--border);
+    background-color: var(--bg);
+}
+
+.navCard-inputGroup select:focus {
+    border-color: var(--border-blured);
+    background-color: var(--bg);
+    box-shadow: 0 0 0 3px var(--shadow-blured);
+}
+
+/* ================================ Forms Cards 1 (Infos Span) ================================ */
+
+.navCard-inputHint {
+    display: block;
+    margin-top: 4px;
+    font-size: 12px;
+    color: var(--text-muted);
+}
+
+.navCard-percentInput {
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+    gap: 6px;
+}
+
+.navCard-percentInput span {
+    font-size: small;
+    font-weight: 600;
+    color: var(--text-soft);
+}
+
+.navCard-range {
+    width: 100%;
+    margin-top: 12px;
+    appearance: none;
+    height: 6px;
+    border-radius: 4px;
+    background: linear-gradient(
+        to right,
+        #3b82f6 0%,
+        #3b82f6 7%,
+        var(--box-soft) 7%,
+        var(--box-soft) 100%
+    );
+    outline: none;
+    transition: background 0.2s ease;
+}
+
+.navCard-range::-webkit-slider-thumb {
+    appearance: none;
+    width: 22px;
+    height: 14px;
+    border-radius: 30%;
+    background: white;
+    border: 2px solid #3b82f6;;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+}
+
+.navCard-range::-moz-range-thumb {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: #3b82f6;
+    cursor: pointer;
+    border: none;
+}
+
+/* =========================== Forms Cards 1 (Checkbox Switch) =========================== */
+
+.navCard-switchInput_Group {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.navCard-switchInput_Group label {
+    margin: 0;
+}
+
+.navCard-switchInput_Group input {
+    max-width: 100px;
+}
+
+.navCard-switchInput {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 28px;
+  vertical-align: middle;
+  margin-left: 10px;
+}
+
+.navCard-switchInput input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.navCard-switchInputSlider {
+  position: absolute;
+  cursor: pointer;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: var(--box-softer);
+  border: 1px solid var(--border);
+  transition: 0.4s;
+  border-radius: 28px;
+}
+
+.navCard-switchInputSlider:before {
+  position: absolute;
+  content: "";
+  height: 22px;
+  width: 22px;
+  left: 3px;
+  bottom: 3px;
+  background-color: var(--bg);
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .navCard-switchInputSlider {
+  background-color: #16a12d;
+}
+
+input:focus + .navCard-switchInputSlider {
+  box-shadow: 0 0 2px #007bff;
+}
+
+input:checked + .navCard-switchInputSlider:before {
+  transform: translateX(22px);
+}
+
+.navCard-switchInputSlider.round {
+  border-radius: 28px;
+}
+
+.navCard-switchInputSlider.round:before {
+  border-radius: 50%;
+}
+
+/* ===================== Release Condition – Multi Select ===================== */
+
+.release-condition-radio {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.release-condition-radio input {
+    display: none !important;
+}
+
+.release-condition-radio label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    color: #374151;
+    position: relative;
+    padding-left: 22px;
+}
+
+.release-condition-radio label::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    border: 2px solid #9ca3af;
+    background: #fff;
+    transition: all 0.2s ease;
+}
+
+.release-condition-radio input:checked + label::before {
+    border-color: #2563eb;
+    background: radial-gradient(circle at center, #2563eb 45%, transparent 47%);
+}
+
+.release-condition-radio label:hover::before {
+    border-color: #2563eb;
+}
+
+/* =========================== Forms Cards 1 (Input Radio) =========================== */
+  
+.inputRadio {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: 10px;
+}
+
+.inputRadio label.Label { 
+    display: block;
+    align-content: center;
+    color: #444;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.inputRadioDefault {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 15px;
+}
+
+.inputRadioDefault label.Label { 
+    display: block;
+    align-content: center;
+    color: #444;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.inputRadio-group {
+    display: flex;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    overflow: hidden;
+    background: #fff;
+    width: 100%;
+}
+
+.inputRadio-group input[type="radio"] {
+    display: none;
+}
+
+.inputRadio-group label {
+    flex: 1;
+    text-align: center;
+    align-content: center;
+    padding: 7px 8px;
+    cursor: pointer;
+    font-size: medium;
+    color: #666;
+    background-color: #fafafa;
+    transition: background 0.3s, color 0.3s;
+    font-family: sans-serif;
+}
+
+.inputRadio-group input[type="radio"]:checked + label {
+    background-color: #007bff;
+    color: white;
+}
+
+.inputRadio-group input[type="radio"]:not(:checked) + label:hover {
+    background-color: white;
+    color: black;
+}
+
+.inputRadio-groupLevels {
+    display: flex;
+    margin: 5px 0px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    background: #f8f8f8;
+    width: 100%;
+}
+
+.inputRadio-groupLevels input[type="radio"] {
+    display: none;
+}
+
+.inputRadio-groupLevels label {
+    display: inline-block;
+    padding: 10px 15px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #f8f8f8;
+    transition: background-color 0.6s, color 0.6s, border 0.6s;
+}
+
+.inputRadio-groupLevels label:hover {
+    opacity: 0.85;
+}
+
+@media only screen and (max-width: 700px) {
+    .inputRadio {
+        display: block;
+    }
+    .inputRadio label.Label { 
+        border-radius: 3px 3px 0px 0px;
+        font-size: 11px;
+        border-bottom: none;
+        border-right: 1px solid #b1b1b1;
+        padding: 1px 5px;
+    }
+    .inputRadio-group {
+        border-radius: 0px 0px 5px 5px;
+    }
+    .inputRadio-group label {
+        font-size: 10px;
+    }
+}
+
+/* =========================== Forms Cards 1 (Input Radio 2) =========================== */
+  
+.inputRadio2 {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 15px;
+}
+
+.inputRadio2 label.Label { 
+    display: block;
+    align-content: center;
+    color: var(--text-soft);
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.inputRadio2-group {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.inputRadio2-group input[type="radio"] {
+    display: none;
+}
+
+.inputRadio2-group label {
+    flex: 1;
+    text-align: center;
+    align-content: center;
+    padding: 7px 10px;
+    cursor: pointer;
+    font-size: medium;
+    color: var(--text-soft);
+    border-radius: 6px;
+    border: 1px solid var(--border);
+    background-color: var(--bg-soft);
+    transition: all 0.25s ease;
+    font-family: sans-serif;
+}
+
+#task_industry label {
+    min-width: 150px;
+}
+
+.inputRadio2-group label small.subLabel {
+    display: block;
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-top: 5px;
+}
+
+.inputRadio2-group input[type="radio"]:checked + label small.subLabel {
+    color: #3b82f6;
+}
+
+.inputRadio2-group input[type="radio"]:checked + label {
+    border: 1px solid #2563eb;
+    color: #3b82f6;
+    background: #8fb4ff1d;
+}
+
+.inputRadio2-group input[type="radio"]:not(:checked) + label:hover {
+    border: 1px solid #2563eb;
+}
+
+.inputRadio2-groupLevels {
+    display: flex;
+    margin: 5px 0px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    background: #f8f8f8;
+    width: 100%;
+}
+
+.inputRadio2-groupLevels input[type="radio"] {
+    display: none;
+}
+
+.inputRadio2-groupLevels label {
+    display: inline-block;
+    padding: 10px 15px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #f8f8f8;
+    transition: background-color 0.6s, color 0.6s, border 0.6s;
+}
+
+.inputRadio2-groupLevels label:hover {
+    opacity: 0.85;
+}
+
+@media only screen and (max-width: 700px) {
+  .inputRadio2 label.Label { 
+    border-radius: 3px 3px 0px 0px;
+    border-bottom: none;
+    padding: 1px 5px;
+  }
+
+  .inputRadio2-group {
+    border-radius: 0px 0px 5px 5px;
+  }
+}
+
+/* ================= Forms Cards 1 (Input Radio 3) ================= */
+
+.inputRadio3-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 10px;
+}
+
+.inputRadio3-card {
+    font-family: Roboto, sans-serif;
+    position: relative;
+    padding: 10px 15px;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    background: var(--bg);
+    cursor: pointer;
+    transition: all 0.25s ease;
+    display: grid;
+    grid-template-columns: min-content auto;
+    gap: 10px;
+    text-align: left;
+    align-items: center;
+}
+
+.inputRadio3-card input {
+    display: none;
+}
+
+.inputRadio3-card i {
+    font-size: 34px;
+    color: #64748b;
+    transition: all 0.25s ease;
+}
+
+.inputRadio3-description {
+  display: grid;
+  gap: 4px;
+}
+
+.inputRadio3-card strong {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--text-soft);
+}
+
+.inputRadio3-card span {
+    font-size: 13px;
+    color: var(--text-soft);
+    line-height: 1.4;
+}
+
+.inputRadio3-card:hover {
+    border-color: #2563eb;
+}
+
+.inputRadio3-card input:checked + i,
+.inputRadio3-card input:checked ~ * {
+    color: #2563eb;
+}
+
+.inputRadio3-card input:checked ~ i {
+    color: #2563eb;
+}
+
+.inputRadio3-card:has(input:checked) {
+    background: #8fb4ff1d;
+    border-color: #2563eb;
+}
+
+@media (max-width: 640px) {
+  .inputRadio3-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ===================== Acceptance Criteria ===================== */
+
+.criteria-inputGroup {
+    margin-bottom: 1rem;
+}
+
+.criteria-inputGroup label {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+    color: var(--text-soft);
+    align-content: center;
+}
+
+.criteria-list {
+  display: grid;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+.criteria-item {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 12px;
+  padding: 10px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--bg-soft);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.criteria-item:hover {
+  border: 1px solid #2563eb;
+}
+
+.criteria-content {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.criteria-content strong {
+  font-weight: 500;
+  font-size: 14px;
+  color: var(--text);
+}
+
+.criteria-content span {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.criteria-inline {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.criteria-inline input {
+  width: 60px;
+  padding: 4px 6px;
+  font-size: small;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background-color: var(--bg);
+  color: var(--text-soft);
+  font-family: sans-serif;
+  transition: all 0.25s ease;
+  outline: none;
+}
+
+.criteria-inline input:hover {
+  border-color: #999;
+  background-color: var(--bg-soft);
+}
+
+.criteria-inline input:focus {
+  border-color: var(--border-blured);
+  background-color: var(--bg);
+  box-shadow: 0 0 1px 2px var(--shadow-blured);
+}
+
+/* ========================== Map / Location Input ========================== */
+
+.navCard-mapInput .mapInput-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 7px 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: #fafafa;
+    transition: all 0.25s ease;
+}
+
+.navCard-mapInput .mapInput-wrapper:hover {
+    border-color: #999;
+    background-color: #f5f5f5;
+}
+
+.navCard-mapInput .mapInput-wrapper:focus-within {
+    border-color: #3b82f6;
+    background-color: #fff;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+.navCard-mapInput .mapInput-icon {
+    font-size: 18px;
+    opacity: 0.7;
+}
+
+.navCard-mapInput input {
+    border: none !important;
+    background: transparent !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+    font-size: medium;
+}
+
+.navCard-mapInput input:focus {
+    outline: none;
+}
+
+/* ========================== Map Picker ========================== */
+
+.navCard-mapPicker #task_map {
+    width: 100%;
+    height: 260px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    background: #eee;
+}
+
+.navCard-mapPicker {
+    margin-top: -5px;
+}
+
+/* ========================== Forms Cards 1 (Requires + Score) ======================== */
+
+.navCard-requiresGroup {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+  flex-wrap: wrap;
+}
+
+.navCard-requiresGroup input[type="text"] {
+  flex: 1;
+  min-width: 150px;
+}
+
+.navCard-requiresScore {
+  display: flex;
+  gap: 4px;
+}
+
+.navCard-requiresScore input[type="radio"] {
+  display: none;
+}
+
+.navCard-requiresScore label {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--box-soft);
+  display: inline-block;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.navCard-requiresScore input[type="radio"]:checked + label {
+  background: #007bff;
+}
+  
+.navCard-requiresGroup {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+}
+
+.navCard-requiresGroup input[type="checkbox"] {
+  transform: scale(1.2);
+  cursor: pointer;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  outline: none;
+  border: 2px solid #007bff;
+  border-radius: 4px;
+  background-color: #fff;
+  display: inline-block;
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+.navCard-requiresGroup input[type="checkbox"]:checked {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.navCard-requiresGroup input[type="checkbox"]:checked::before {
+  content: '';
+  position: absolute;
+  top: 0px;
+  left: 4px;
+  width: 4px;
+  height: 10px;
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.navCard-requiresGroup input[type="checkbox"]:hover {
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.3);
+}
+
+/* =================================== Horizontal Navigation ==================================== */
+
+.horizontal-navContainer {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    gap: 10px;
+}
+
+.horizontal-navPages {
+  	font-family: "Segoe UI", sans-serif;
+    min-width: 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px var(--shadow-soft);
+}
+
+.horizontal-navigator {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    position: sticky;
+    top: 20px;
+    align-items: stretch;
+    justify-content: flex-start;
+    margin: 0;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 3px;
+}
+
+.horizontal-navigator button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 6px;
+    padding: 14px 10px;
+    border-radius: 8px;
+    background: transparent;
+    border: none;
+    color: var(--text-soft);
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 14px;
+    text-align: center;
+    box-shadow: none;
+}
+
+.horizontal-navigator button i {
+  font-size: 22px;
+  color: var(--text-soft);
+  transition: color 0.3s ease;
+}
+
+.horizontal-navigator button:hover {
+  color: #007bff;
+  border: none;
+}
+
+.horizontal-navigator button:hover i {
+  color: #007bff;
+}
+
+.horizontal-navigator button.active {
+    background-color: var(--bg-card);
+    color: #007bff;
+    box-shadow: none;
+    font-weight: normal;
+}
+
+.horizontal-navigator button.active i {
+  color: #007bff;
+}
+
+.horizontal-navPage {
+    display: none;
+}
+  
+@media (max-width: 768px) {
+  .horizontal-navContainer {
+      grid-template-columns: 1fr;
+  }
+
+  .horizontal-navPages {
+    grid-template-columns: 1fr;
+  }
+
+  .horizontal-navigator {
+      flex-direction: row;
+      width: auto;
+      position: relative;
+      top: auto;
+      border-radius: 8px;
+      padding: 6px;
+      overflow-x: auto;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+  }
+
+  .horizontal-navigator::-webkit-scrollbar {
+    display: none;
+  }
+
+  .horizontal-navigator button {
+      flex-direction: column;
+      min-width: 80px;
+      padding: 0px 6px;
+      flex: 1;
+      font-size: 12px;
+  }
+}
+
+/* =================================== Horizontal Navigation ==================================== */
+
+.tasks-navContainer {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 10px;
+}
+
+.tasks-navPages {
+  	font-family: "Segoe UI", sans-serif;
+    min-width: 0;
+    border-radius: 8px;
+}
+
+.tasks-navigatorSection {
+  display: grid;
+  align-self: flex-start;
+  gap: 10px;
+}
+
+.tasks-navigatorBtn {
+  height: fit-content;
+  background: #3178d3;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.tasks-navigatorBtn i {
+  font-size: 16px;
+  font-weight: 400;
+  color: white;
+}
+
+.tasks-navigatorBtn:hover {
+  background: #28a745;
+}
+
+.tasks-navigator {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 14px 10px;
+    min-width: 150px;
+}
+
+.tasks-navigator button {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 6px;
+    padding: 10px 12px;
+    border-radius: 10px;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #374151;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 14px;
+}
+
+.tasks-navigator button i {
+  font-size: 18px;
+  color: #374151;
+  transition: color 0.3s ease;
+}
+
+.tasks-navigator button:hover {
+  color: #007bff;
+  border: none;
+}
+
+.tasks-navigator button:hover i {
+  color: #007bff;
+}
+
+.tasks-navigator button.active {
+    background: #eff6ff;
+    color: #2563eb;
+    font-weight: 600;
+}
+
+.tasks-navigator button.active i {
+  color: #007bff;
+}
+
+.tasks-navPage {
+    display: none;
+}
+  
+@media (max-width: 768px) {
+  .tasks-navContainer {
+      grid-template-columns: 1fr;
+  }
+
+  .tasks-navPages {
+    grid-template-columns: 1fr;
+  }
+
+  .tasks-navigator {
+      flex-direction: row;
+      width: auto;
+      position: relative;
+      top: auto;
+      border-radius: 8px;
+      padding: 6px;
+      overflow-x: auto;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+  }
+
+  .tasks-navigator::-webkit-scrollbar {
+    display: none;
+  }
+
+  .tasks-navigator button {
+      flex-direction: column;
+      min-width: 80px;
+      padding: 0px 6px;
+      flex: 1;
+      font-size: 12px;
+  }
+}
+
+/* =================================== Vertical Navigation ==================================== */
+
+.vertical-navContainer {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+}
+
+.vertical-navPages {
+  	font-family: "Segoe UI", sans-serif;
+    min-width: 0;
+}
+
+.vertical-navigator {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-bottom: 25px;
+  border-bottom: 2px solid #e6ecf5;
+}
+
+.vertical-navPage {
+  display: none;
+  animation: fadeIn 0.3s ease;
+}
+
+.vertical-navigator button {
+    position: relative;
+    padding: 10px 2px;
+    border-radius: 8px;
+    background: transparent;
+    border: none;
+    color: #7a7a7a;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 15px;
+    text-align: center;
+    box-shadow: none;
+}
+
+.vertical-navigator button::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0%;
+  height: 3px;
+  background-color: #3178d3;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.vertical-navigator button.active {
+  color: #1c4e80;
+}
+
+.vertical-navigator button:hover::after {
+  width: 100%;
+}
+
+.vertical-navigator button.active::after {
+  width: 100%;
+}
+
+.vertical-navPage.active {
+  display: grid;
+}
+
+@media (max-width: 768px) {
+  .vertical-navContainer {
+      grid-template-columns: 1fr;
+  }
+
+  .vertical-navPages {
+    grid-template-columns: 1fr;
+  }
+
+  .vertical-navigator {
+      flex-direction: row;
+      width: auto;
+      position: relative;
+      top: auto;
+      border-radius: 8px;
+      padding: 6px;
+      overflow-x: auto;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+  }
+
+  .vertical-navigator::-webkit-scrollbar {
+    display: none;
+  }
+
+  .vertical-navigator button {
+      flex-direction: column;
+      min-width: 80px;
+      padding: 0px 6px;
+      flex: 1;
+      font-size: 12px;
+  }
+}
+
+/* ===================== Modern Stepper Navigation ===================== */
+
+.horizontal-newTaskContainer {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 20px;
+}
+
+.horizontal-newTaskPages {
+  	font-family: "Segoe UI", sans-serif;
+    min-width: 0;
+}
+
+.horizontal-newTaskPage {
+  display: none;
+  animation: fadeIn 0.3s ease;
+}
+
+.horizontal-newTaskPage.active {
+  display: grid;
+}
+
+.horizontal-newTask {
+  display: flex;
+  flex-flow: column;
+  gap: 24px;
+  padding: 16px 0px;
+  background: transparent;
+  border-radius: 12px;
+  border: none;
+}
+
+.horizontal-newTask button {
+  all: unset;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  position: relative;
+  white-space: nowrap;
+}
+
+.horizontal-newTask .step-circle {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: var(--box-soft);
+  color: var(--text-muted);
+  font-size: 14px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.25s ease;
+}
+
+.horizontal-newTask .step-label {
+  font-size: 14px;
+  color: var(--text-muted);
+  font-weight: 500;
+  transition: color 0.25s ease;
+}
+
+.horizontal-newTask button.active .step-circle {
+  background: #2563eb;
+  color: #fff;
+}
+
+.horizontal-newTask button.active .step-label {
+  color: var(--text-blured2);
+  font-weight: 600;
+}
+
+.horizontal-newTask button.completed .step-circle {
+  background: #16a34a;
+  color: #fff;
+}
+
+.horizontal-newTask button:not(.active):hover .step-circle {
+  background: var(--box);
+  color: var(--text);
+}
+  
+@media (max-width: 768px) {
+  .horizontal-newTaskContainer {
+      grid-template-columns: 1fr;
+  }
+
+  .horizontal-newTask {
+      display: flex;
+      flex-flow: wrap;
+      justify-self: center;
+      padding-bottom: 10px;
+  }
+
+  .horizontal-navStepper {
+    padding: 12px;
+    gap: 18px;
+  }
+
+  .horizontal-newTask .step-circle {
+      width: 40px;
+      height: 40px;
+  }
+
+  .vertical-newTask .step-label {
+    display: none;
+  }
+}
+
+/* ===================== Modern Stepper Navigation ===================== */
+
+.vertical-newTaskContainer {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+}
+
+.vertical-newTaskPages {
+  	font-family: "Segoe UI", sans-serif;
+    min-width: 0;
+}
+
+.vertical-newTaskPage {
+  display: none;
+  animation: fadeIn 0.3s ease;
+}
+
+.vertical-newTaskPage.active {
+  display: grid;
+}
+
+.vertical-newTask {
+    display: flex;
+    flex-flow: wrap;
+    align-items: center;
+    gap: 24px;
+    padding: 16px 20px;
+    background: transparent;
+    border-radius: 12px;
+    border: none;
+    overflow-x: auto;
+    justify-content: center;
+}
+
+.vertical-newTask button {
+    all: unset;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    position: relative;
+    white-space: nowrap;
+}
+
+.step-circle {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #e5e7eb;
+    color: #6b7280;
+    font-size: 14px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.25s ease;
+}
+
+.step-label {
+    font-size: 14px;
+    color: #6b7280;
+    font-weight: 500;
+    transition: color 0.25s ease;
+}
+
+.vertical-newTask button.active .step-circle {
+    background: #2563eb;
+    color: #fff;
+}
+
+.vertical-newTask button.active .step-label {
+    color: #0f3c9b;
+    font-weight: 600;
+}
+
+.vertical-newTask button.completed .step-circle {
+    background: #16a34a;
+    color: #fff;
+}
+
+.vertical-newTask button:hover .step-circle {
+    background: #dbeafe;
+    color: #2563eb;
+}
+  
+@media (max-width: 768px) {
+  .vertical-navStepper {
+    padding: 12px;
+    gap: 18px;
+  }
+
+  .step-label {
+    display: none;
+  }
+}
+
+/* =================================== Importation Container ================================== */
+
+.import-container {
+  margin: 0;
+  padding: 16px 20px;
+  background: var(--bg-soft);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  box-shadow: 0 6px 14px var(--shadow-soft);
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+.import-container-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text-blured);
+}
+
+.import-container-actions label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.import-container-actions input[type="file"] {
+  display: none;
+}
+
+.import-container-actions span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-left: 14px;
+  padding: 5px 10px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #fff;
+  background: #2878dc;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.import-container-actions span:hover {
+  background: #1c4e80;
+  transform: translateY(-1px);
+}
+
+.import-container-actions span i {
+  font-size: 16px;
+  line-height: 1;
+}
+
+.import-container-actions span:hover::after {
+  background: #1c4e80;
+  transform: translateY(-1px);
+}
+
+.import-light-btn {
+  padding: 8px 14px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #2878dc;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  outline: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease, color 0.3s ease;
+}
+
+.import-light-btn:hover {
+  background: #2878dc;
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+@media (max-width: 768px) {
+  .import-container-actions {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .import-light-btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* =================================== App CV Progress ==================================== */
+
+.progressBar-container {
+  position: relative;
+  display: flex;
+  flex-direction: row; /* horizontal layout */
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px 0;
+  padding: 0 10px;
+}
+
+.progressBar-container .step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  flex: 1;
+}
+
+.progressBar-container .circle {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: var(--bg-card);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  position: relative;
+  z-index: 1;
+  transition: background-color 0.3s;
+}
+
+.progressBar-container .label {
+  margin-top: 8px;
+  text-align: center;
+  font-weight: 500;
+  font-size: 12px;
+  color: var(--text-soft);
+}
+
+.progressBar-container::before {
+    content: "";
+    position: absolute;
+    top: 12px;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background-color: var(--box);
+    z-index: 0;
+    border-radius: 10px;
+}
+
+.progressBar-container.all-completed::before {
+  background-color: #4caf50;
+}
+
+.progressBar-containerAll.all-completed .progressBar-title {
+  color: #3c953f;
+}
+
+.step.completed .circle {
+  background-color: #349737;
+}
+
+.step.incomplete .circle {
+  background-color: var(--box);
+}
+
+.progressBar-title-container {
+  text-align: center;
+  margin: 0 0 10px;
+}
+
+.progressBar-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  position: relative;
+}
+
+.progressBar-toggle-icon {
+  font-size: 22px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  color: #1c4e80;
+}
+
+.progressBar-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text-blured);
+  margin: 0;
+}
+
+.progressBar-toggle-icon.collapsed {
+  transform: rotate(+180deg);
+}
+
+.progressBar-collapsed #progressBar,
+.progressBar-collapsed .progressBar-description {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: 0.35s ease;
+  margin: 0px;
+}
+
+#progressBar,
+.progressBar-description {
+  transition: 0.35s ease;
+}
+
+.progressBar-description {
+  font-size: 14px;
+  color: var(--text-soft);
+  margin: 4px 0 0 0;
+}
+
+@media (max-width: 600px) {
+  .progressBar-container .label {
+    display: none;
+  }
+}

@@ -1,0 +1,1119 @@
+/* =================================== APP GENERAL ==================================== */
+.app-container {
+  display: grid;
+  gap: 20px;
+  margin: 20px 40px 30px 40px;
+}
+
+.cvb-App {
+  display: grid;
+  grid-template-columns: 1fr 270px;
+  gap: 20px;
+  margin: 0px;
+}
+
+@media (max-width: 768px) {
+  .app-container {
+      margin: 20px 20px 20px 20px;
+      gap: 5px;
+  }
+
+  .cvb-App {
+    grid-template-columns: 1fr;
+    margin: 0px;
+    gap: 0px;
+  }
+}
+
+/* =================================== APP EXCLUSIVE ==================================== */
+
+.Exclusive-Infos {
+  display: none;
+  padding: 3px 15px;
+  margin-bottom: 5px;
+  text-align: center;
+  font-weight: 500;
+  border-radius: 8px;
+  background: #28a7462b;
+  border: 1px solid #28a7462b;
+  color: var(--accent-emerald);
+  font-size: 14px;
+  box-shadow: 0 0px 3px rgba(0, 0, 0, 0.12);
+  transition: all 0.3s ease;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.Exclusive-Infos p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.Exclusive-Infos i {
+  color: var(--accent-emerald);
+  flex-shrink: 0;
+}
+
+#exclusive-CoinsOnFirstSave {
+  display: none;
+}
+
+/* ================================ App Mobile Navigation ============================== */
+
+.cvb-mobile-nav {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .cvb-mobile-nav {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    gap: 12px;
+    margin-bottom: 15px;
+  }
+  
+  .cvb-mobile-navSub {
+    display: grid;
+    gap: 12px;
+  }
+
+  .cvb-mobile-navSub button {
+    display: flex !important;
+    align-items: center;
+    gap: 10px !important;
+    padding: 10px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: var(--bg-soft);
+    box-shadow: 0 2px 6px var(--shadow);
+    cursor: pointer;
+    text-align: left;
+    transition: all 0.3s ease;
+    text-align: start !important;
+  }
+
+  .cvb-mobile-nav button {
+    display: grid;
+    align-items: center;
+    gap: 0px;
+    padding: 10px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: var(--bg-soft);
+    box-shadow: 0 2px 6px var(--shadow);
+    cursor: pointer;
+    text-align: left;
+    transition: all 0.3s ease;
+    text-align: center;
+  }
+
+  .cvb-mobile-nav button.active,
+  .cvb-mobile-navSub button.active {
+    box-shadow: 0 4px 10px var(--shadow-soft);
+    background: var(--state-info-soft);
+    border: 1px solid var(--state-info-border);
+  }
+
+  .cvb-mobile-navSub .cvb-nav-icon {
+    width: 44px !important;
+    height: 44px !important;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    overflow: hidden;
+    padding: 5px 10px;
+  }
+  
+  .cvb-nav-icon {
+    width: auto;
+    height: 100%;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    overflow: hidden;
+  }
+
+  .cvb-nav-icon.green { background: var(--level-elite-badge-bg); }
+  .cvb-nav-icon.orange { background: var(--state-highlight-soft); }
+  .cvb-nav-icon.blue { background: var(--level-builder-badge-bg); }
+
+  .cvb-icon-img {
+    width: 70px !important;
+    height: 70px !important;
+    object-fit: contain;
+  }
+
+  .cvb-nav-text h4 {
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0;
+    color: var(--text);
+  }
+
+  .cvb-nav-text p {
+    font-size: 12px;
+    color: #666;
+    margin: 0;
+  }
+
+  #cvb-fields,
+  #cvb-joboffer,
+  #cvb-theme {
+    display: none;
+  }
+
+  .cvb-hidden {
+    display: none !important;
+  }
+
+  #cvb-fields:not(.cvb-hidden),
+  #cvb-joboffer:not(.cvb-hidden),
+  #cvb-theme:not(.cvb-hidden) {
+    display: grid;
+    margin-top: 0px;
+  }
+}
+
+/* =================================== App Actions ==================================== */
+
+.cvb-app-actions {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+.cvb-app-actions button {
+  position: relative;
+  background: var(--bg-soft);
+  border: 1px solid var(--border);
+  color: var(--text-soft);
+  font-size: 14px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  cursor: pointer;
+  transition: color 0.2s ease, transform 0.2s ease;
+  padding: 8px 10px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.cvb-app-actions button i {
+  font-size: 18px;
+}
+
+.cvb-app-actions button:hover {
+  color: var(--text-blured);
+}
+
+.cvb-app-actions button:first-child {
+  background: #0769cb1a;
+}
+
+@media (max-width: 768px) {
+  .cvb-app-actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+  
+/* =================================== APP CV Navigation ==================================== */
+
+.cvb-AppFields {
+  display: grid;
+  gap: 10px;
+}
+
+/* =============================== APP CV Profil Picture Picker ============================== */
+
+.cvb-profile-wrapper {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: flex-start;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+    background-color: var(--bg-soft);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1rem;
+    flex-wrap: wrap;
+}
+
+.cvb-photo-upload {
+    flex: 1;
+}
+
+.cvb-photo-upload label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: var(--text);
+    font-size: 14px;
+}
+
+.cvb-photo-upload input[type="file"] {
+    margin-bottom: 0.5rem;
+}
+
+.cvb-photo-preview {
+    width: 120px;
+    height: 120px;
+    background-color: var(--box-soft);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    float: right;
+    font-size: 0.75rem;
+    color: var(--text-soft);
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.cvb-photo-tip {
+  display: flex;
+	flex: 2;
+  justify-self: right;
+  font-size: 0.85rem;
+  color: var(--text-soft);
+  height: 100%;
+  line-height: 1.5;
+  min-height: 120px;
+}
+
+.cvb-profile-wrapper p {
+    margin: 0px;
+    color: var(--text-soft);
+    font-size: 13px;
+}
+
+@media (max-width: 768px) {
+  .cvb-profile-wrapper {
+    	grid-template-columns: 1fr;
+  }
+  
+  .cvb-photo-preview {
+    	width: 100%;
+  }
+  
+  .cvb-photo-tip {
+   		justify-self: center;
+        justify-content: center;
+        width: 100%;
+  }
+}
+
+/* =============================== APP CV Job Offer Analyzer ============================== */
+
+.cvb-joboffer-section {
+  background:var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 20px;
+  margin-top: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+  transition: box-shadow 0.3s ease;
+}
+
+.cvb-joboffer-title {
+    font-size: 19px !important;
+    font-weight: 700 !important;
+    color: var(--text-blured) !important;
+    margin-bottom: 6px !important;
+}
+
+.cvb-joboffer-subtitle {
+  font-size: 0.95rem;
+  color: var(--text-soft);
+  margin-bottom: 12px;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+.cvb-joboffer-textarea {
+  min-height: 200px !important;
+  resize: vertical;
+  padding: 12px 14px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  outline: none;
+  border: 1.5px solid var(--border);
+  border-radius: 8px;
+  box-shadow: inset 0 1px 3px var(--shadow-soft);
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  background-color: var(--bg-soft);
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.cvb-joboffer-textarea:focus {
+  border-color: var(--border-blured);
+  box-shadow: 0 0 0 3px rgba(40, 120, 220, 0.15);
+}
+
+.cvb-joboffer-textarea::-webkit-scrollbar {
+  width: 6px;
+}
+
+.cvb-joboffer-textarea::-webkit-scrollbar-thumb {
+  background-color: var(--box-soft);
+  border-radius: 6px;
+}
+
+.cvb-joboffer-textarea::-webkit-scrollbar-thumb:hover {
+  background-color: #a0a8b5;
+}
+  
+.cvb-joboffer-button-container {
+  text-align: right;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+.cvb-ai-loading {
+  display: none;
+  font-weight: 600;
+  color: #0061ff;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+.cvb-joboffer-buttons {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 12px;
+}
+  
+.cvb-btn-IA-modern {
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  font-size: 15px;
+  padding: 8px 16px;
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  font-weight: 600;
+  background: #3178d3;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.cvb-btn-IA-modern i {
+	size: 29px;
+  font-size: 19px;
+  font-weight: 100;
+}
+
+.cvb-btn-IA-modern:hover {
+  background: #28a745;
+}
+
+.btn-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: start;
+  line-height: 1.2;
+}
+
+.btn-content small {
+  font-size: 11px;
+  background: rgba(255,255,255,0.15);
+  padding: 2px 6px;
+  border-radius: 6px;
+  margin-top: 3px;
+}
+
+.btn-content small i {
+  font-size: 11px;
+}
+
+@keyframes dots {
+  0%, 20% { content: ""; }
+  40% { content: "."; }
+  60% { content: ".."; }
+  80%, 100% { content: "..."; }
+}
+
+#cvb-loading-dots::after {
+  content: "";
+  animation: dots 1.5s infinite steps(4, end);
+  display: inline-block;
+  width: 1.2em;
+  text-align: left;
+  font-weight: 700;
+  color: #0061ff;
+  margin-left: 4px;
+}
+  
+.cvb-skill-progress-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.cvb-skill-progress-wrapper {
+  position: relative;
+  width: 100%;
+  height: 33px;
+  margin-bottom: 20px;
+  background: linear-gradient(to left, rgb(191, 191, 191), rgb(169, 169, 169), rgb(131, 131, 131));
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  overflow: hidden;
+  flex: 1 1 100%;
+  box-shadow: inset 0 1px 2px var(--shadow-soft)
+}
+
+.cvb-skill-progress-bar {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #28a745, #218838);
+  border-radius: 6px 0 0 6px;
+  transition: width 0.4s ease-in-out;
+}
+
+#cvb-joboffer-progress-label {
+  position: absolute;
+  top: 50%;
+  left: 155px;
+  transform: translate(-50%, -50%);
+  font-weight: bold;
+  color: white;
+  pointer-events: none;
+  white-space: nowrap;
+  z-index: 10;
+}
+
+.cvb-skill-progress-bar span {
+  position: relative;
+  z-index: 1;
+}
+
+.cvb-keyneeds-inline {
+  margin: 0 0 18px;
+  font-size: 0.95rem;
+  color: var(--text-soft);
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  display: none;
+  gap: 7px;
+}
+
+.cvb-keyneeds-inline strong {
+  margin: 0 0 5px;
+}
+
+.cvb-keyneeds-pill-group {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  vertical-align: middle;
+}
+
+.cvb-keyneeds-pill-group span {
+  color: #1c4e80;
+  padding: 5px 12px;
+  border-radius: 10px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  line-height: 1.2;
+  border: 1px solid transparent;
+}
+
+.cvb-keyneeds-pill--matched {
+  background: #00ff3728;
+  color: var(--accent-emerald) !important;
+  border-color: rgba(21, 87, 36, 0.2) !important;
+}
+
+.cvb-keyneeds-pill--missing {
+  background: #ff40003b;
+  color: var(--accent-orange) !important;
+  border-color: rgba(114, 28, 36, 0.2) !important;
+}
+
+.cvb-joboffer-subProgress {
+  display: grid;
+  grid-template-columns: 70% 1fr;
+  gap: 10px;
+  height: 0;
+}
+
+#cvb-job-speciality-result {
+  display: none;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  font-size: 14px;
+}
+
+#cvb-job-speciality-result .speciality-card {
+  border: 1px dashed var(--border);
+  border-radius: 12px;
+  padding: 20px 25px;
+}
+
+#cvb-job-speciality-result h3 {
+  margin: 0px 0px 12px 0px;
+  color: var(--text-blured);
+  font-size: 18px;
+  font-weight: 600;
+}
+
+#cvb-job-speciality-result p {
+  margin: 6px 0;
+  color: var(--text-soft);
+}
+
+#cvb-job-speciality-result .badge {
+  display: inline-block;
+  background-color: #0061ff;
+  color: #fff;
+  border-radius: 10px;
+  padding: 4px 12px;
+  font-size: 12px;
+  font-weight: 600;
+  margin-right: 8px;
+  margin-top: 4px;
+}
+
+.cvb-premium-progress-section {
+  margin-bottom: 10px;
+  align-content: center;
+}
+
+.cvb-premium-progress {
+  margin-top: 12px;
+}
+
+.cvb-premium-progress-label {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #1c4e80;
+}
+
+.cvb-premium-progress-bar-wrapper {
+  width: 100%;
+  height: 9px;
+  background: #e8edf7;
+  border-radius: 6px;
+  overflow: hidden;
+  position: relative;
+}
+
+.cvb-premium-progress-bar {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #00c46a, #009e52);
+  border-radius: 6px;
+  transition: width 0.5s ease;
+}
+
+@media (max-width: 768px) {
+  .cvb-joboffer-textarea {
+    min-height: 250px;
+  }
+
+  .cvb-joboffer-subtitle {
+    margin-top: 0px;
+  }
+
+  .cvb-joboffer-button-container {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .cvb-joboffer-clear-container {
+    margin-top: 15px;
+  }
+
+  .cvb-joboffer-subProgress {
+    grid-template-columns: 1fr;
+    gap: 0px;
+  }
+
+  #cvb-job-speciality-result .speciality-card {
+    border: none;
+    padding: 10px 5px;
+  }
+}
+
+.cvb-joboffer-clear-container {
+  text-align: left;
+}
+
+.cvb-clear-btn {
+  display: inline-block;
+  cursor: pointer;
+  color: #1186fc;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  transition: all 0.2s ease;
+}
+
+.cvb-clear-btn:hover {
+  color: #0754a0;
+}
+
+.cvb-clear-btn i {
+  margin-right: 3px;
+  font-size: 16px;
+}
+
+/* =============================== APP CV Color Picker ============================== */
+
+.cvb-color-picker-wrapper {
+  margin: 0px 0px 0px 0px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #222;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+}
+
+.cvb-color-picker-section {
+  padding: 20px;
+  padding-bottom: 0px;
+}
+
+.cvb-color-title {
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    font-weight: 700 !Important;
+    font-size: 18px !important;
+    color: var(--text-blured) !important;
+    margin: 0px 0px 15px 0px !important;
+}
+
+.cvb-color-label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 6px;
+  font-size: 14px;
+  color: var(--text);
+}
+
+.cvb-color-input {
+  width: 50px;
+  height: 38px;
+  margin: 0;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  cursor: pointer;
+  background-color: var(--bg-soft);
+  transition: border-color 0.3s ease;
+}
+
+.cvb-color-input:hover,
+.cvb-color-input:focus {
+  border-color: #3e5f8a;
+  outline: none;
+}
+
+.cvb-color-select {
+  width: 100%;
+  height: 38px;
+  border: 2px solid #1f497d;
+  border-radius: 6px;
+  background-color: var(--bg-soft);
+  padding: 6px 10px;
+  font-size: 14px;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  cursor: pointer;
+  margin-bottom: 16px;
+}
+
+.cvb-color-select:hover,
+.cvb-color-select:focus {
+  border-color: #3e5f8a;
+  outline: none;
+}
+
+.cvb-color-dropdown {
+  max-width: 100%;
+  box-sizing: border-box;
+  position: relative;
+  width: 100%;
+  margin: 0 !important;
+  cursor: pointer;
+}
+
+.cvb-color-selected {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 26px;
+    gap: 10px;
+    padding: 5px 7px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    background-color: var(--bg-soft);
+}
+
+.cvb-color-sample {
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  background-color: #1f497d
+}
+
+.cvb-color-options {
+  position: absolute;
+  top: 100%;
+  bottom: auto;
+  left: 0;
+  right: 0;
+  background: var(--bg-soft);
+  border: 1px solid var(--border);
+  box-shadow: 0 4px 10px var(--shadow-soft);
+  max-height: 220px;
+  overflow-y: auto;
+  z-index: 999;
+  display: none;
+}
+
+.cvb-color-option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.cvb-color-option:hover {
+  background-color: var(--bg);
+}
+
+.cvb-color-name {
+  font-size: 14px;
+  color: var(--text);
+}
+
+.cvb-color-form-grid {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 5px;
+  align-items: flex-end;
+  margin-bottom: 10px;
+}
+
+/* =============================== APP CV Language Picker ============================== */
+  
+.cvb-lang-input {
+  width: 100%;
+  height: 38px;
+  padding: 5px 10px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background-color: var(--bg-soft);
+  font-size: 14px;
+  color: var(--text);
+  cursor: pointer;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  background-image: url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%231f497d'><path d='M2 4l4 4 4-4z'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 12px;
+}
+
+.cvb-lang-input:hover,
+.cvb-lang-input:focus {
+  border-color: #3e5f8a;
+  box-shadow: 0 0 0 2px rgba(31, 73, 125, 0.15);
+  outline: none;
+}
+
+/* =============================== APP CV Template Picker ============================== */
+
+.cv-style-selection-wrapper {
+  max-height: 776px;
+  overflow-y: auto;
+  border-radius: 5px;
+  padding: 15px;
+}
+
+.cv-style-selection-wrapper::-webkit-scrollbar {
+  width: 6px;
+}
+
+.cv-style-selection-wrapper::-webkit-scrollbar-thumb {
+  background-color: var(--box-soft);
+  border-radius: 5px;
+}
+
+.cv-style-selection-wrapper::-webkit-scrollbar-thumb:hover {
+  background-color: #a0a8b5;
+}
+
+.cv-style-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.cv-style-filter {
+  flex: 1 1 calc(20% - 8px);
+  text-align: center;
+  padding: 8px 12px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background-color: var(--bg-soft);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.cv-style-filter:hover {
+  background-color: var(--bg-card);
+  border : 1px solid var(--border-blured);
+}
+
+.cv-style-filter.active {
+  background-color: #2878dc;
+  color: white;
+  border : 1px solid #2878dc;
+}
+
+@media (max-width: 600px) {
+  .cv-style-filter {
+    flex: 1 1 100%;
+  }
+}
+
+.cv-style-selection {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  justify-items: center;
+}
+
+.cv-style-selection img {
+	max-width: 100%;
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.cv-style-selection img:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.15);
+}
+
+.cv-style-selection img.selected {
+  border-color: #2878dc;
+  box-shadow: 0 0 0 3px rgba(31, 73, 125, 0.2);
+}
+
+.cv-style-captioned {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.cv-style-captioned span {
+  margin-top: 6px;
+  font-size: 13px;
+  color: var(--text-soft);
+  font-weight: 500;
+}
+
+.cv-pro-wrapper {
+  position: relative;
+  display: flex;
+  border: 5px;
+  transition: transform 0.2s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cv-pro-badge {
+    position: absolute;
+    bottom: 12px;
+    right: 6px;
+    background-color: #ffd34dd4;
+    border: 1px solid white;
+    color: #1a1a1a;
+    font-size: 10.5px;
+    font-weight: 500;
+    padding: 2px 4px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+    pointer-events: none;
+}
+
+.cv-pro-badge i {
+    font-size: 13px;
+    color: #d4a100;
+}
+
+.cv-pro-wrapper:hover {
+  transform: translateY(-4px);
+}
+
+.cv-style-selection .cv-pro-wrapper img:hover {
+  transform: none;
+}
+
+@media (max-width: 768px) {
+  .cvb-color-suggestions {
+    grid-template-columns: 1fr 1fr;
+  }
+  .cvb-color-box {
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+  }
+  .cv-style-filters {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .cv-style-selection-wrapper {
+    max-height: 245px;
+  }
+  .cv-style-selection {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ================================== APP CV Preview =================================== */
+  
+.cvb-preview-wrapper {
+  margin: 20px 0px 0px 0px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  box-shadow: 0 2px 12px var(--shadow);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.cvb-preview-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--bg-soft);
+  padding: 10px 15px;
+  border-bottom: 1px solid var(--border);
+}
+
+.cvb-preview-header h4 {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-soft);
+}
+
+.cvb-preview-placeholder {
+  height: 300px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--text-soft);
+  font-size: 13px;
+  text-align: center;
+  gap: 10px;
+  padding: 20px 70px 20px 20px;
+  border: 1px dashed var(--border);
+  border-radius: 8px;
+  background: var(--bg);
+}
+
+.cvb-preview-placeholder i {
+  font-size: 42px;
+  color: #007bff;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.cvb-preview-body {
+  background: var(--bg-soft);
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  padding: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+.cvb-preview-body > iframe {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+#cvb-preview-img {
+  transition: transform 0.2s ease;
+  transform-origin: center center;
+  cursor: grab;
+  max-width: none;
+}
+
+.cvb-preview-sidebar {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 10px;
+  background: var(--bg-card);
+  border-left: 1px solid var(--border);
+  border-radius: 10px 0 0 10px;
+  box-shadow: -2px 2px 12px rgba(0,0,0,0.08);
+}
+
+.cvb-btn-sidebar {
+  background: var(--bg-soft);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-blured) !important;
+}
+
+.cvb-btn-sidebar:hover {
+  background: #007bff !important;
+  border-color: #007bff !important;
+  color: white !important;
+}
+
+.cvb-preview-frame {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border: none;
+  display: block;
+  background: var(--bg-soft);
+  box-sizing: border-box;
+  border: 1px dashed var(--border);
+}

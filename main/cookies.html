@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="style/index.css" />
+    <link rel="stylesheet" href="style/landing.css" />
+    <link rel="icon" type="image/png" href="icons/operlya_favicon.png">
+    <title>Operlya - Cookie Policy</title>
+    <link rel="canonical" href="https://www.operlya.com/cookies">
+    <meta property="og:url" content="https://www.operlya.com/cookies">
+    <meta name="description" content="Learn how Operlya uses cookies and similar technologies, and how to manage your preferences.">
+</head>
+<body>
+
+<header class="cvb-topbar">
+  <div class="cvb-topbar-container">
+    <div class="cvb-topbar-left">
+      <a class="cvb-logo" href="/">
+        <img src="icons/operlya_favicon.png" alt="Operlya Logo" />
+        <span class="cvb-logo-text">Operlya</span>
+      </a>
+
+      <button class="nav_flagButton" id="topBarHelp"><i class="ri-question-line"></i> Need Help?</button>
+    </div>
+
+    <div class="navbar-actionsRight">
+
+      <div class="topbar-cta">
+        <a href="feed.html" data-title="opportunitiesExplorer" class="topbar-btn topbar-btn-primary">
+          <i class="ri-compass-discover-line"></i> Tasks Explorer
+        </a>
+
+        <a href="talents/resume.html" data-title="resumeBuilder" class="topbar-btn topbar-btn-outline">
+          <i class="ri-user-3-line"></i> Resume Builder
+        </a>
+      </div>
+
+      <div class="language-select" id="languageSelectorSidebar">
+        <div class="selectedLanguage">
+          <span class="fi fi-us"></span>
+          <span class="lang-text">English</span>
+        </div>
+        <ul class="options">
+          <li data-value="en"><span class="fi fi-us"></span> English</li>
+          <li data-value="es"><span class="fi fi-es"></span> Español</li>
+          <li data-value="zh"><span class="fi fi-cn"></span> 中文</li>
+          <li data-value="fr"><span class="fi fi-fr"></span> Français</li>
+          <li data-value="de"><span class="fi fi-de"></span> Deutsch</li>
+          <li data-value="ar"><span class="fi fi-sa"></span> العربية</li>
+          <li data-value="pt"><span class="fi fi-br"></span> Português</li>
+          <li data-value="ja"><span class="fi fi-jp"></span> 日本語</li>
+          <li data-value="ru"><span class="fi fi-ru"></span> Русский</li>
+        </ul>
+      </div>
+
+      <div class="navbar-actions" id="navbarActions">
+        <button class="nav_flagButton" id="loginButton"><i class="ri-login-circle-line"></i> Login</button>
+      </div>
+
+      <div class="cvb-menu-toggle" id="cvb_menu_toggle">☰</div>
+    </div>
+
+  </div>
+
+  <div class="cvb-topbar-containerMobile">
+    <nav class="cvb-nav-mobile" id="cvb-default-navMobile">
+      <ul>
+        <li><a href="feed.html" data-title="opportunitiesExplorer"><i class="ri-compass-discover-line"></i> Tasks Explorer</a></li>
+        <li><a href="talents/resume.html" data-title="resumeBuilder"><i class="ri-user-3-line"></i> Resume Builder</a></li>
+      </ul>
+    </nav>
+    <div class="cvb-mobileLeft">
+      <button class="nav_flagButton" id="openhelpMobile"><i class="ri-question-line"></i> Need Help?</button>
+      <div class="language-select mobile-lang" id="languageSelectorMobile">
+        <div class="selectedLanguage">
+          <span class="fi fi-us"></span>
+          <span class="lang-text">English</span>
+        </div>
+        <ul class="options">
+          <li data-value="en"><span class="fi fi-us"></span> English</li>
+          <li data-value="es"><span class="fi fi-es"></span> Español</li>
+          <li data-value="zh"><span class="fi fi-cn"></span> 中文</li>
+          <li data-value="fr"><span class="fi fi-fr"></span> Français</li>
+          <li data-value="de"><span class="fi fi-de"></span> Deutsch</li>
+          <li data-value="ar"><span class="fi fi-sa"></span> العربية</li>
+          <li data-value="pt"><span class="fi fi-br"></span> Português</li>
+          <li data-value="ja"><span class="fi fi-jp"></span> 日本語</li>
+          <li data-value="ru"><span class="fi fi-ru"></span> Русский</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div id="helpModal" class="modal">
+  <div class="modal-content">
+
+    <div class="modal-header">
+      <h2>Need Help?</h2>
+
+      <button class="close-icon" id="closeHelp" title="close help">
+        <i class="ri-close-line"></i>
+      </button>
+    </div>
+
+    <p class="modal-subtitle">
+      We're here to support you. Choose a topic and tell us your issue.
+    </p>
+
+    <div class="modal-dropdown-wrapper">
+      <i class="ri-arrow-down-s-line modal-dropdown-icon"></i>
+      <select id="helpCategory" title="Help Category" class="modal-dropdown">
+        <option value="" disabled selected>Select a category</option>
+        <option value="account">Account & Login Issues</option>
+        <option value="coins">Coins & Payments</option>
+        <option value="builder">CV Builder Help</option>
+        <option value="bug">Report a Bug</option>
+      </select>
+    </div>
+
+    <div id="helpFormContainer">
+      <input type="email" id="helpEmail" placeholder="Enter your email">
+      <textarea id="helpMessage" placeholder="Write your message..." rows="4"></textarea>
+      <button id="helpSendBtn">Send Message</button>
+    </div>
+
+  </div>
+</div>
+
+<section class="operlya-page">
+  <div class="cvb-privacy-container">
+
+    <h1>Cookie Policy – Operlya</h1>
+    <p class="updated-date">Last Updated: August 2026</p>
+
+    <p>
+      This Cookie Policy explains how <strong>Operlya</strong> uses cookies and similar technologies
+      (such as local storage and session storage) when you visit or use our website and services.
+      It should be read together with our <a href="privacy.html">Privacy Policy</a>.
+    </p>
+
+    <h2>1. What Are Cookies</h2>
+    <p>
+      Cookies are small text files placed on your device by websites you visit. They are widely used to make
+      websites work, keep you signed in, remember your preferences, and understand how a site is used.
+    </p>
+
+    <h2>2. Categories of Cookies We Use</h2>
+    <p>
+      Operlya groups the cookies and similar technologies it uses into the following categories:
+    </p>
+    <ul>
+      <li>
+        <strong>Strictly Necessary</strong>: required for core functionality such as keeping you signed in
+        (authentication session), remembering security settings, and enabling basic navigation. These cannot
+        be disabled without breaking the Platform, and do not require consent under applicable law.
+      </li>
+      <li>
+        <strong>Functional</strong>: remember your preferences, such as your selected display language, so you
+        don't have to reconfigure them on every visit.
+      </li>
+      <li>
+        <strong>Analytics</strong>: help us understand how visitors use Operlya (pages viewed, general navigation
+        patterns) so we can improve the Platform. We currently use Google Analytics / Google Tag Manager for this
+        purpose.
+      </li>
+      <li>
+        <strong>Advertising / Measurement</strong>: help us measure the performance of our marketing campaigns.
+        We currently use the Meta (Facebook) Pixel for this purpose.
+      </li>
+    </ul>
+
+    <h2>3. Consent</h2>
+    <p>
+      When you first visit Operlya, you are shown a cookie banner where you can accept or reject non-essential
+      cookies (Analytics and Advertising / Measurement categories). Analytics and advertising tags are not loaded
+      until you give your consent. Strictly Necessary and Functional cookies are always active, as the Platform
+      cannot function properly without them. You can change your choice at any time by clearing your browser's
+      site data for operlya.com, which will show the banner again on your next visit.
+    </p>
+
+    <h2>4. Third-Party Cookies</h2>
+    <p>
+      Some cookies are set by third-party services we rely on, including Google (Analytics / Tag Manager) and
+      Meta (Facebook Pixel), and — for signed-in users — Firebase Authentication for session management. These
+      providers may use the information collected for their own purposes as described in their respective privacy
+      policies. Operlya does not control these third-party cookies directly.
+    </p>
+
+    <h2>5. Managing Cookies in Your Browser</h2>
+    <p>
+      In addition to the choice offered in our cookie banner, most browsers let you block or delete cookies
+      through their settings. Disabling Strictly Necessary or Functional cookies may prevent core features —
+      such as staying signed in or saving your language preference — from working correctly.
+    </p>
+
+    <h2>6. Changes to This Policy</h2>
+    <p>
+      We may update this Cookie Policy from time to time to reflect changes in the technologies we use or for
+      legal, operational, or regulatory reasons. Updates will be posted on this page with a revised
+      "Last Updated" date.
+    </p>
+
+    <h2>7. Contact</h2>
+    <p>
+      If you have questions about this Cookie Policy, contact us at:
+      <br><strong>support@operlya.com</strong>
+    </p>
+
+  </div>
+</section>
+
+<footer class="operlya-footer">
+  <div class="footer-container">
+    <div class="footer-col brand">
+      <div class="footer-logo">
+        <img src="icons/operlya_favicon.png" alt="Operlya logo">
+        <span>Operlya</span>
+      </div>
+      <p>
+        Build your resume, publish your professional profile, find opportunities,
+        and manage real work — all in one platform.
+      </p>
+      <div class="footer-socials">
+        <a title="X" href="https://x.com/operlya"><i class="ri-twitter-x-line"></i></a>
+        <a title="Linkedin" href="https://linkedin.com/company/operlya/"><i class="ri-linkedin-line"></i></a>
+        <a title="Instagram" href="https://instagram.com/operlya"><i class="ri-instagram-line"></i></a>
+        <a title="Tiktok" href="https://tiktok.com/operlyaa"><i class="ri-tiktok-line"></i></a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h4>Discover</h4>
+      <a href="talents/resume.html">Resume Builder</a>
+      <a href="feed.html">Opportunities</a>
+    </div>
+
+    <div class="footer-col">
+      <h4>Resources</h4>
+      <a href="contact.html">Help Center</a>
+      <a href="career-tips.html">Career Tips</a>
+      <a href="resume-builder.html">ATS Resume Guide</a>
+    </div>
+
+    <div class="footer-col">
+      <h4>Company</h4>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms</a>
+    </div>
+
+    <div class="footer-col footer-cta">
+      <h4>Start your career system</h4>
+      <p>Create your profile and start getting opportunities today.</p>
+
+      <a href="talents/resume.html" class="btn-primary">
+        <i class="ri-user-3-line"></i> Create Profile
+      </a>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2026 Operlya. All rights reserved.</p>
+
+    <div class="footer-bottom-links">
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="cookies.html">Cookies</a>
+    </div>
+  </div>
+</footer>
+
+<script type="module" src="index/index.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flag-icons/css/flag-icons.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@563&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&family=Inter:wght@563&family=Roboto:ital,wght@0,100..900;1,100..900&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap" rel="stylesheet">
+
+</body>
+</html>

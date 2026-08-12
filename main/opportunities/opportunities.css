@@ -1,0 +1,492 @@
+.opportunitiesPage{
+    display:grid;
+    grid-template-columns:70% 1fr;
+    padding:20px 60px;
+    gap:25px;
+}
+
+/* ============================== OPPORTUNTIES LEFT ============================ */
+
+.displayOpportunity{
+    display:grid;
+    gap:18px;
+    height: min-content;
+}
+
+.externalOpportunity{
+    display:grid;
+    gap:18px;
+}
+
+.externalHero{
+    display:grid;
+    gap:14px;
+    padding-bottom:18px;
+    border-bottom:
+    1px solid #f1f5f9;
+}
+
+.externalHero-top{
+    display:flex;
+    justify-content:
+    space-between;
+    align-items:center;
+}
+
+.externalBadge{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    width:fit-content;
+    padding:7px 14px;
+    border-radius:999px;
+    background:#eff6ff;
+    color:#2563eb;
+    font-size:12px;
+    font-weight:700;
+}
+
+.externalSave{
+    width:38px;
+    height:38px;
+    border: 1px solid #dbeafe;
+    background: white;
+    color: #2563eb;
+    border-radius:10px;
+    cursor:pointer;
+    transition:.2s;
+}
+
+.externalSave:hover{
+    background:#eff6ff;
+}
+
+.externalShare{
+    display:flex;
+    align-items:center;
+    gap:6px;
+}
+
+.shareBtn{
+    width:38px;
+    height:38px;
+    border-radius:10px;
+    border:1px solid #dbeafe;
+    background:white;
+    cursor:pointer;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#2563eb;
+    font-size: 15px;
+    transition:.2s;
+}
+
+.shareBtn:hover{
+    background:#f8fafc;
+    color:#2563eb;
+}
+
+.externalHero h1{
+    margin:0;
+    font-size:34px;
+    line-height:1.2;
+    color:#111827;
+}
+
+.externalHero-meta{
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+}
+
+.externalHero-meta span{
+    display:flex;
+    align-items:center;
+    gap:6px;
+    padding:7px 12px;
+    border-radius:8px;
+    background:#f8fafc;
+    color:#475569;
+    font-size:13px;
+    font-weight:500;
+}
+
+.externalHero-meta i{
+    color:#2563eb;
+}
+
+.externalSection{
+    display:grid;
+    gap:12px;
+}
+
+.externalSection h3{
+    margin:0;
+    font-size:17px;
+    display:flex;
+    align-items:center;
+    gap:8px;
+    color:#111827;
+}
+
+.externalSection i{
+    color:#2563eb;
+}
+
+.externalDescription{
+    margin:0;
+    font-size:15px;
+    line-height:1.9;
+    color:#475569;
+}
+
+.externalInfoGrid{
+    display:grid;
+    grid-template-columns:
+    repeat(3,1fr);
+    gap:12px;
+}
+
+.externalInfo{
+    padding:16px;
+    border-radius:12px;
+    background:#f8fafc;
+    display:grid;
+    gap:6px;
+}
+
+.externalInfo span{
+    font-size:12px;
+    color:#64748b;
+}
+
+.externalInfo strong{
+    color:#111827;
+    font-size:14px;
+}
+
+.externalActionBar{
+    padding-top:10px;
+}
+
+.externalApply{
+    width:100%;
+    border:none;
+    background:#2563eb;
+    color:white;
+    padding:14px;
+    border-radius:12px;
+    font-size:15px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.25s;
+}
+
+.externalApply:hover{
+    background:#1d4ed8;
+    transform:
+    translateY(-1px);
+    box-shadow: 0 8px 25px rgba(37,99,235,.25);
+}
+
+.externalDescriptionWrapper {
+    display: grid;
+    gap: 8px;
+}
+
+.externalDescription {
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.9;
+    color: #475569;
+    overflow: hidden;
+    transition: max-height .35s ease;
+}
+
+.externalDescription.collapsed {
+    max-height: 170px;
+    position: relative;
+}
+
+.externalDescription.collapsed::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    pointer-events: none;
+    background: linear-gradient(transparent, white);
+}
+
+.externalReadMore {
+    width: fit-content;
+    border: none;
+    background: none;
+    padding: 0;
+    color: #2563eb;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.externalReadMore:hover {
+    color: #1d4ed8;
+}
+
+@media(max-width:900px){
+
+    .opportunitiesPage{
+        grid-template-columns:1fr;
+        padding:16px;
+        gap: 0px;
+    }
+
+    .externalInfoGrid{
+        grid-template-columns:1fr;
+    }
+
+    .externalHero-top{
+        display:grid;
+        gap: 10px;
+    }
+
+    .externalHero h1{
+        font-size:28px;
+    }
+
+}
+
+/* ============================== OPPORTUNTIES RIGHT ============================ */
+
+.moreOpportunitiesWrapper{
+    display:grid;
+    gap:12px;
+    position:sticky;
+    top:20px;
+    height:calc(100vh - 40px);
+}
+
+.moreOpportunitiesHeader{
+    display:grid;
+    gap:4px;
+    padding: 5px 5px;
+}
+
+.moreOpportunitiesHeader-top{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:10px;
+}
+
+.createOpportunityBtn{
+    display:flex;
+    align-items:center;
+    gap:5px;
+    border:none;
+    background:#eff6ff;
+    color:#2563eb;
+    text-decoration: none;
+    padding:6px 10px;
+    border-radius:8px;
+    font-size:12px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.2s;
+    white-space:nowrap;
+}
+
+.createOpportunityBtn:hover{
+    background:#dbeafe;
+    transform:translateY(-1px);
+}
+
+.createOpportunityBtn i{
+    font-size:14px;
+}
+
+.moreOpportunitiesHeader h3{
+    margin:0;
+    font-size:15px;
+    font-weight:700;
+    color:#111827;
+}
+
+.moreOpportunitiesHeader span{
+    font-size:12px;
+    color:#64748b;
+}
+
+.moreOpportunities{
+    display:grid;
+    gap:12px;
+    align-content:start;
+    position:sticky;
+    top:20px;
+    height:calc(100vh - 40px);
+    overflow-y:auto;
+}
+
+.moreOpportunities::-webkit-scrollbar{
+    width:6px;
+}
+
+.moreOpportunities::-webkit-scrollbar-thumb{
+    background:#e5e7eb;
+    border-radius:10px;
+}
+
+.moreOpportunities::-webkit-scrollbar-thumb:hover{
+    background:#cbd5e1;
+}
+
+.external-card {
+    height: min-content;
+    position: relative;
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    padding: 18px;
+    display: grid;
+    gap: 12px;
+    transition: 0.2s ease;
+    overflow: hidden;
+}
+
+.external-card:hover {
+  border-color: #d1d5db;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+}
+
+.external-title {
+  font-size: 17px;
+  font-weight: 600;
+  color: #111827;
+}
+
+.external-description {
+  font-size: 13px;
+  line-height: 1.6;
+  color: #475569;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.external-tag {
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: #f1f5f9;
+  color: #2563eb;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.external-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.external-meta span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 8px;
+  border-radius: 6px;
+  background: #f8fafc;
+  color: #334155;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.external-meta i {
+  font-size: 14px;
+  color: #2563eb;
+}
+
+.external-actions {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 10px;
+}
+
+.external-openBtn {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all .25s ease;
+}
+
+.external-openBtn:hover {
+  background: #1d4ed8;
+}
+
+.external-saveBtn {
+  width: 40px;
+  border-radius: 8px;
+  border: 1px solid #dbeafe;
+  background: white;
+  color: #2563eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all .2s ease;
+}
+
+.external-saveBtn:hover {
+  background: #eff6ff;
+}
+
+.external-info {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  font-weight: 500;
+  color: #64748b;
+  width: fit-content;
+}
+
+.similar-card{
+    cursor:pointer;
+}
+
+.similar-card:hover{
+    border-color:#dbeafe;
+    box-shadow:0 10px 25px rgba(0,0,0,0.05);
+}
+
+.similar-card .external-title{
+    font-size:14px;
+}
+
+.similar-card .external-description{
+    font-size:12px;
+    line-height:1.5;
+}
+
+@media(max-width:900px){
+    .moreOpportunitiesWrapper{
+        position: relative;
+        height: auto;
+    }
+
+    .moreOpportunitiesHeader-top{
+        flex-wrap:wrap;
+    }
+
+    .moreOpportunities{
+        height: auto;
+    }
+}

@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta property="og:type" content="website" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="style/index.css" />
+    <link rel="stylesheet" href="auth/login.css" />
+    <link rel="stylesheet" href="style/forms.css" />
+    <link rel="stylesheet" href="style/landing.css" />
+    <link rel="stylesheet" href="u/account.css" />
+    <link rel="stylesheet" href="opportunities/tasks.css" />
+    <link rel="icon" type="image/png" href="icons/operlya_favicon.png">
+    <title>Jobs, Tasks & Opportunities | Operlya</title>
+    <link rel="canonical" href="https://www.operlya.com/feed">
+    <meta property="og:url" content="https://www.operlya.com/feed">
+    <meta name="description" content="Find jobs, tasks, freelance work, and career opportunities. Build your profile and grow your career with Operlya.">
+    <meta property="og:description" content="Better opportunities, built differently." />
+    <meta property="og:image" content="https://www.operlya.com/images/operlya_illustration_link_3.png">
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+</head>
+<body>
+
+<header class="cvb-topbar">
+  <div class="cvb-topbar-container">
+    <div class="cvb-topbar-left">
+      <a class="cvb-logo" href="/">
+        <img src="icons/operlya_favicon.png" alt="Operlya Logo" />
+        <span class="cvb-logo-text">Operlya</span>
+      </a>
+
+      <button class="nav_helpButton" id="topBarHelp"><i class="ri-question-line"></i> Need Help?</button>
+    </div>
+
+    <div class="navbar-actionsRight">
+      
+      <div class="topbar-cta">
+        <a href="opportunities/create.html" data-title="postOpportunity" class="topbar-btn topbar-btn-primary">
+          <i class="ri-add-circle-line"></i> Create Opportunity
+        </a>
+
+        <a href="opportunities/execution.html" data-title="executionCenter" class="topbar-btn topbar-btn-outline">
+          <i class="ri-timeline-view"></i> Execution Center
+        </a>
+
+        <a href="talents/resume.html"  data-title="resumeBuilder" class="topbar-btn topbar-btn-outline">
+          <i class="ri-file-list-3-line"></i> Resume Builder
+        </a>
+      </div>
+
+      <div class="language-select" id="languageSelectorSidebar">
+        <div class="selectedLanguage">
+          <span class="fi fi-us"></span>
+          <span class="lang-text">English</span>
+        </div>
+        <ul class="options">
+          <li data-value="en"><span class="fi fi-us"></span> English</li>
+          <li data-value="es"><span class="fi fi-es"></span> Español</li>
+          <li data-value="zh"><span class="fi fi-cn"></span> 中文</li>
+          <li data-value="fr"><span class="fi fi-fr"></span> Français</li>
+          <li data-value="de"><span class="fi fi-de"></span> Deutsch</li>
+          <li data-value="ar"><span class="fi fi-sa"></span> العربية</li>
+          <li data-value="pt"><span class="fi fi-br"></span> Português</li>
+          <li data-value="ja"><span class="fi fi-jp"></span> 日本語</li>
+          <li data-value="ru"><span class="fi fi-ru"></span> Русский</li>
+        </ul>
+      </div>
+
+      <div class="navbar-actions" id="navbarActions"></div>
+
+      <div class="cvb-menu-toggle" id="cvb_menu_toggle">☰</div>
+    </div>
+
+  </div>
+
+  <div class="cvb-topbar-containerMobile">
+    <nav class="cvb-nav-mobile" id="cvb-default-navMobile">
+      <ul>
+        <li><a href="opportunities/create.html" data-title="postOpportunity"><i class="ri-add-circle-line"></i> Create Opportunity</a></li>
+        <li><a href="opportunities/execution.html" data-title="executionCenter"><i class="ri-timeline-view"></i> Execution Center</a></li>
+        <li><a href="talents/resume.html" data-title="resumeBuilder"><i class="ri-user-3-line"></i> Resume Builder</a></li>
+      </ul>
+    </nav>
+    <div class="cvb-mobileLeft">
+      <div class="language-select mobile-lang" id="languageSelectorMobile">
+        <div class="selectedLanguage">
+          <span class="fi fi-us"></span>
+          <span class="lang-text">English</span>
+        </div>
+        <ul class="options">
+          <li data-value="en"><span class="fi fi-us"></span> English</li>
+          <li data-value="es"><span class="fi fi-es"></span> Español</li>
+          <li data-value="zh"><span class="fi fi-cn"></span> 中文</li>
+          <li data-value="fr"><span class="fi fi-fr"></span> Français</li>
+          <li data-value="de"><span class="fi fi-de"></span> Deutsch</li>
+          <li data-value="ar"><span class="fi fi-sa"></span> العربية</li>
+          <li data-value="pt"><span class="fi fi-br"></span> Português</li>
+          <li data-value="ja"><span class="fi fi-jp"></span> 日本語</li>
+          <li data-value="ru"><span class="fi fi-ru"></span> Русский</li>
+        </ul>
+      </div>
+      <button class="nav_helpButton" id="openhelpMobile"><i class="ri-question-line"></i> Need Help?</button>
+    </div>    
+  </div>
+</header>
+
+<div id="helpModal" class="modal">
+  <div class="modal-content">
+    
+    <div class="modal-header">
+      <h2>Need Help?</h2>
+
+      <button class="close-icon" id="closeHelp" title="close help">
+        <i class="ri-close-line"></i>
+      </button>
+    </div>
+
+    <p class="modal-subtitle">
+      We're here to support you. Choose a topic and tell us your issue.
+    </p>
+
+    <!-- Modern Dropdown -->
+    <div class="modal-dropdown-wrapper">
+      <i class="ri-arrow-down-s-line modal-dropdown-icon"></i>
+      <select id="helpCategory" title="Help Category" class="modal-dropdown">
+        <option value="" disabled selected>Select a category</option>
+        <option value="account">Account & Login Issues</option>
+        <option value="coins">Coins & Payments</option>
+        <option value="builder">CV Builder Help</option>
+        <option value="bug">Report a Bug</option>
+      </select>
+    </div>
+
+    <div id="helpFormContainer">
+      <input type="email" id="helpEmail" placeholder="Enter your email">
+      <textarea id="helpMessage" placeholder="Write your message..." rows="4"></textarea>
+      <button id="helpSendBtn">Send Message</button>
+    </div>
+
+  </div>
+</div>
+
+<div class="notify2-modal" id="newTaskNotif">
+  <div class="notify2-content">
+    <button title="Close Form" class="notify2-close-top" id="notifyCloseTop"><i class="ri-close-line"></i></button>
+    <div class="notify2-icon" id="notifyIcon"></div>
+    <h3 id="notifyTitle">Title</h3>
+    <p id="notifyMessage">Message goes here</p>
+    <div class="notify2-actions" id="notifyActions">
+      <button class="notify2-btn notify2-btn-secondary" id="notifyCancel">Cancel</button>
+      <button class="notify2-btn notify2-btn-primary" id="notifyConfirm">Reset settings</button>
+    </div>
+  </div>
+</div>
+
+<div class="loginModalPage" id="loginModalPage"></div>
+
+<div class="tasksPage">
+
+  <aside class="leftBar">
+    <div class="right-profile" id="right-profile">
+        <div class="profile-card">
+
+          <div class="profile-cover" id="profileCover">
+            <canvas id="profileCanvas"></canvas>
+          </div>
+
+          <div class="profile-avatar">
+            <img id="profileAvatar" src="images/default_avatar.png" alt="Profile Avatar">
+          </div>
+
+          <div class="avatar-actions" id="avatarActions">
+            <button class="avatar-btn cancel" id="cancelAvatarBtn">
+              <i class="ri-close-line"></i> Cancel
+            </button>
+            <button class="avatar-btn save" id="saveAvatarBtn">
+              <i class="ri-check-line"></i> Save avatar
+            </button>
+          </div>
+
+          <div class="profile-identity">
+            <h2 id="profileFullName"></h2>
+            <p class="profile-headline" id="profileHeadline"></p>
+            <p class="profile-industry" id="profileIndustry"></p>
+          </div>
+
+          <div class="profile-stats">
+            <div id="profileVerified" class="profile-badge verified">
+              <i class="ri-shield-check-line"></i>
+              <span>Verification</span>
+            </div>
+            <div class="profile-badge role" id="profileRole">
+              <i class="ri-briefcase-line"></i>
+              <span>Status</span>
+            </div>
+            <div class="profile-badge availability" id="profileAvailability">
+              <i class="ri-time-line"></i>
+              <span>Availability</span>
+            </div>
+          </div>
+
+          <div class="profile-kpis"></div>
+
+        </div>
+    </div>
+    <div class="leftBar-inner">
+
+      <div class="lb-section">
+        <a class="lb-item active" data-filter="all">
+          <i class="ri-compass-3-line"></i>
+          <span>Explore All</span>
+        </a>
+
+        <a class="lb-item" data-filter="tasks">
+          <i class="ri-checkbox-circle-line"></i>
+          <span>Tasks</span>
+        </a>
+
+        <a class="lb-item" data-filter="jobs">
+          <i class="ri-briefcase-4-line"></i>
+          <span>Jobs</span>
+        </a>
+
+        <a class="lb-item" data-filter="projects">
+          <i class="ri-folder-3-line"></i>
+          <span>Projects</span>
+          <span class="lb-soon">Soon</span>
+        </a>
+
+        <a class="lb-item" data-filter="benevols">
+          <i class="ri-heart-3-line"></i>
+          <span>Benevols</span>
+          <span class="lb-soon">Soon</span>
+        </a>
+      </div>
+
+      <div class="lb-divider"></div>
+
+      <div class="lb-section small">
+        <a class="lb-item">
+          <i class="ri-fire-line"></i>
+          <span>Trending</span>
+        </a>
+
+        <a class="lb-item">
+          <i class="ri-time-line"></i>
+          <span>Recent</span>
+        </a>
+      </div>
+
+      <div class="lb-divider"></div>
+
+      <a class="lb-item" data-filter="saved">
+        <i class="ri-bookmark-line"></i>
+        <span>Saved Tasks</span>
+      </a>
+
+      <a class="lb-item" data-filter="applied">
+        <i class="ri-send-plane-line"></i>
+        <span>Applied Tasks</span>
+      </a>
+
+    </div>
+    <div class="tasksFilter">
+      <!-- Modern Tasks Filter -->
+      <div class="tasksFilter-Card">
+        <div class="tasksFilter-content">
+          <div class="tasksFilter-header">
+            <span class="tf-title"><i class="ri-filter-3-fill"></i> Find Opportunities</span>
+            <button id="toggleFilters" title="Filter More">
+              <i class="ri-arrow-up-s-line"></i>
+            </button>
+          </div>
+
+          <div class="tasksFilter-top">
+            <div class="tf-search">
+              <i class="ri-map-pin-line"></i>
+              <input type="text" id="locationFilter" placeholder="Search location...">
+            </div>
+            <div class="tf-search">
+              <i class="ri-hashtag"></i>
+              <input type="text" id="bytextFilter" placeholder="Search by speciality or market...">
+            </div>
+          </div>
+
+          <div class="tasksFilter-bottom">
+
+            <div class="tf-group">
+              <label class="tf-checkbox">
+                <input type="checkbox" value="Remote" checked>
+                <span>Remote</span>
+              </label>
+
+              <label class="tf-checkbox">
+                <input type="checkbox" value="OnSite" checked>
+                <span>On-Site</span>
+              </label>
+
+              <label class="tf-checkbox">
+                <input type="checkbox" value="Hybrid" checked>
+                <span>Hybrid</span>
+              </label>
+
+              <label class="tf-checkbox">
+                <input type="checkbox" value="Independent" checked>
+                <span>Independent</span>
+              </label>
+            </div>
+
+            <div class="tf-complexity">
+              <div class="tf-complexity-header">
+                <span>Complexity Level</span>
+                <span id="complexityValue">80%</span>
+              </div>
+              <input type="range" title="Complexity Range" id="complexityRange" min="0" max="100" value="80">
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <div class="tasksFeed">
+    <div class="premiumTasks" id="premiumTasks"></div>
+    <div class="externalTasksList">
+      <div class="tasksFeed-header">
+        <div>
+          <h3><i class="ri-global-fill"></i> External Opportunities</h3>
+          <span>Curated jobs and missions imported from trusted platforms</span>
+        </div>
+        <div class="external-feed-badge">
+          <span class="live-dot"></span> Live Sources
+        </div>
+      </div>
+      <div class="externalTasksGrid" id="externalTasksContainer"></div>
+    </div>
+    <div id="tasksList2">
+      <div class="tasksList" id="tasksContainer"></div>
+      <div id="tasksFooter"></div>
+    </div>
+  </div>
+
+</div>
+
+<div class="mobileTaskNav">
+
+  <button class="mobile-nav-item active" data-filter="all">
+    <i class="ri-compass-3-line"></i>
+    <span>Explore</span>
+  </button>
+
+  <button class="mobile-nav-item" data-filter="tasks">
+    <i class="ri-checkbox-circle-line"></i>
+    <span>Tasks</span>
+  </button>
+
+  <button class="mobile-nav-item" data-filter="network">
+    <i class="ri-team-line"></i>
+    <span>Network</span>
+  </button>
+
+  <button class="mobile-nav-item" data-filter="saved">
+    <i class="ri-bookmark-line"></i>
+    <span>Saved</span>
+  </button>
+
+  <button class="mobile-nav-item" data-filter="applied">
+    <i class="ri-send-plane-line"></i>
+    <span>Applied</span>
+  </button>
+
+</div>
+
+  <aside class="rightBar">
+    <div class="rightBar-inner">
+      <div class="right-network" id="right-network"></div>
+    </div>
+  </aside>
+  
+<script type="module" src="opportunities/tasks.js"></script>
+<script type="module" src="auth/login_modal.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flag-icons/css/flag-icons.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@563&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&family=Inter:wght@563&family=Roboto:ital,wght@0,100..900;1,100..900&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap" rel="stylesheet">
+
+<link crossorigin='anonymous' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css' integrity='sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==' referrerpolicy='no-referrer' rel='stylesheet'/>
+<script src='https://apis.google.com/js/api.js'></script>
+
+</body>
+</html>

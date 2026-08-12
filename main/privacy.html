@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="style/index.css" />
+    <link rel="stylesheet" href="style/landing.css" />
+    <link rel="icon" type="image/png" href="icons/operlya_favicon.png">
+    <title>Operlya - Privacy Policy</title>
+    <link rel="canonical" href="https://www.operlya.com/privacy">
+    <meta property="og:url" content="https://www.operlya.com/privacy">
+</head>
+<body>
+
+<header class="cvb-topbar">
+  <div class="cvb-topbar-container">
+    <div class="cvb-topbar-left">
+      <a class="cvb-logo" href="/">
+        <img src="icons/operlya_favicon.png" alt="Operlya Logo" />
+        <span class="cvb-logo-text">Operlya</span>
+      </a>
+
+      <button class="nav_flagButton" id="topBarHelp"><i class="ri-question-line"></i> Need Help?</button>
+    </div>
+
+    <div class="navbar-actionsRight">
+      
+      <div class="topbar-cta">
+        <a href="feed.html" data-title="opportunitiesExplorer" class="topbar-btn topbar-btn-primary">
+          <i class="ri-compass-discover-line"></i> Tasks Explorer
+        </a>
+
+        <a href="talents/resume.html" data-title="resumeBuilder" class="topbar-btn topbar-btn-outline">
+          <i class="ri-user-3-line"></i> Resume Builder
+        </a>
+      </div>
+
+      <div class="language-select" id="languageSelectorSidebar">
+        <div class="selectedLanguage">
+          <span class="fi fi-us"></span>
+          <span class="lang-text">English</span>
+        </div>
+        <ul class="options">
+          <li data-value="en"><span class="fi fi-us"></span> English</li>
+          <li data-value="es"><span class="fi fi-es"></span> Español</li>
+          <li data-value="zh"><span class="fi fi-cn"></span> 中文</li>
+          <li data-value="fr"><span class="fi fi-fr"></span> Français</li>
+          <li data-value="de"><span class="fi fi-de"></span> Deutsch</li>
+          <li data-value="ar"><span class="fi fi-sa"></span> العربية</li>
+          <li data-value="pt"><span class="fi fi-br"></span> Português</li>
+          <li data-value="ja"><span class="fi fi-jp"></span> 日本語</li>
+          <li data-value="ru"><span class="fi fi-ru"></span> Русский</li>
+        </ul>
+      </div>
+
+      <div class="navbar-actions" id="navbarActions">
+        <button class="nav_flagButton" id="loginButton"><i class="ri-login-circle-line"></i> Login</button>
+      </div>
+
+      <div class="cvb-menu-toggle" id="cvb_menu_toggle">☰</div>
+    </div>
+
+  </div>
+
+  <div class="cvb-topbar-containerMobile">
+    <nav class="cvb-nav-mobile" id="cvb-default-navMobile">
+      <ul>
+        <li><a href="feed.html" data-title="opportunitiesExplorer"><i class="ri-compass-discover-line"></i> Tasks Explorer</a></li>
+        <li><a href="talents/resume.html" data-title="resumeBuilder"><i class="ri-user-3-line"></i> Resume Builder</a></li>
+      </ul>
+    </nav>
+    <div class="cvb-mobileLeft">
+      <button class="nav_flagButton" id="openhelpMobile"><i class="ri-question-line"></i> Need Help?</button>
+      <div class="language-select mobile-lang" id="languageSelectorMobile">
+        <div class="selectedLanguage">
+          <span class="fi fi-us"></span>
+          <span class="lang-text">English</span>
+        </div>
+        <ul class="options">
+          <li data-value="en"><span class="fi fi-us"></span> English</li>
+          <li data-value="es"><span class="fi fi-es"></span> Español</li>
+          <li data-value="zh"><span class="fi fi-cn"></span> 中文</li>
+          <li data-value="fr"><span class="fi fi-fr"></span> Français</li>
+          <li data-value="de"><span class="fi fi-de"></span> Deutsch</li>
+          <li data-value="ar"><span class="fi fi-sa"></span> العربية</li>
+          <li data-value="pt"><span class="fi fi-br"></span> Português</li>
+          <li data-value="ja"><span class="fi fi-jp"></span> 日本語</li>
+          <li data-value="ru"><span class="fi fi-ru"></span> Русский</li>
+        </ul>
+      </div>
+    </div>    
+  </div>
+</header>
+
+<div id="helpModal" class="modal">
+  <div class="modal-content">
+    
+    <div class="modal-header">
+      <h2>Need Help?</h2>
+
+      <button class="close-icon" id="closeHelp" title="close help">
+        <i class="ri-close-line"></i>
+      </button>
+    </div>
+
+    <p class="modal-subtitle">
+      We're here to support you. Choose a topic and tell us your issue.
+    </p>
+
+    <!-- Modern Dropdown -->
+    <div class="modal-dropdown-wrapper">
+      <i class="ri-arrow-down-s-line modal-dropdown-icon"></i>
+      <select id="helpCategory" title="Help Category" class="modal-dropdown">
+        <option value="" disabled selected>Select a category</option>
+        <option value="account">Account & Login Issues</option>
+        <option value="coins">Coins & Payments</option>
+        <option value="builder">CV Builder Help</option>
+        <option value="bug">Report a Bug</option>
+      </select>
+    </div>
+
+    <div id="helpFormContainer">
+      <input type="email" id="helpEmail" placeholder="Enter your email">
+      <textarea id="helpMessage" placeholder="Write your message..." rows="4"></textarea>
+      <button id="helpSendBtn">Send Message</button>
+    </div>
+
+  </div>
+</div>
+
+<section class="operlya-page">
+  <div class="cvb-privacy-container">
+
+    <h1 id="privacy-title">Privacy Policy – Operlya</h1>
+    <p class="updated-date" id="privacy-updated">Last Updated: April 2026</p>
+
+    <p id="privacy-p1">
+      At <strong>Operlya</strong>, we are committed to protecting your privacy, securing your personal data,
+      and ensuring full transparency in how your information is collected, processed, and used.
+      Operlya is a modern AI-powered career ecosystem that enables users to build professional CVs,
+      manage personal career profiles, access intelligent tools, and interact with digital employment services.
+      <br><br>
+      This Privacy Policy explains in detail how we handle your data when you use Operlya (the “Platform”, “Service”).
+      By accessing or using Operlya, you agree to the terms described in this Privacy Policy.
+    </p>
+
+    <h2 id="privacy-1-title">1. Information We Collect</h2>
+    <p id="privacy-1-text">
+      We collect only the information necessary to operate, improve, and personalize your experience on Operlya.
+      This includes, but is not limited to, the following categories of data, which we gather either directly from your input, automatically through your interactions, or from third-party authentication services:
+    </p>
+    <ul>
+      <li id="privacy-1-li1">
+        <strong>Account Information</strong>: Full name, email address, authentication data (including hashed passwords and social login tokens), and unique account identifiers such as user ID and registration date.
+      </li>
+      <li id="privacy-1-li2">
+        <strong>Professional Profile Data</strong>: Comprehensive CV details including education history (institutions, degrees, dates), skills inventory (hard, soft, and technical skills), work experience (job titles, company names, responsibilities, durations), certifications, licenses, professional affiliations, spoken languages with proficiency levels, and explicit career preferences (desired roles, industries, locations, and salary expectations).
+      </li>
+      <li id="privacy-1-li3">
+        <strong>Generated Content</strong>: All AI-generated CVs, cover letters, professional summaries, accomplishment statements, skill suggestions, career biographies, and any document edits, revisions, or outputs created within Operlya’s AI tools. This also includes user feedback on AI outputs (e.g., likes, dislikes, corrections).
+      </li>
+      <li id="privacy-1-li4">
+        <strong>Usage Data</strong>: Detailed interactions with the Platform, including feature usage frequency (e.g., number of CV generations per session), navigation behavior (click paths, time spent on pages), feature adoption rates, search queries, export actions, and system performance logs (error reports, latency data).
+      </li>
+      <li id="privacy-1-li5">
+        <strong>Technical Data</strong>: IP address (for geolocation and security), browser type and version, device information (make, model, screen resolution), operating system, unique device identifiers, referring website addresses, and data from cookies or similar tracking technologies.
+      </li>
+      <li id="privacy-1-li6">
+        <strong>Transaction Data</strong>: Records of virtual coins, credits, purchases (including amounts, timestamps, and payment method types, though full payment card details are processed by our PCI-compliant partners), subscription status, plan history, invoicing information, and any refund or dispute records.
+      </li>
+    </ul>
+
+    <h2 id="privacy-2-title">2. How We Use Your Information</h2>
+    <p id="privacy-2-text">
+      Operlya uses your data strictly to provide, maintain, protect, and improve its services. Your information is used for the following specific operational, analytical, and legal purposes:
+    </p>
+    <ul>
+      <li id="privacy-2-li1">Creating, storing, versioning, and managing your professional CV and comprehensive career profile, including synchronization across devices.</li>
+      <li id="privacy-2-li2">Powering AI-based CV generation, real-time content optimization, tailored wording suggestions, grammar and style correction, and automated formatting assistance.</li>
+      <li id="privacy-2-li3">Personalizing your dashboard layout, job recommendations, learning content suggestions, and overall user experience based on your industry, seniority, and past behavior.</li>
+      <li id="privacy-2-li4">Providing customer support, troubleshooting technical issues, responding to inquiries, and documenting service interactions for quality assurance.</li>
+      <li id="privacy-2-li5">Ensuring platform security, fraud prevention, abuse detection (e.g., automated bot activity), and enforcing our Terms of Service.</li>
+      <li id="privacy-2-li6">Sending essential service communications such as account verification emails, security alerts, password reset instructions, critical system updates, and policy change notifications (these are non-marketing and cannot be opted out of).</li>
+      <li id="privacy-2-li7">Improving Operlya through aggregated analytics, user experience research, A/B testing, feature performance monitoring, and training our AI models (only on anonymized or de-identified data unless explicit consent is given).</li>
+    </ul>
+
+    <h2 id="privacy-3-title">3. AI Processing and Automation</h2>
+    <p id="privacy-3-text">
+      Operlya includes AI-powered tools that process your CV and profile data to generate optimized content. This processing is automated and designed to assist users in improving their career documents. Specifically, our large language models (LLMs) may analyze your input text to produce suggestions for bullet points, summaries, skill phrasing, and keyword enrichment. AI outputs are suggestions only and should not be considered professional guarantees, legal advice, or definitive career counsel. You remain fully responsible for reviewing, editing, and validating any AI-generated content before use. Operlya does not use your personal data to train models for third-party products without your explicit, separate consent.
+    </p>
+
+    <h2 id="privacy-4-title">4. Data Protection and Security</h2>
+    <p id="privacy-4-text">
+      We implement industry-standard security measures to protect your data against unauthorized access, alteration, disclosure, or destruction. These measures include, in technical and organizational detail:
+    </p>
+    <ul>
+      <li id="privacy-4-li1">End-to-end encryption for sensitive data transmission (TLS 1.3 protocols for all data in transit) and at-rest encryption (AES-256 for stored personal information).</li>
+      <li id="privacy-4-li2">Secure authentication systems (including multi-factor authentication support, OAuth2 integration, and brute-force protection) and strict role-based access control mechanisms (RBAC) limiting employee data access.</li>
+      <li id="privacy-4-li3">Continuous, automated monitoring for suspicious activity, including login anomalies, data exfiltration attempts, and denial-of-service patterns, plus real-time security threat detection.</li>
+      <li id="privacy-4-li4">Regular security audits, third-party penetration testing, continuous system patching, and proactive vulnerability assessments conducted at least quarterly.</li>
+    </ul>
+
+    <h2 id="privacy-5-title">5. Data Sharing and Third Parties</h2>
+    <p id="privacy-5-text1">
+      Operlya does <strong>not sell, rent, or trade</strong> your personal data to any external organization for advertising, marketing, or any commercial purpose unrelated to providing our service.
+      We only share information in the following strictly defined cases:
+    </p>
+    <ul>
+      <li id="privacy-5-li1">With trusted service providers who act as data processors (e.g., email delivery platforms like SendGrid, cloud hosting providers like AWS or GCP, analytics services like Mixpanel or PostHog), solely to perform functions on our behalf under binding data processing agreements.</li>
+      <li id="privacy-5-li2">With security and fraud prevention tools (e.g., reCAPTCHA, IP reputation services) to detect and prevent malicious activity, spam, or unauthorized access attempts.</li>
+      <li id="privacy-5-li3">When required by applicable law, legal process, subpoena, search warrant, court order, or governmental authority, and only to the extent strictly necessary to comply with such valid legal obligations.</li>
+    </ul>
+    <p id="privacy-5-text2">
+      All third-party partners are contractually required to comply with strict confidentiality, data protection obligations, and security standards at least as stringent as those described in this policy. They are prohibited from using your data for any purpose other than the specific service they provide to Operlya.
+    </p>
+
+    <h2 id="privacy-6-title">6. Data Ownership</h2>
+    <p id="privacy-6-text">
+      You retain full and exclusive ownership of your personal data, original CV content, and all documents created on Operlya. We do not claim any intellectual property or ownership rights over your information. Any AI-generated suggestions are considered derivative works based on your input; as such, you hold all rights to the final document you choose to export. You may export, modify, or delete your data at any time without penalty. Operlya’s only rights are to host, process, and display your data as necessary to deliver the Service to you.
+    </p>
+
+    <h2 id="privacy-7-title">7. Cookies and Tracking Technologies</h2>
+    <p id="privacy-7-text">
+      Operlya uses essential and functional cookies, local storage, and similar technologies to: maintain secure authentication sessions across pages, remember your UI preferences (e.g., theme, language), analyze platform performance (via first-party analytics), and improve overall user experience. We do not use targeting or advertising cookies unless you provide explicit consent via a cookie banner. You may disable or delete cookies in your browser settings at any time; however, certain core features — such as staying logged in, saving drafts, or generating CVs — may become limited or completely unavailable without functional cookies.
+    </p>
+
+    <h2 id="privacy-8-title">8. Data Retention</h2>
+    <p id="privacy-8-text">
+      We retain your personal data only for as long as necessary to provide the Services to you, comply with legal obligations (e.g., tax, accounting, or anti-fraud laws), resolve disputes, or enforce our agreements. Specifically:
+      <br>- Active account data: retained until you delete your account or request removal.
+      <br>- Backup and logs: may persist for up to 90 days after deletion for disaster recovery.
+      <br>- Transaction records: retained for 7 years to meet financial and legal audit requirements.
+      <br>You may request deletion of your account and associated data at any time via the Settings page or by contacting support. After a verified deletion request, we will permanently delete or anonymize your personal data within 30 days, except where law requires longer retention.
+    </p>
+
+    <h2 id="privacy-9-title">9. International Data Transfers</h2>
+    <p id="privacy-9-text">
+      Operlya may process and store data on secure servers located in different countries, including the United States, the European Union, and other regions where our service providers operate. By using the Platform, you consent to the transfer of your information across international borders in accordance with applicable data protection laws. When transferring personal data from the European Economic Area (EEA), Switzerland, or the UK, we rely on appropriate safeguards such as Standard Contractual Clauses (SCCs) as approved by the European Commission, together with supplementary measures where needed.
+    </p>
+
+    <h2 id="privacy-10-title">10. User Rights</h2>
+    <p id="privacy-10-text">
+      Depending on your location (particularly if you are in the EEA, UK, Switzerland, California, or other regions with specific privacy laws), you may have the following enforceable rights:
+    </p>
+    <ul>
+      <li id="privacy-10-li1">Right to access your personal data — obtain a copy of the data we hold about you.</li>
+      <li id="privacy-10-li2">Right to correct inaccurate, incomplete, or outdated information.</li>
+      <li id="privacy-10-li3">Right to request deletion of your data (the “right to be forgotten”), subject to legal exceptions.</li>
+      <li id="privacy-10-li4">Right to restrict or object to certain types of data processing, including direct marketing or automated decision-making.</li>
+      <li id="privacy-10-li5">Right to data portability — receive your data in a structured, machine-readable format (e.g., JSON or CSV) and transmit it to another controller.</li>
+    </ul>
+
+    <h2 id="privacy-11-title">11. Coins, Credits, and Virtual Economy</h2>
+    <p id="privacy-11-text">
+      Operlya may offer virtual coins, credits, or tokens used to access premium features, AI generations, or document exports. These virtual items have no monetary value outside the Platform, are non-transferable between accounts, cannot be exchanged for real currency, and may be modified, adjusted, or removed at Operlya’s sole discretion without liability. Unused credits do not entitle you to a refund unless required by local law. Any purchase of virtual items is final. We may update pricing, earning rates, or expiration policies with reasonable notice.
+    </p>
+
+    <h2 id="privacy-12-title">12. Security Limitations</h2>
+    <p id="privacy-12-text">
+      While we apply strong security measures, no system — including Operlya — is 100% immune to compromise. We cannot and do not guarantee absolute protection against unauthorized access, sophisticated hacking attempts, malware, social engineering, or data breaches that may result from factors beyond our reasonable control (e.g., compromised user devices, insecure networks, or password reuse by users). You also bear responsibility for safeguarding your login credentials and using the Platform in a secure environment.
+    </p>
+
+    <h2 id="privacy-13-title">13. Changes to This Privacy Policy</h2>
+    <p id="privacy-13-text">
+      Operlya may update this Privacy Policy periodically to reflect new features, changing legal requirements, regulatory guidance, operational improvements, or security enhancements. Updates will be posted on this page with a revised “Last Updated” date. For material changes (e.g., new data uses, expanded sharing), we will provide prominent notice within the Platform or via email at least 30 days in advance. Your continued use of Operlya after the effective date constitutes acceptance of the revised policy.
+    </p>
+
+    <h2 id="privacy-14-title">14. Contact Information</h2>
+    <p id="privacy-14-text">
+      If you have any questions, concerns, requests, or complaints regarding this Privacy Policy, our data handling practices, or if you wish to exercise any of your user rights, you can contact us at:
+      <br><strong id="privacy-14-email">support@operlya.com</strong>
+      <br><br>For data protection inquiries or to reach our Data Protection Officer (DPO), please write to:
+      <br><strong>Privacy Office, Operlya, mdata@operlya.com</strong>
+      <br>We aim to respond to verified requests within 30 days. If you are in the EEA, you also have the right to lodge a complaint with your local supervisory authority.
+    </p>
+
+    <p class="closing-line" id="privacy-end">
+      Operlya is built on trust, transparency, and innovation.
+      Your privacy is not just a policy — it is a core part of our mission.
+    </p>
+
+  </div>
+</section>
+
+<footer class="operlya-footer">
+  <div class="footer-container">
+    <div class="footer-col brand">
+      <div class="footer-logo">
+        <img src="icons/operlya_favicon.png" alt="Operlya logo">
+        <span>Operlya</span>
+      </div>
+      <p>
+        Build your resume, publish your professional profile, find opportunities, 
+        and manage real work — all in one platform.
+      </p>
+      <div class="footer-socials">
+        <a title="X" href="https://x.com/operlya"><i class="ri-twitter-x-line"></i></a>
+        <a title="Linkedin" href="https://linkedin.com/company/operlya/"><i class="ri-linkedin-line"></i></a>
+        <a title="Instagram" href="https://instagram.com/operlya"><i class="ri-instagram-line"></i></a>
+        <a title="Tiktok" href="https://tiktok.com/operlyaa"><i class="ri-tiktok-line"></i></a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h4>Discover</h4>
+      <a href="talents/resume.html">Resume Builder</a>
+      <a href="feed.html">Opportunities</a>
+    </div>
+
+    <div class="footer-col">
+      <h4>Resources</h4>
+      <a href="contact.html">Help Center</a>
+      <a href="career-tips.html">Career Tips</a>
+      <a href="resume-builder.html">ATS Resume Guide</a>
+    </div>
+
+    <div class="footer-col">
+      <h4>Company</h4>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms</a>
+    </div>
+
+    <div class="footer-col footer-cta">
+      <h4>Start your career system</h4>
+      <p>Create your profile and start getting opportunities today.</p>
+
+      <a href="talents/resume.html" class="btn-primary">
+        <i class="ri-user-3-line"></i> Create Profile
+      </a>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2026 Operlya. All rights reserved.</p>
+
+    <div class="footer-bottom-links">
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="cookies.html">Cookies</a>
+    </div>
+  </div>
+</footer>
+
+<script type="module" src="index/index.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flag-icons/css/flag-icons.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@563&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&family=Inter:wght@563&family=Roboto:ital,wght@0,100..900;1,100..900&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap" rel="stylesheet">
+
+<link crossorigin='anonymous' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css' integrity='sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==' referrerpolicy='no-referrer' rel='stylesheet'/>
+<script src='https://www.gstatic.com/charts/loader.js' type='text/javascript'></script>
+<script src='https://apis.google.com/js/api.js'></script>
+
+</body>
+</html>

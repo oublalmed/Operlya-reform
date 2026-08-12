@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="style/index.css" />
+    <link rel="stylesheet" href="style/landing.css" />
+    <link rel="icon" type="image/png" href="icons/operlya_favicon.png">
+    <title>Operlya - About</title>
+    <link rel="canonical" href="https://www.operlya.com/about">
+    <meta property="og:url" content="https://www.operlya.com/about">
+</head>
+<body>
+
+<header class="cvb-topbar">
+  <div class="cvb-topbar-container">
+    <div class="cvb-topbar-left">
+      <a class="cvb-logo" href="/">
+        <img src="icons/operlya_favicon.png" alt="Operlya Logo" />
+        <span class="cvb-logo-text">Operlya</span>
+      </a>
+
+      <button class="nav_flagButton" id="topBarHelp"><i class="ri-question-line"></i> Need Help?</button>
+    </div>
+
+    <div class="navbar-actionsRight">
+      
+      <div class="topbar-cta">
+        <a href="feed.html" data-title="opportunitiesExplorer" class="topbar-btn topbar-btn-primary">
+          <i class="ri-compass-discover-line"></i> Tasks Explorer
+        </a>
+
+        <a href="talents/resume.html" data-title="resumeBuilder" class="topbar-btn topbar-btn-outline">
+          <i class="ri-user-3-line"></i> Resume Builder
+        </a>
+      </div>
+
+      <div class="language-select" id="languageSelectorSidebar">
+        <div class="selectedLanguage">
+          <span class="fi fi-us"></span>
+          <span class="lang-text">English</span>
+        </div>
+        <ul class="options">
+          <li data-value="en"><span class="fi fi-us"></span> English</li>
+          <li data-value="es"><span class="fi fi-es"></span> Español</li>
+          <li data-value="zh"><span class="fi fi-cn"></span> 中文</li>
+          <li data-value="fr"><span class="fi fi-fr"></span> Français</li>
+          <li data-value="de"><span class="fi fi-de"></span> Deutsch</li>
+          <li data-value="ar"><span class="fi fi-sa"></span> العربية</li>
+          <li data-value="pt"><span class="fi fi-br"></span> Português</li>
+          <li data-value="ja"><span class="fi fi-jp"></span> 日本語</li>
+          <li data-value="ru"><span class="fi fi-ru"></span> Русский</li>
+        </ul>
+      </div>
+
+      <div class="navbar-actions" id="navbarActions">
+        <button class="nav_flagButton" id="loginButton"><i class="ri-login-circle-line"></i> Login</button>
+      </div>
+
+      <div class="cvb-menu-toggle" id="cvb_menu_toggle">☰</div>
+    </div>
+
+  </div>
+
+  <div class="cvb-topbar-containerMobile">
+    <nav class="cvb-nav-mobile" id="cvb-default-navMobile">
+      <ul>
+        <li><a href="feed.html" data-title="opportunitiesExplorer"><i class="ri-compass-discover-line"></i> Tasks Explorer</a></li>
+        <li><a href="talents/resume.html" data-title="resumeBuilder"><i class="ri-user-3-line"></i> Resume Builder</a></li>
+      </ul>
+    </nav>
+    <div class="cvb-mobileLeft">
+      <button class="nav_flagButton" id="openhelpMobile" onclick="openHelp()"><i class="ri-question-line"></i> Need Help?</button>
+      <div class="language-select mobile-lang" id="languageSelectorMobile">
+        <div class="selectedLanguage">
+          <span class="fi fi-us"></span>
+          <span class="lang-text">English</span>
+        </div>
+        <ul class="options">
+          <li data-value="en"><span class="fi fi-us"></span> English</li>
+          <li data-value="es"><span class="fi fi-es"></span> Español</li>
+          <li data-value="zh"><span class="fi fi-cn"></span> 中文</li>
+          <li data-value="fr"><span class="fi fi-fr"></span> Français</li>
+          <li data-value="de"><span class="fi fi-de"></span> Deutsch</li>
+          <li data-value="ar"><span class="fi fi-sa"></span> العربية</li>
+          <li data-value="pt"><span class="fi fi-br"></span> Português</li>
+          <li data-value="ja"><span class="fi fi-jp"></span> 日本語</li>
+          <li data-value="ru"><span class="fi fi-ru"></span> Русский</li>
+        </ul>
+      </div>
+    </div>    
+  </div>
+</header>
+
+<div id="helpModal" class="modal">
+  <div class="modal-content">
+    
+    <div class="modal-header">
+      <h2>Need Help?</h2>
+
+      <button class="close-icon" id="closeHelp" title="close help">
+        <i class="ri-close-line"></i>
+      </button>
+    </div>
+
+    <p class="modal-subtitle">
+      We're here to support you. Choose a topic and tell us your issue.
+    </p>
+
+    <!-- Modern Dropdown -->
+    <div class="modal-dropdown-wrapper">
+      <i class="ri-arrow-down-s-line modal-dropdown-icon"></i>
+      <select id="helpCategory" title="Help Category" class="modal-dropdown">
+        <option value="" disabled selected>Select a category</option>
+        <option value="account">Account & Login Issues</option>
+        <option value="coins">Coins & Payments</option>
+        <option value="builder">CV Builder Help</option>
+        <option value="bug">Report a Bug</option>
+      </select>
+    </div>
+
+    <div id="helpFormContainer">
+      <input type="email" id="helpEmail" placeholder="Enter your email">
+      <textarea id="helpMessage" placeholder="Write your message..." rows="4"></textarea>
+      <button id="helpSendBtn">Send Message</button>
+    </div>
+
+  </div>
+</div>
+
+<section class="operlya-page">
+  <div class="cvb-privacy-container">
+
+    <h1 id="about-title">About Us – Operlya: The AI-Powered Career Ecosystem for Modern Professionals</h1>
+    <p class="updated-date" id="about-updated">Last Updated: April 2026</p>
+
+    <p id="about-p1">
+      <strong>Operlya</strong> is a modern, AI-integrated digital platform designed to help individuals create, manage,
+      optimize, and export professional CVs, resumes, and career profiles in a simple, structured, and highly effective way.
+      Unlike traditional document editors, Operlya is built specifically for students, first-time job seekers, seasoned professionals,
+      freelancers, remote workers, and career changers who want to present their experience, skills, and achievements
+      in a clear, organized, impactful, and ATS-friendly (Applicant Tracking System) format.
+      <br><br>
+      Our core purpose is to make career development easier, more accessible, more efficient, and more intelligent
+      by bringing together essential career tools — from AI-powered content generation to profile management —
+      into one unified, secure, and intuitive platform. Operlya is more than a simple CV builder;
+      it is a complete career management environment designed to support users throughout their entire professional journey,
+      from their first internship application to executive-level career transitions.
+    </p>
+
+    <!-- 1 - WHO WE ARE (EXPANDED FOR SEO) -->
+    <h2 id="about-1-title">1. Who We Are – The Team Behind Operlya’s Career Platform</h2>
+    <p id="about-1-text">
+      Operlya is a digital product created by a dedicated, remote-first team of software engineers, UX designers, career development specialists,
+      and AI researchers who are passionate about building modern, ethical, and user-centric tools for career growth and professional development.
+      We recognized that millions of job seekers struggle with outdated CV templates, complex formatting, and a lack of clear guidance.
+      Our mission-driven team combines technical expertise with real-world recruitment insights to simplify the way people build CVs,
+      manage their professional identity online, and stand out in competitive job markets.
+      <br><br>
+      The platform is designed to support users at every stage of their career, from creating a first CV while still in university
+      to maintaining a structured, updated, and version-controlled professional profile across multiple industries and job applications.
+      We are not just a software company; we are a partner in your professional success.
+    </p>
+
+    <!-- 2 - OUR MISSION (EXPANDED FOR SEO) -->
+    <h2 id="about-2-title">2. Our Mission: Democratizing Professional CV Creation and Career Management</h2>
+    <p id="about-2-text">
+      Our mission is to make professional CV creation, resume optimization, and career management simple, fast, accessible, and affordable
+      to everyone — regardless of their technical skills, design background, or financial situation.
+      We aim to remove the complexity, frustration, and confusion from the job application process and give users the ability to create
+      strong, well-structured, visually appealing, and keyword-optimized CVs without needing advanced technical or design skills.
+      <br><br>
+      We believe every individual deserves a fair opportunity to present their skills, experience, and unique value proposition
+      in a professional, authentic, and effective way. Operlya exists to level the playing field,
+      helping users overcome common barriers such as lack of design experience, unfamiliarity with ATS systems,
+      and difficulty articulating achievements. We are committed to continuous innovation that puts user success first.
+    </p>
+
+    <!-- 3 - WHAT OPERLYA OFFERS (EXPANDED WITH DETAILS) -->
+    <h2 id="about-3-title">3. What Operlya Offers – A Complete Suite of Career Development Tools</h2>
+    <p id="about-3-text">
+      Operlya provides a comprehensive, all-in-one set of tools for career development, CV management, and professional branding, including:
+    </p>
+    <ul>
+      <li id="about-3-li1"><strong>Smart CV Builder</strong>: Create structured, ATS-optimized, and professionally formatted CVs in minutes using our drag-and-drop interface, pre-designed templates, and real-time preview. Choose from multiple industry-specific layouts (tech, finance, creative, healthcare, etc.).</li>
+      <li id="about-3-li2"><strong>Centralized Career Profile</strong>: Store, organize, and manage all your professional information — skills, work experience, education, certifications, projects, languages, achievements, and references — in one secure, cloud-based location. Update once and apply to multiple CV versions.</li>
+      <li id="about-3-li3"><strong>AI-Powered Content Suggestions</strong>: Get intelligent, context-aware recommendations to improve your CV quality, grammar, impact phrasing, keyword density, and overall presentation. Our AI analyzes your input and suggests stronger action verbs, quantifiable achievements, and role-specific terminology.</li>
+      <li id="about-3-li4"><strong>Advanced Document Management</strong>: Edit, duplicate, version, update, and export multiple CV variants easily. Target different roles or industries without starting from scratch. Maintain a master profile and spin off tailored versions for each application.</li>
+      <li id="about-3-li5"><strong>Career Optimization Tools</strong>: Improve formatting, structure, layout, and keyword alignment for specific job descriptions. Our ATS simulators help you test how well your CV will perform against automated screening systems used by major employers.</li>
+      <li id="about-3-li6"><strong>Flexible Credits System</strong>: Use virtual credits to access advanced platform features, premium templates, unlimited AI generations, bulk exports (PDF, DOCX, TXT), and priority support. Credits are earned through activity or purchased affordably.</li>
+      <li id="about-3-li7"><strong>Privacy-First Infrastructure</strong>: All your data is encrypted, securely stored, and never sold to third parties. You remain in full control of your professional information.</li>
+    </ul>
+
+    <!-- 4 - OUR VISION (EXPANDED FOR SEO) -->
+    <h2 id="about-4-title">4. Our Vision – A Global, Dynamic Career Identity Platform</h2>
+    <p id="about-4-text">
+      We aim to build a global, trusted platform where anyone, anywhere, can manage, improve, and showcase their professional identity
+      in a simple, effective, and future-proof way. We envision a world where a static, one-page CV is replaced by a dynamic,
+      interactive, and continuously updated career profile that grows with you.
+      <br><br>
+      Our vision is to help users move beyond traditional, rigid CV formats and adopt a more modern, structured, data-driven,
+      and personalized approach to presenting their career path. We want Operlya to become the central hub for professional identity —
+      whether you are applying for a job, pitching to a client, or building a personal brand. We are building for the future of work.
+    </p>
+
+    <!-- 5 - OUR PLATFORM (EXPANDED) -->
+    <h2 id="about-5-title">5. Our Platform – Built for Performance, Security, and Scalability</h2>
+    <p id="about-5-text">
+      Operlya is built using modern web technologies (including React, Node.js, and secure cloud infrastructure) designed for
+      high performance, 99.9% uptime reliability, data protection, and seamless scalability. The platform focuses on delivering
+      fast, sub-second interactions, a smooth and intuitive user experience, and secure, encrypted data handling at every layer.
+      <br><br>
+      Every feature, from the CV builder to the AI suggestion engine, is designed and rigorously tested to ensure that users
+      can build, edit, format, and manage their CVs efficiently without unnecessary complexity, lag, or confusion.
+      We support all modern browsers, mobile devices, and tablets to ensure you can work from anywhere.
+    </p>
+
+    <!-- 6 - COMMITMENT TO USERS (EXPANDED) -->
+    <h2 id="about-6-title">6. Our Commitment to Users – Transparency, Control, and Trust</h2>
+    <p id="about-6-text">
+      We are deeply committed to protecting user data, respecting your privacy, and ensuring full, clear transparency
+      in how the platform operates, how your information is used, and what rights you have.
+      Users remain in complete control of their personal and professional information at all times.
+      You can modify, update, export, or permanently delete your data at any time directly from your account settings.
+      <br><br>
+      We do not sell, rent, or trade user data to any third party. We do not use personal information for unrelated advertising purposes.
+      Our business model is based on providing genuine value through tools and credits, not on exploiting user data.
+      Trust is our most valuable asset, and we protect it rigorously.
+    </p>
+
+    <!-- 7 - CONTINUOUS IMPROVEMENT (EXPANDED) -->
+    <h2 id="about-7-title">7. Continuous Improvement – Built on User Feedback and Innovation</h2>
+    <p id="about-7-text">
+      Operlya is continuously evolving based on real user feedback, platform analytics, usability studies, and emerging best practices
+      in recruitment technology and AI. We release regular updates to improve usability, performance, feature depth,
+      template variety, and overall user experience — often multiple times per month.
+      <br><br>
+      Our goal is to keep the platform simple, reliable, modern, and perfectly aligned with current and future career needs.
+      We actively encourage users to suggest features, report issues, and share their success stories.
+      Operlya is a living product that grows with its community.
+    </p>
+
+    <!-- 8 - ACCESSIBILITY (EXPANDED FOR SEO) -->
+    <h2 id="about-8-title">8. Accessibility – Designed for Global, Cross-Device Use</h2>
+    <p id="about-8-text">
+      Operlya is designed to be accessible worldwide, across all devices, and for users with varying levels of technical comfort.
+      The platform is fully optimized for mobile phones, tablets, laptops, and desktop computers to ensure a consistent,
+      functional, and frustration-free experience for all users — whether you are at home, in a library, or on public transport.
+      <br><br>
+      We aim to make high-quality career tools available to everyone, regardless of geographic location, economic background,
+      device type, or internet speed. Our interface follows accessibility guidelines (WCAG 2.1) where possible,
+      and we are committed to reducing barriers to professional success.
+    </p>
+
+    <!-- 9 - WHY OPERLYA EXISTS (EXPANDED WITH PROBLEM/SOLUTION) -->
+    <h2 id="about-9-title">9. Why Operlya Exists – Solving the Fragmented CV Problem</h2>
+    <p id="about-9-text">
+      Many traditional CV tools are outdated, fragmented, confusing, difficult to use, or locked behind expensive subscriptions.
+      Others lack integration with modern ATS systems, provide no content guidance, or store data in isolated, non-portable formats.
+      Operlya was created to simplify, unify, and humanize this entire process by offering a single, integrated platform
+      where users can create, manage, optimize, store, and export their CVs and career profiles in a structured, efficient,
+      and intelligent way — without needing multiple tools or expert knowledge.
+      <br><br>
+      Our goal is to help users present themselves professionally, authentically, and confidently in today’s highly competitive,
+      automated, and fast-moving job market. Operlya exists because your career story deserves to be told clearly and powerfully.
+    </p>
+
+    <!-- 10 - CONTACT US (EXPANDED) -->
+    <h2 id="about-10-title">10. Contact Us – Get Support, Give Feedback, or Partner With Us</h2>
+    <p id="about-10-text">
+      If you have any questions about our platform, need technical support, want to share feedback or feature ideas,
+      have partnership or media inquiries, or simply want to learn more about how Operlya can help your career,
+      you can reach our team directly at:
+      <br><strong id="about-email">support@operlya.com</strong>
+      <br><br>
+      We aim to respond to all inquiries within 24-48 hours on business days. For urgent matters, please include “URGENT” in your subject line.
+      We also welcome suggestions for university partnerships, career center integrations, and accessibility improvements.
+    </p>
+
+    <p class="closing-line" id="about-end">
+      Operlya is built with purpose, care, and expertise to support your career growth — by making CV creation, professional presentation,
+      and career management simple, structured, intelligent, and accessible to everyone, everywhere.
+      Start building your future with Operlya today.
+    </p>
+
+  </div>
+</section>
+
+<footer class="operlya-footer">
+  <div class="footer-container">
+    <div class="footer-col brand">
+      <div class="footer-logo">
+        <img src="icons/operlya_favicon.png" alt="Operlya logo">
+        <span>Operlya</span>
+      </div>
+      <p>
+        Build your resume, publish your professional profile, find opportunities, 
+        and manage real work — all in one platform.
+      </p>
+      <div class="footer-socials">
+        <a title="X" href="https://x.com/operlya"><i class="ri-twitter-x-line"></i></a>
+        <a title="Linkedin" href="https://linkedin.com/company/operlya/"><i class="ri-linkedin-line"></i></a>
+        <a title="Instagram" href="https://instagram.com/operlya"><i class="ri-instagram-line"></i></a>
+        <a title="Tiktok" href="https://tiktok.com/operlyaa"><i class="ri-tiktok-line"></i></a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h4>Discover</h4>
+      <a href="talents/resume.html">Resume Builder</a>
+      <a href="feed.html">Opportunities</a>
+    </div>
+
+    <div class="footer-col">
+      <h4>Resources</h4>
+      <a href="contact.html">Help Center</a>
+      <a href="career-tips.html">Career Tips</a>
+      <a href="resume-builder.html">ATS Resume Guide</a>
+    </div>
+
+    <div class="footer-col">
+      <h4>Company</h4>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms</a>
+    </div>
+
+    <div class="footer-col footer-cta">
+      <h4>Start your career system</h4>
+      <p>Create your profile and start getting opportunities today.</p>
+
+      <a href="talents/resume.html" class="btn-primary">
+        <i class="ri-user-3-line"></i> Create Profile
+      </a>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2026 Operlya. All rights reserved.</p>
+
+    <div class="footer-bottom-links">
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="cookies.html">Cookies</a>
+    </div>
+  </div>
+</footer>
+
+<script type="module" src="index/index.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flag-icons/css/flag-icons.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@563&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&family=Inter:wght@563&family=Roboto:ital,wght@0,100..900;1,100..900&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap" rel="stylesheet">
+
+<link crossorigin='anonymous' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css' integrity='sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==' referrerpolicy='no-referrer' rel='stylesheet'/>
+<script src='https://www.gstatic.com/charts/loader.js' type='text/javascript'></script>
+<script src='https://apis.google.com/js/api.js'></script>
+
+</body>
+</html>

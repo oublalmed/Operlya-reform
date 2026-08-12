@@ -1,0 +1,404 @@
+.tasksPage {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding: 5px 0px;
+}
+
+.addNewForm {
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  gap: 30px;
+  padding: 20px 40px;
+}
+
+@media (max-width: 768px) {
+  .addNewForm {
+    grid-template-columns: 1fr;
+    gap: 0px;
+    padding: 10px 0px;
+  }
+}
+
+/* ================= RIGHT MINI BAR ================= */
+
+.rightMiniBar {
+  top: 100px;
+  height: fit-content;
+}
+
+.rightMiniBar-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 10px;
+  box-shadow: 0 6px 20px var(--shadow-soft);
+}
+
+.rmb-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  padding: 10px 6px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 12px;
+  color: var(--text-muted);
+  position: relative;
+}
+
+.rmb-item i {
+  font-size: 24px;
+  font-weight: 300;
+}
+
+.rmb-item:hover {
+  background: #8599c510;
+  color: #2563eb;
+}
+
+.rmb-item.active {
+  background: #2563eb10;
+  color: #2563eb;
+}
+
+.rmb-item.active i {
+  transform: scale(1.1);
+}
+
+.rmb-item.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.rmb-item small {
+  font-size: 9px;
+  color: var(--text-muted);
+}
+
+@media (max-width: 768px) {
+
+  .rightMiniBar {
+    max-width: 100%;
+    overflow: hidden;
+    padding: 0px 15px;
+  }
+
+  .rightMiniBar::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40px;
+    height: 100%;
+    pointer-events: none;
+    background: linear-gradient(to right, transparent, var(--bg));
+    z-index: 2;
+  }
+
+  .rightMiniBar-inner {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    white-space: nowrap;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+
+    padding: 8px;
+    border-radius: 16px;
+  }
+
+  .rightMiniBar-inner::-webkit-scrollbar {
+    display: none;
+  }
+
+  .rmb-item {
+    flex: 0 0 auto;
+    min-width: 68px;
+    padding: 8px 6px;
+    border-radius: 10px;
+    font-size: 10px;
+  }
+
+  .rmb-item i {
+    font-size: 16px;
+  }
+
+  .rmb-item small {
+    display: none;
+  }
+}
+
+/* ================= NEWTASK HEADER ================= */
+
+.nt-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.nt-header h2 {
+  margin: 0;
+  font-size: 24px;
+  color: var(--text);
+}
+
+.nt-header p {
+  margin: 4px 0 0;
+  color: var(--text-soft);
+}
+
+.nt-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nt-header-icon {
+  background: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 24px;
+  color: var(--text-soft);
+  transition: color 0.2s;
+}
+
+.nt-header-icon:hover {
+  color: var(--text);
+}
+
+@media (max-width: 768px) {
+    .nt-header h2 {
+        font-size: 22px;
+    }
+
+    .nt-header p {
+        font-size: 16px;
+    }
+
+    .nt-header-icon {
+        align-self: flex-end;
+    }
+}
+
+/* ================= DRAFTS SECTION ================= */
+
+.draftsWrapper {
+  display: none;
+  padding: 18px 18px 5px;
+  margin: 0px 30px;
+  position: relative;
+  gap: 14px;
+  transition: all 0.2s ease;
+}
+
+.draftsWrapper::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 70px;
+  width: 40px;
+  height: calc(100% - 70px);
+  pointer-events: none;
+  background: linear-gradient(to right, transparent, var(--bg-soft));
+}
+
+.draftsWrapper.collapsed {
+    gap: 0px;
+}
+
+.draftsHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.draftsHeader-left {
+  display: grid;
+  gap: 2px;
+}
+
+.draftsHeader h3 {
+  margin: 0;
+  font-size: 18px;
+  color: var(--text);
+}
+
+.draftsCount {
+  margin-left: 8px;
+  background: var(--box-soft);
+  color: var(--text);
+  font-size: 12px;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: 20px;
+}
+
+.draftsHeader p {
+  margin: 2px 0 0;
+  font-size: 13px;
+  color: var(--text-soft);
+}
+
+.draftsToggleBtn {
+  background: var(--box-soft);
+  border: 1px solid var(--border);
+  color: var(--text-soft);
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.draftsToggleBtn i {
+  transition: transform 0.3s ease;
+}
+
+.draftsToggleBtn:hover {
+  border-color: #2563eb;
+  color: var(--text-blured);
+}
+
+.draftsWrapper.collapsed .draftsToggleBtn i {
+  transform: rotate(180deg);
+  transition: transform 0.3s ease;
+}
+
+.draftsGrid {
+  display: flex;
+  overflow: auto;
+  gap: 10px;
+  max-height: 500px;
+  transition: max-height 0.35s ease, opacity 0.25s ease;
+  scrollbar-width: thin;
+  scrollbar-color: #cbd5e1 transparent;
+  opacity: 1;
+}
+
+.draftsGrid::-webkit-scrollbar {
+  height: 6px;
+}
+
+.draftsGrid::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.draftsGrid::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 10px;
+  transition: background 0.2s ease;
+}
+
+.draftsGrid::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+}
+
+.draftsWrapper.collapsed .draftsGrid {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.draftCard {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 14px;
+    max-width: 300px;
+    display: grid;
+    align-self: flex-start;
+    min-width: 200px;
+    gap: 8px;
+    transition: 0.2s ease;
+    cursor: pointer;
+}
+
+.draftCard:hover {
+  border-color: #2563eb;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.04);
+}
+
+.draftCard h4 {
+  margin: 0;
+  font-size: 16px;
+  color: var(--text);
+}
+
+.draftDesc {
+  font-size: 13px;
+  color: var(--text-soft);
+  margin: 5px 0px;
+}
+
+.draftMeta {
+  font-size: 12px;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+@media (max-width: 768px) {
+    .draftsWrapper {
+        margin: 0px;
+    }
+}
+
+/* ================= NEWTASK HEADER ================= */
+
+.tasksForm {
+  display: grid;
+  gap: 10px;
+  padding: 10px 0px;
+}
+
+.tasksForm_x2 {
+  display: grid;
+  grid-template-columns: 70% 1fr;
+  gap: 10px;
+}
+
+.tasksForm_subx2 {
+  display: grid;
+  gap: 10px;
+  height: max-content;
+}
+
+@media (max-width: 768px) {
+  .tasksPage {
+    padding: 20px 20px;
+  }
+
+  .tasksForm {
+    padding: 0px;
+  }
+
+  .tasksForm_x2 {
+    grid-template-columns: 1fr;
+  }
+}
+
+#job_salary_negotiableCheckbox {
+  margin-top: 5px;
+}

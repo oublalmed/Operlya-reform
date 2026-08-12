@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="style/index.css" />
+    <link rel="stylesheet" href="style/landing.css" />
+    <link rel="icon" type="image/png" href="icons/operlya_favicon.png">
+    <title>Operlya - Terms of Use</title>
+    <link rel="canonical" href="https://www.operlya.com/terms">
+    <meta property="og:url" content="https://www.operlya.com/terms">
+</head>
+<body>
+
+<header class="cvb-topbar">
+  <div class="cvb-topbar-container">
+    <div class="cvb-topbar-left">
+      <a class="cvb-logo" href="/">
+        <img src="icons/operlya_favicon.png" alt="Operlya Logo" />
+        <span class="cvb-logo-text">Operlya</span>
+      </a>
+
+      <button class="nav_flagButton" id="topBarHelp"><i class="ri-question-line"></i> Need Help?</button>
+    </div>
+
+    <div class="navbar-actionsRight">
+      
+      <div class="topbar-cta">
+        <a href="feed.html" data-title="opportunitiesExplorer" class="topbar-btn topbar-btn-primary">
+          <i class="ri-compass-discover-line"></i> Tasks Explorer
+        </a>
+
+        <a href="talents/resume.html" data-title="resumeBuilder" class="topbar-btn topbar-btn-outline">
+          <i class="ri-user-3-line"></i> Resume Builder
+        </a>
+      </div>
+
+      <div class="language-select" id="languageSelectorSidebar">
+        <div class="selectedLanguage">
+          <span class="fi fi-us"></span>
+          <span class="lang-text">English</span>
+        </div>
+        <ul class="options">
+          <li data-value="en"><span class="fi fi-us"></span> English</li>
+          <li data-value="es"><span class="fi fi-es"></span> Español</li>
+          <li data-value="zh"><span class="fi fi-cn"></span> 中文</li>
+          <li data-value="fr"><span class="fi fi-fr"></span> Français</li>
+          <li data-value="de"><span class="fi fi-de"></span> Deutsch</li>
+          <li data-value="ar"><span class="fi fi-sa"></span> العربية</li>
+          <li data-value="pt"><span class="fi fi-br"></span> Português</li>
+          <li data-value="ja"><span class="fi fi-jp"></span> 日本語</li>
+          <li data-value="ru"><span class="fi fi-ru"></span> Русский</li>
+        </ul>
+      </div>
+
+      <div class="navbar-actions" id="navbarActions">
+        <button class="nav_flagButton" id="loginButton"><i class="ri-login-circle-line"></i> Login</button>
+      </div>
+
+      <div class="cvb-menu-toggle" id="cvb_menu_toggle">☰</div>
+    </div>
+
+  </div>
+
+  <div class="cvb-topbar-containerMobile">
+    <nav class="cvb-nav-mobile" id="cvb-default-navMobile">
+      <ul>
+        <li><a href="feed.html" data-title="opportunitiesExplorer"><i class="ri-compass-discover-line"></i> Tasks Explorer</a></li>
+        <li><a href="talents/resume.html" data-title="resumeBuilder"><i class="ri-user-3-line"></i> Resume Builder</a></li>
+      </ul>
+    </nav>
+    <div class="cvb-mobileLeft">
+      <button class="nav_flagButton" id="openhelpMobile"><i class="ri-question-line"></i> Need Help?</button>
+      <div class="language-select mobile-lang" id="languageSelectorMobile">
+        <div class="selectedLanguage">
+          <span class="fi fi-us"></span>
+          <span class="lang-text">English</span>
+        </div>
+        <ul class="options">
+          <li data-value="en"><span class="fi fi-us"></span> English</li>
+          <li data-value="es"><span class="fi fi-es"></span> Español</li>
+          <li data-value="zh"><span class="fi fi-cn"></span> 中文</li>
+          <li data-value="fr"><span class="fi fi-fr"></span> Français</li>
+          <li data-value="de"><span class="fi fi-de"></span> Deutsch</li>
+          <li data-value="ar"><span class="fi fi-sa"></span> العربية</li>
+          <li data-value="pt"><span class="fi fi-br"></span> Português</li>
+          <li data-value="ja"><span class="fi fi-jp"></span> 日本語</li>
+          <li data-value="ru"><span class="fi fi-ru"></span> Русский</li>
+        </ul>
+      </div>
+    </div>    
+  </div>
+</header>
+
+<div id="helpModal" class="modal">
+  <div class="modal-content">
+    
+    <div class="modal-header">
+      <h2>Need Help?</h2>
+
+      <button class="close-icon" id="closeHelp" title="close help">
+        <i class="ri-close-line"></i>
+      </button>
+    </div>
+
+    <p class="modal-subtitle">
+      We're here to support you. Choose a topic and tell us your issue.
+    </p>
+
+    <!-- Modern Dropdown -->
+    <div class="modal-dropdown-wrapper">
+      <i class="ri-arrow-down-s-line modal-dropdown-icon"></i>
+      <select id="helpCategory" title="Help Category" class="modal-dropdown">
+        <option value="" disabled selected>Select a category</option>
+        <option value="account">Account & Login Issues</option>
+        <option value="coins">Coins & Payments</option>
+        <option value="builder">CV Builder Help</option>
+        <option value="bug">Report a Bug</option>
+      </select>
+    </div>
+
+    <div id="helpFormContainer">
+      <input type="email" id="helpEmail" placeholder="Enter your email">
+      <textarea id="helpMessage" placeholder="Write your message..." rows="4"></textarea>
+      <button id="helpSendBtn">Send Message</button>
+    </div>
+
+  </div>
+</div>
+
+<section class="operlya-page">
+  <div class="cvb-privacy-container">
+
+    <h1 id="terms-title">Terms of Use – Operlya</h1>
+    <p class="updated-date" id="terms-updated">Last Updated: April 2026</p>
+
+    <p id="terms-p1">
+      Welcome to <strong>Operlya</strong>, a comprehensive digital career ecosystem designed to empower job seekers, professionals, and creatives by enabling them to build professional CVs, manage career documents, access AI-assisted writing and optimization tools, track job applications, and discover personalized career opportunities all within a centralized, secure environment. By accessing or using Operlya (the “Platform”), you acknowledge that you have read, understood, and agree to be legally bound by these Terms of Use, which form a binding contract between you and Operlya. If you do not agree with any part of these Terms, you must immediately discontinue any use of the Platform, including browsing, account registration, or document creation.
+    </p>
+
+    <!-- 1 -->
+    <h2 id="terms-1-title">1. Acceptance of the Terms</h2>
+    <p id="terms-1-text">
+      By creating an account, accessing any feature, or otherwise using Operlya (whether as a registered user or a visitor), you confirm that you have read, understood, and accepted these Terms of Use in their entirety, without modification. These Terms constitute a legally binding agreement between you (the user) and Operlya (the platform operator). Your continued use of the Platform after any updates, modifications, or revisions to these Terms are published implies your unconditional acceptance of the revised Terms. It is your responsibility to review this page periodically for changes. If you object to any future changes, your sole remedy is to terminate your account and stop using the Platform.
+    </p>
+
+    <!-- 2 -->
+    <h2 id="terms-2-title">2. Eligibility</h2>
+    <p id="terms-2-text">
+      You must be at least 16 years old to create an account or use Operlya. By using the Platform, you represent and warrant that you have the full legal capacity, right, and authority to enter into this agreement under applicable laws. Furthermore, you affirm that all information you provide to Operlya—whether during registration, profile creation, or document upload—is truthful, accurate, complete, and up to date. Operlya reserves the right to request proof of age or identity and to terminate accounts that are found to be created by individuals who do not meet the eligibility requirements.
+    </p>
+
+    <!-- 3 -->
+    <h2 id="terms-3-title">3. Account Registration and Security</h2>
+    <ul>
+      <li id="terms-3-li1">You are solely responsible for maintaining the confidentiality and security of your login credentials (including your password, email address, and any two-factor authentication methods). You must not share your account details with any third party.</li>
+      <li id="terms-3-li2">You are fully and unconditionally responsible for all activities, actions, and content generated or transmitted under your account, regardless of whether such activities were authorized by you or resulted from unauthorized access.</li>
+      <li id="terms-3-li3">You agree to notify Operlya immediately upon becoming aware of any unauthorized access, use, or security breach involving your account. Any delay in reporting may affect your rights and remedies.</li>
+      <li id="terms-3-li4">Operlya reserves the absolute right, in its sole discretion, to suspend, restrict, or permanently terminate any account that exhibits suspicious, fraudulent, abusive, or otherwise unauthorized behavior, including multiple failed login attempts, unusual document access patterns, or reports of compromised credentials.</li>
+    </ul>
+
+    <!-- 4 -->
+    <h2 id="terms-4-title">4. Use of the Platform</h2>
+    <p id="terms-4-text1">
+      Operlya grants you a limited, revocable, non-exclusive, non-transferable, and non-sublicensable license to access and use the Platform strictly for your personal, non-commercial, professional career-building purposes, including CV creation, document storage, AI-assisted content generation, and job opportunity discovery. This license does not include any right to resell, redistribute, or commercially exploit the Platform or its content.
+    </p>
+    <p id="terms-4-text2">You expressly agree not to engage in any of the following prohibited activities:</p>
+    <ul>
+      <li id="terms-4-li1">Use Operlya for any unlawful, fraudulent, deceptive, harmful, harassing, defamatory, or abusive purpose, including but not limited to identity theft, impersonation, or phishing.</li>
+      <li id="terms-4-li2">Copy, reproduce, scrape, reverse engineer, decompile, disassemble, or attempt to extract the source code of any part of the Platform, including templates, algorithms, or proprietary formats.</li>
+      <li id="terms-4-li3">Interfere with or compromise the security, integrity, or performance of the Platform, including its servers, databases, network infrastructure, or authentication systems.</li>
+      <li id="terms-4-li4">Upload, transmit, or distribute any malicious code (including viruses, worms, Trojan horses, ransomware), spam, chain letters, or abusive, obscene, or otherwise inappropriate content.</li>
+    </ul>
+
+    <!-- 5 -->
+    <h2 id="terms-5-title">5. User Content and Data Ownership</h2>
+    <p id="terms-5-text">
+      You retain full, exclusive ownership of all intellectual property rights in and to any CVs, documents, resumes, cover letters, portfolios, personal data, and other content you create, upload, or import into Operlya (collectively, “User Content”). However, by submitting User Content, you grant Operlya a limited, worldwide, royalty-free, non-exclusive license to host, store, process, reproduce, display, and transmit your User Content solely for the purpose of providing and improving Platform features, including AI-assisted CV generation, document formatting, storage synchronization, and analytics. Operlya will never claim ownership of your User Content or sell it to third parties without your explicit consent, except as required by law or to enforce these Terms.
+    </p>
+
+    <!-- 6 -->
+    <h2 id="terms-6-title">6. Intellectual Property Rights</h2>
+    <p id="terms-6-text">
+      All intellectual property rights in and to Operlya—including but not limited to its overall design, branding elements (logos, trademarks, service marks), software code, user interface and user experience (UI/UX) layouts, algorithms, proprietary CV templates, icons, typography, system architecture, and any underlying technology—are owned exclusively by Operlya or its licensors. No right, title, or interest in any of the foregoing is transferred to you under these Terms. Any unauthorized use, reproduction, modification, distribution, public display, or creation of derivative works based on Operlya’s intellectual property is strictly prohibited and may result in legal action.
+    </p>
+
+    <!-- 7 -->
+    <h2 id="terms-7-title">7. AI Tools and Automated Features</h2>
+    <p id="terms-7-text">
+      Operlya may provide AI-powered tools, including but not limited to automated CV content generation, text optimization, grammar correction, keyword suggestions, and personalized career recommendations. These tools are provided for informational, assistive, and convenience purposes only and do not constitute professional legal, financial, or career counseling. Operlya does not guarantee that AI-generated suggestions will be accurate, error-free, up-to-date, or suitable for your specific circumstances. Furthermore, Operlya makes no warranties or guarantees regarding any employment opportunity, interview invitation, job placement, or career outcome resulting from your use of AI-assisted features. You are solely responsible for reviewing, editing, and validating all AI-generated content before use.
+    </p>
+
+    <!-- 8 -->
+    <h2 id="terms-8-title">8. Credits, Coins, and Virtual Items</h2>
+    <p id="terms-8-text">
+      Operlya may offer virtual credits, coins, points, badges, or other promotional rewards (collectively, “Virtual Items”) as part of its loyalty programs, onboarding bonuses, or paid plans. You acknowledge and agree that Virtual Items: (i) have no real-world, monetary, or cash value; (ii) are non-transferable, non-exchangeable, and cannot be sold, traded, or redeemed for real currency or physical goods; (iii) may be subject to expiration dates or usage limits as disclosed at the time of issuance; and (iv) may be modified, reduced, revoked, or entirely removed by Operlya at any time without prior notice or liability, including in cases of suspected abuse, fraud, or violation of these Terms.
+    </p>
+
+    <!-- 9 -->
+    <h2 id="terms-9-title">9. Payments, Billing, and Subscriptions</h2>
+    <p id="terms-9-text">
+      Certain advanced features of Operlya—such as premium CV templates, unlimited AI generations, bulk document exports, or priority support—may require payment of fees or an active subscription. By purchasing any paid service or subscribing to a plan, you agree to the pricing, billing cycle (e.g., monthly, annual), cancellation policy, and any other terms displayed at the time of purchase. All fees are exclusive of applicable taxes, which remain your responsibility. Unless otherwise required by mandatory consumer protection laws in your jurisdiction, all payments made to Operlya are final and non-refundable, including for partially used subscription periods. Operlya reserves the right to change its pricing upon reasonable notice.
+    </p>
+
+    <!-- 10 -->
+    <h2 id="terms-10-title">10. Acceptable Use Policy</h2>
+    <p id="terms-10-text">
+      You agree to use Operlya responsibly, ethically, and in full compliance with all applicable local, national, and international laws. Any misuse of the Platform—including but not limited to fraud, identity theft, impersonation of another person or entity, manipulation of system features (e.g., artificially inflating credits, bypassing usage limits), harassment of other users, scraping data for competitive purposes, or submitting false information—may result in immediate suspension of your account, permanent termination without refund, and potential referral to law enforcement authorities. Operlya actively monitors for abusive behavior and reserves the right to investigate any suspected violations.
+    </p>
+
+    <!-- 11 -->
+    <h2 id="terms-11-title">11. Termination of Services</h2>
+    <p id="terms-11-text">
+      Operlya reserves the right, in its sole discretion, to suspend, restrict, or permanently terminate your access to all or part of the Platform at any time, with or without prior notice, if you violate any provision of these Terms, engage in activities that may harm the Platform’s reputation, security, or functionality, or pose a risk to other users or third parties. Upon termination, your right to use the Platform ceases immediately, and Operlya may delete or deactivate your account and associated User Content, subject to applicable data retention laws. You may also terminate your own account at any time via your account settings. Sections that by their nature should survive termination (e.g., ownership, liability, governing law) will remain in effect.
+    </p>
+
+    <!-- 12 -->
+    <h2 id="terms-12-title">12. Service Availability</h2>
+    <p id="terms-12-text">
+      Operlya strives to maintain continuous, reliable, and secure access to the Platform, but we do not guarantee that the Platform will be uninterrupted, error-free, or available at all times. The Platform may experience downtime, delays, or disruptions due to scheduled maintenance (announced where feasible), emergency updates, software bugs, hardware failures, cybersecurity incidents, or circumstances beyond our reasonable control (including natural disasters, internet outages, or government actions). Operlya will make reasonable efforts to restore service but assumes no liability for any loss of data, productivity, or opportunities resulting from temporary unavailability.
+    </p>
+
+    <!-- 13 -->
+    <h2 id="terms-13-title">13. Privacy and Data Protection</h2>
+    <p id="terms-13-text">
+      Your personal data and any content you submit are handled in accordance with our Privacy Policy, which is incorporated into these Terms by reference. Operlya implements industry-standard technical, organizational, and administrative security measures—including encryption, access controls, and regular audits—to protect user data against unauthorized access, disclosure, alteration, or destruction. However, no method of transmission over the Internet or electronic storage is 100% secure. Therefore, while we strive to protect your information, we cannot guarantee absolute security against sophisticated cyberattacks or breaches caused by factors outside our reasonable control. You are encouraged to use strong passwords and enable any available security features.
+    </p>
+
+    <!-- 14 -->
+    <h2 id="terms-14-title">14. Disclaimer of Warranties</h2>
+    <p id="terms-14-text">
+      TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, OPERLYA AND ITS AFFILIATES, LICENSORS, AND SERVICE PROVIDERS PROVIDE THE PLATFORM “AS IS,” “WITH ALL FAULTS,” AND “AS AVAILABLE,” WITHOUT ANY WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED. WE EXPRESSLY DISCLAIM ALL IMPLIED WARRANTIES, INCLUDING BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE, NON-INFRINGEMENT, ACCURACY, RELIABILITY, AND QUIET ENJOYMENT. WE DO NOT WARRANT THAT THE PLATFORM WILL MEET YOUR REQUIREMENTS, THAT IT WILL BE UNINTERRUPTED OR ERROR-FREE, THAT DEFECTS WILL BE CORRECTED, OR THAT THE PLATFORM OR ITS SERVERS ARE FREE OF VIRUSES OR OTHER HARMFUL COMPONENTS. ANY CONTENT OR DATA DOWNLOADED OR OTHERWISE OBTAINED THROUGH THE PLATFORM IS ACCESSED AT YOUR OWN RISK.
+    </p>
+
+    <!-- 15 -->
+    <h2 id="terms-15-title">15. Limitation of Liability</h2>
+    <p id="terms-15-text">
+      TO THE FULLEST EXTENT PERMITTED BY LAW, IN NO EVENT SHALL OPERLYA, ITS DIRECTORS, EMPLOYEES, PARTNERS, OR AGENTS BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, EXEMPLARY, OR PUNITIVE DAMAGES, INCLUDING BUT NOT LIMITED TO LOSS OF PROFITS, REVENUE, DATA, GOODWILL, OR OTHER INTANGIBLE LOSSES, ARISING FROM OR RELATING TO YOUR USE OR INABILITY TO USE THE PLATFORM, EVEN IF OPERLYA HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. OUR TOTAL AGGREGATE LIABILITY FOR ANY CLAIMS UNDER THESE TERMS SHALL NOT EXCEED THE AMOUNT YOU HAVE PAID TO OPERLYA (IF ANY) DURING THE TWELVE (12) MONTHS PRECEDING THE EVENT GIVING RISE TO THE CLAIM. SOME JURISDICTIONS DO NOT ALLOW LIMITATIONS ON INCIDENTAL OR CONSEQUENTIAL DAMAGES, SO THESE LIMITATIONS MAY NOT APPLY TO YOU.
+    </p>
+
+    <!-- 16 -->
+    <h2 id="terms-16-title">16. External Links</h2>
+    <p id="terms-16-text">
+      Operlya may contain links to third-party websites, job boards, articles, or resources that are not owned or controlled by Operlya. These links are provided for your convenience only. Operlya has no control over, and assumes no responsibility for, the content, privacy policies, terms of use, accuracy, legality, or practices of any third-party websites. By accessing external links, you agree that Operlya shall not be liable, directly or indirectly, for any damage or loss caused or alleged to be caused by or in connection with your use of or reliance on any such content, goods, or services available on or through any third-party site.
+    </p>
+
+    <!-- 17 -->
+    <h2 id="terms-17-title">17. Modifications to Terms</h2>
+    <p id="terms-17-text">
+      Operlya reserves the right, at its sole discretion, to modify, amend, or replace these Terms of Use at any time. Updates will be prominently posted on this page, and the “Last Updated” date at the top of the Terms will be revised accordingly. For material changes (e.g., substantial alterations to your rights or obligations), Operlya may also notify you via email or an in-platform notification. Your continued use of the Platform after the effective date of any modifications constitutes your binding acceptance of the revised Terms. If you do not agree to the new Terms, you must stop using the Platform and close your account before the changes take effect.
+    </p>
+
+    <!-- 18 -->
+    <h2 id="terms-18-title">18. Governing Law and Jurisdiction</h2>
+    <p id="terms-18-text">
+      These Terms of Use and any dispute, claim, or controversy arising out of or relating to them (including their formation, performance, or breach) shall be governed by and interpreted in accordance with the laws of the Kingdom of Morocco, without regard to its conflict of laws principles. Any legal action or proceeding arising under these Terms shall be brought exclusively in the competent courts located in Casablanca, Morocco, and you hereby irrevocably consent to the personal jurisdiction and venue of such courts. You agree that any cause of action you may have must be filed within one (1) year after the cause of action arises, or it will be permanently barred.
+    </p>
+
+    <!-- 19 -->
+    <h2 id="terms-19-title">19. Contact Information</h2>
+    <p id="terms-19-text">
+      If you have any questions, concerns, or requests regarding these Terms of Use, your rights, your account, or any other aspect of Operlya, please contact our support team. We strive to respond to all legitimate inquiries within a reasonable timeframe.
+      <br><strong id="terms-19-email">support@operlya.com</strong>
+    </p>
+
+    <p class="closing-line" id="terms-end">
+      Operlya is committed to providing a secure, professional, innovative, and user-centric career-building ecosystem that respects your data, fosters growth, and helps you achieve your professional aspirations. Thank you for trusting us and for being an integral part of our platform.
+    </p>
+
+  </div>
+</section>
+
+<footer class="operlya-footer">
+  <div class="footer-container">
+    <div class="footer-col brand">
+      <div class="footer-logo">
+        <img src="icons/operlya_favicon.png" alt="Operlya logo">
+        <span>Operlya</span>
+      </div>
+      <p>
+        Build your resume, publish your professional profile, find opportunities, 
+        and manage real work — all in one platform.
+      </p>
+      <div class="footer-socials">
+        <a title="X" href="https://x.com/operlya"><i class="ri-twitter-x-line"></i></a>
+        <a title="Linkedin" href="https://linkedin.com/company/operlya/"><i class="ri-linkedin-line"></i></a>
+        <a title="Instagram" href="https://instagram.com/operlya"><i class="ri-instagram-line"></i></a>
+        <a title="Tiktok" href="https://tiktok.com/operlyaa"><i class="ri-tiktok-line"></i></a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h4>Discover</h4>
+      <a href="talents/resume.html">Resume Builder</a>
+      <a href="feed.html">Opportunities</a>
+    </div>
+
+    <div class="footer-col">
+      <h4>Resources</h4>
+      <a href="contact.html">Help Center</a>
+      <a href="career-tips.html">Career Tips</a>
+      <a href="resume-builder.html">ATS Resume Guide</a>
+    </div>
+
+    <div class="footer-col">
+      <h4>Company</h4>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms</a>
+    </div>
+
+    <div class="footer-col footer-cta">
+      <h4>Start your career system</h4>
+      <p>Create your profile and start getting opportunities today.</p>
+
+      <a href="talents/resume.html" class="btn-primary">
+        <i class="ri-user-3-line"></i> Create Profile
+      </a>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2026 Operlya. All rights reserved.</p>
+
+    <div class="footer-bottom-links">
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="cookies.html">Cookies</a>
+    </div>
+  </div>
+</footer>
+
+<script type="module" src="index/index.js"></script>
+
+<link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flag-icons/css/flag-icons.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@563&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&family=Inter:wght@563&family=Roboto:ital,wght@0,100..900;1,100..900&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap" rel="stylesheet">
+
+<link crossorigin='anonymous' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css' integrity='sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==' referrerpolicy='no-referrer' rel='stylesheet'/>
+
+</body>
+</html>

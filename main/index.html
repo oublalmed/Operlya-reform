@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="facebook-domain-verification" content="48n8i8rz3yz7njey1itc2pwjd4z5e6" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="style/landing.css" />
+    <link rel="stylesheet" href="style/index.css" />
+    <link rel="stylesheet" href="auth/login.css" />
+    <link rel="stylesheet" href="talents/resume.css" />
+    <link rel="stylesheet" href="style/forms.css" />
+    <link rel="stylesheet" href="opportunities/tasks.css" />
+    <link rel="icon" type="image/png" href="icons/operlya_favicon.png">
+    <title>Operlya - The Operating System for Human Potential</title>
+    <link rel="canonical" href="https://www.operlya.com/">
+    <meta name="description" content="Find people, projects, organizations, contributors, researchers, and opportunities in one connected ecosystem. Operlya is building the world's first operating system designed to connect human potential with opportunity at scale.">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Operlya">
+    <meta property="og:title" content="Operlya - The Operating System for Human Potential">
+    <meta property="og:description" content="The world's first operating system designed to connect people, organizations, projects, and opportunities in one unified ecosystem.">
+    <meta property="og:image" content="https://www.operlya.com/images/operlya_illustration_link_3.png">
+    <meta property="og:url" content="https://www.operlya.com/">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Operlya - The Operating System for Human Potential">
+    <meta name="twitter:description" content="Find talent, contributors, projects, organizations, and opportunities in one connected ecosystem built to unlock human potential.">
+    <meta name="twitter:image" content="https://www.operlya.com/images/operlya_illustration_link_3.png">
+
+    <style>
+      .cookie-consent-banner {
+        position: fixed;
+        left: 16px;
+        right: 16px;
+        bottom: 16px;
+        z-index: 99999;
+        max-width: 640px;
+        margin: 0 auto;
+        background: #14141c;
+        color: #f2f2f5;
+        border-radius: 14px;
+        box-shadow: 0 12px 32px rgba(0,0,0,0.25);
+        padding: 20px 22px;
+        display: none;
+        font-family: "Roboto", sans-serif;
+      }
+      .cookie-consent-banner.is-visible { display: block; }
+      .cookie-consent-banner p {
+        margin: 0 0 14px;
+        font-size: 14px;
+        line-height: 1.5;
+        color: #d6d6de;
+      }
+      .cookie-consent-banner a { color: #9db4ff; text-decoration: underline; }
+      .cookie-consent-actions { display: flex; gap: 10px; flex-wrap: wrap; }
+      .cookie-consent-actions button {
+        cursor: pointer;
+        border: none;
+        border-radius: 8px;
+        padding: 10px 18px;
+        font-size: 14px;
+        font-weight: 600;
+      }
+      #cookieConsentAccept { background: #6c5ce7; color: #fff; }
+      #cookieConsentReject { background: transparent; color: #d6d6de; border: 1px solid #3a3a45; }
+    </style>
+</head>
+
+<body>
+
+<div class="cookie-consent-banner" id="cookieConsentBanner">
+  <p>
+    We use cookies to run Operlya and, with your permission, to measure traffic and improve our marketing.
+    See our <a href="cookies.html">Cookie Policy</a> for details.
+  </p>
+  <div class="cookie-consent-actions">
+    <button id="cookieConsentAccept" type="button">Accept</button>
+    <button id="cookieConsentReject" type="button">Reject non-essential</button>
+  </div>
+</div>
+
+<header class="cvb-topbar">
+  <div class="cvb-topbar-container">
+    <div class="cvb-topbar-left">
+      <a class="cvb-logo" href="/">
+        <img src="icons/operlya_favicon.png" alt="Operlya Logo" />
+        <span class="cvb-logo-text">Operlya</span>
+      </a>
+
+      <button class="nav_flagButton" id="topBarHelp" title="Get help"><i class="ri-question-line"></i> Need Help?</button>
+    </div>
+
+    <div class="navbar-actionsRight">
+      
+      <div class="topbar-cta">
+        <a href="feed.html" data-title="opportunitiesExplorer" class="topbar-btn topbar-btn-primary">
+          <i class="ri-compass-discover-line"></i> Opportunities Explorer
+        </a>
+
+        <a href="talents/resume.html" data-title="resumeBuilder" class="topbar-btn topbar-btn-outline">
+          <i class="ri-user-3-line"></i> Resume Builder
+        </a>
+      </div>
+
+      <div class="language-select" id="languageSelectorSidebar">
+        <div class="selectedLanguage">
+          <span class="fi fi-us"></span>
+          <span class="lang-text">English</span>
+        </div>
+        <ul class="options">
+          <li data-value="en"><span class="fi fi-us"></span> English</li>
+          <li data-value="es"><span class="fi fi-es"></span> Español</li>
+          <li data-value="zh"><span class="fi fi-cn"></span> 中文</li>
+          <li data-value="fr"><span class="fi fi-fr"></span> Français</li>
+          <li data-value="de"><span class="fi fi-de"></span> Deutsch</li>
+          <li data-value="ar"><span class="fi fi-sa"></span> العربية</li>
+          <li data-value="pt"><span class="fi fi-br"></span> Português</li>
+          <li data-value="ja"><span class="fi fi-jp"></span> 日本語</li>
+          <li data-value="ru"><span class="fi fi-ru"></span> Русский</li>
+        </ul>
+      </div>
+
+      <div class="navbar-actions" id="navbarActions">
+        <button class="nav_flagButton" id="loginButton"><i class="ri-login-circle-line"></i> Login</button>
+      </div>
+
+      <div class="cvb-menu-toggle" id="cvb_menu_toggle">☰</div>
+    </div>
+
+  </div>
+
+  <div class="cvb-topbar-containerMobile">
+    <nav class="cvb-nav-mobile" id="cvb-default-navMobile">
+      <ul>
+        <li><a href="feed.html" data-title="opportunitiesExplorer"><i class="ri-compass-discover-line"></i> Opportunities Explorer</a></li>
+        <li><a href="talents/resume.html" data-title="resumeBuilder"><i class="ri-user-3-line"></i> Resume Builder</a></li>
+      </ul>
+    </nav>
+    <div class="cvb-mobileLeft">
+      <div class="language-select mobile-lang" id="languageSelectorMobile">
+        <div class="selectedLanguage">
+          <span class="fi fi-us"></span>
+          <span class="lang-text">English</span>
+        </div>
+        <ul class="options">
+          <li data-value="en"><span class="fi fi-us"></span> English</li>
+          <li data-value="es"><span class="fi fi-es"></span> Español</li>
+          <li data-value="zh"><span class="fi fi-cn"></span> 中文</li>
+          <li data-value="fr"><span class="fi fi-fr"></span> Français</li>
+          <li data-value="de"><span class="fi fi-de"></span> Deutsch</li>
+          <li data-value="ar"><span class="fi fi-sa"></span> العربية</li>
+          <li data-value="pt"><span class="fi fi-br"></span> Português</li>
+          <li data-value="ja"><span class="fi fi-jp"></span> 日本語</li>
+          <li data-value="ru"><span class="fi fi-ru"></span> Русский</li>
+        </ul>
+      </div>
+      <button class="nav_flagButton" id="openhelpMobile"><i class="ri-question-line"></i> Need Help?</button>
+    </div>    
+  </div>
+</header>
+
+<div id="helpModal" class="modal">
+  <div class="modal-content">
+    
+    <div class="modal-header">
+      <h2>Need Help?</h2>
+
+      <button class="close-icon" id="closeHelp" title="close help">
+        <i class="ri-close-line"></i>
+      </button>
+    </div>
+
+    <p class="modal-subtitle">
+      We're here to support you. Choose a topic and tell us your issue.
+    </p>
+
+    <!-- Modern Dropdown -->
+    <div class="modal-dropdown-wrapper">
+      <i class="ri-arrow-down-s-line modal-dropdown-icon"></i>
+      <select id="helpCategory" title="Help Category" class="modal-dropdown">
+        <option value="" disabled selected>Select a category</option>
+        <option value="account">Account & Login Issues</option>
+        <option value="coins">Coins & Payments</option>
+        <option value="builder">CV Builder Help</option>
+        <option value="bug">Report a Bug</option>
+      </select>
+    </div>
+
+    <div id="helpFormContainer">
+      <input type="email" id="helpEmail" placeholder="Enter your email">
+      <textarea id="helpMessage" placeholder="Write your message..." rows="4"></textarea>
+      <button id="helpSendBtn">Send Message</button>
+    </div>
+
+  </div>
+</div>
+
+<div class="notify2-modal" id="newTaskNotif">
+  <div class="notify2-content">
+    <button title="Close Form" class="notify2-close-top" id="notifyCloseTop"><i class="ri-close-line"></i></button>
+    <div class="notify2-icon" id="notifyIcon"></div>
+    <h3 id="notifyTitle">Title</h3>
+    <p id="notifyMessage">Message goes here</p>
+    <div class="notify2-actions" id="notifyActions">
+      <button class="notify2-btn notify2-btn-secondary" id="notifyCancel">Cancel</button>
+      <button class="notify2-btn notify2-btn-primary" id="notifyConfirm">Reset settings</button>
+    </div>
+  </div>
+</div>
+
+<div class="loginModalPage" id="loginModalPage"></div>
+
+<div class="LandingPage">
+
+    <section class="operlya-hero">
+      <div class="hero-left">
+
+        <div class="badge-live">
+          <span class="live-dot"></span>
+          <span>People, teams and opportunities are actively operating on Operlya</span>
+          </div>
+            <h1>
+              Start <span>instantly</span> with the right people and
+              <span class="second">operate with performance</span>
+            </h1>
+            <p class="hero-subtext">
+              We connect talent, projects, and opportunities into one intelligent workspace.
+              Find the right profiles, collaborate in real time, manage tasks and opportunities,
+              and turn execution into a measurable system — built for fast-moving teams.
+            </p>
+          <div class="hero-cta">
+            <a href="talents/resume.html" class="btn-primary">
+              <i class="ri-user-3-line"></i> Create Your Profile
+            </a>
+            <a href="feed.html" class="btn-secondary">
+              <i class="ri-compass-discover-line"></i> Explore Opportunities
+            </a>
+          </div>
+
+          <div class="hero-social-proof">
+            <div class="hero-social-subProof">
+              <strong>Join the first users</strong>
+              <p>already collaborating, hiring, and executing work with Operlya</p>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="hero-right">
+          <div class="dashboard-wrapper">
+
+            <div class="floating-icon contribute">
+              <i class="ri-add-circle-fill"></i>
+            </div>
+
+            <div class="floating-icon community">
+              <i class="ri-group-fill"></i>
+            </div>
+
+            <div class="floating-icon insight">
+              <i class="ri-lightbulb-flash-fill"></i>
+            </div>
+
+            <div class="floating-icon support">
+              <i class="ri-star-fill"></i>
+            </div>
+
+            <div class="hero-opportunities" id="heroOpportunities">
+              <div class="hero-opportunities-header">
+                <h3>Latest Opportunities</h3>
+
+                <a href="/feed.html" class="hero-opportunities-link">
+                  View all
+                  <i class="ri-arrow-right-line"></i>
+                </a>
+              </div>
+
+              <div class="hero-opportunities-viewport">
+                <div class="hero-opportunities-list" id="heroOpportunitiesList"></div>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+    </section>
+
+    <section class="operlya-quick-action">
+      <div class="quick-action-box">
+
+        <div class="quick-action-grid">
+
+          <!-- LEFT -->
+          <div class="quick-action-left">
+
+            <div class="quick-action-header">
+              <h3>What do you need help with?</h3>
+              <p>Describe your need and Operlya will connect you instantly</p>
+            </div>
+
+            <div class="quick-action-input">
+              <i class="ri-search-line"></i>
+              <input type="text" id="quickInput" placeholder="" />
+              <button id="createOpportunity">
+                <i class="ri-arrow-right-line"></i>
+              </button>
+            </div>
+
+            <div class="quick-action-examples">
+              <span>I need a website for my local business</span>
+              <span>Find a delivery driver in Paris ASAP</span>
+              <span>Looking for a designer for a fashion launch</span>
+              <span>I need a mobile app developer</span>
+            </div>
+
+          </div>
+
+          <!-- RIGHT -->
+          <div class="quick-action-right">
+
+            <div class="qa-right-header">
+              <h4>Recent talents</h4>
+              <p>People currently active on Operlya</p>
+            </div>
+
+            <div id="recentProfiles" class="recent-profiles"></div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <section class="operlya-values-container">
+
+      <div class="values-header">
+        <h2>
+          Everything you need to build a
+          <span>high-performing career</span>
+        </h2>
+        <p>
+          One platform to create, manage, and accelerate your professional growth.
+        </p>
+      </div>
+
+      <div class="operlya-values">
+        <div class="value-card purple">
+          <div class="value-icon purple">
+            <i class="ri-file-list-3-line"></i>
+          </div>
+
+          <h3>Smart Resume Builder</h3>
+
+          <p>
+            Create modern resumes, optimize content, and improve your ATS score.
+          </p>
+
+          <a href="/talents/resume.html" class="value-link purple">
+            Build my resume
+            <i class="ri-arrow-right-line"></i>
+          </a>
+        </div>
+
+        <div class="value-card blue">
+          <div class="value-icon blue">
+            <i class="ri-briefcase-4-line"></i>
+          </div>
+
+          <h3>Personalized Opportunities</h3>
+
+          <p>
+            Discover opportunities that match your profile every day.
+          </p>
+
+          <a href="/feed.html" class="value-link blue">
+            Explore
+            <i class="ri-arrow-right-line"></i>
+          </a>
+        </div>
+
+        <div class="value-card green">
+          <div class="value-icon green">
+            <i class="ri-line-chart-line"></i>
+          </div>
+
+          <h3>Real-Time Career Management</h3>
+
+          <p>
+            Track applications, interviews, and professional progress.
+          </p>
+
+          <a href="opportunities/execution.html" class="value-link green">
+            Manage my activity
+            <i class="ri-arrow-right-line"></i>
+          </a>
+        </div>
+
+        <div class="value-card orange">
+          <div class="value-icon orange">
+            <i class="ri-flashlight-line"></i>
+          </div>
+
+          <h3>Career Copilot & Action Engine</h3>
+
+          <p>
+            Recommendations, improvements, and next-step execution in one flow.
+          </p>
+
+          <a href="opportunities/manager.html" class="value-link orange">
+            Take action now
+            <i class="ri-arrow-right-line"></i>
+          </a>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="operlya-fomo">
+
+      <div class="fomo-box">
+
+          <h2>Professionals are already using Operlya to manage real work</h2>
+
+          <div class="fomo-grid">
+
+          <div class="fomo-item">
+              <i class="ri-user-add-line"></i>
+              <div>
+              <strong>New profiles are being published</strong>
+              <p>Users are turning their resumes into public professional identities.</p>
+              </div>
+          </div>
+
+          <div class="fomo-item">
+              <i class="ri-briefcase-4-line"></i>
+              <div>
+              <strong>Opportunities are being posted daily</strong>
+              <p>Projects, tasks, and jobs are shared by opportunity owners.</p>
+              </div>
+          </div>
+
+          <div class="fomo-item">
+              <i class="ri-user-search-line"></i>
+              <div>
+              <strong>Applications are actively reviewed</strong>
+              <p>Profiles are evaluated based on real skills and experience.</p>
+              </div>
+          </div>
+
+          <div class="fomo-item">
+              <i class="ri-kanban-view"></i>
+              <div>
+              <strong>Work is being managed in real time</strong>
+              <p>Tasks, conversations, and progress are tracked inside projects.</p>
+              </div>
+          </div>
+
+          <div class="fomo-item">
+              <i class="ri-file-chart-line"></i>
+              <div>
+              <strong>Resumes are continuously improved</strong>
+              <p>Users optimize their CVs with ATS analysis and feedback.</p>
+              </div>
+          </div>
+
+          <div class="fomo-item">
+              <i class="ri-line-chart-line"></i>
+              <div>
+              <strong>Profiles are getting visibility</strong>
+              <p>Users receive views and opportunities from their public profiles.</p>
+              </div>
+          </div>
+
+          </div>
+
+          <div class="fomo-cta">
+          <a href="talents/resume.html" class="btn-primary">
+              <i class="ri-user-3-line"></i> Create My Resume
+          </a>
+          <a href="feed.html" class="btn-secondary">
+              <i class="ri-compass-discover-line"></i> Explore Opportunities
+          </a>
+          </div>
+
+      </div>
+
+    </section>
+
+    <section class="operlya-final-cta">
+        <h2>Stop scrolling. Start building your future.</h2>
+        <p>
+            Build your profile, find opportunities, and manage your work —
+            all in one place.
+        </p>
+        <a href="talents/resume.html" class="btn-primary big">
+          Start My Career System
+        </a>
+    </section>
+
+</div>
+
+<footer class="operlya-footer">
+  <div class="footer-container">
+    <div class="footer-col brand">
+      <div class="footer-logo">
+        <img src="icons/operlya_favicon.png" alt="Operlya logo">
+        <span>Operlya</span>
+      </div>
+      <p>
+        Build your resume, publish your professional profile, find opportunities, 
+        and manage real work — all in one platform.
+      </p>
+      <div class="footer-socials">
+        <a title="X" href="https://x.com/operlya"><i class="ri-twitter-x-line"></i></a>
+        <a title="Linkedin" href="https://linkedin.com/company/operlya/"><i class="ri-linkedin-line"></i></a>
+        <a title="Instagram" href="https://instagram.com/operlya"><i class="ri-instagram-line"></i></a>
+        <a title="Tiktok" href="https://tiktok.com/operlyaa"><i class="ri-tiktok-line"></i></a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h4>Discover</h4>
+      <a href="talents/resume.html">Resume Builder</a>
+      <a href="feed.html">Opportunities</a>
+    </div>
+
+    <div class="footer-col">
+      <h4>Resources</h4>
+      <a href="contact.html">Help Center</a>
+      <a href="career-tips.html">Career Tips</a>
+      <a href="resume-builder.html">ATS Resume Guide</a>
+    </div>
+
+    <div class="footer-col">
+      <h4>Company</h4>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms</a>
+    </div>
+
+    <div class="footer-col footer-cta">
+      <h4>Start your career system</h4>
+      <p>Create your profile and start getting opportunities today.</p>
+
+      <a href="talents/resume.html" class="btn-primary">
+        <i class="ri-user-3-line"></i> Create Profile
+      </a>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2026 Operlya. All rights reserved.</p>
+
+    <div class="footer-bottom-links">
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="cookies.html">Cookies</a>
+    </div>
+  </div>
+</footer>
+
+<script type="module" src="index/landing.js"></script>
+<script type="module" src="auth/login_modal.js"></script>
+
+<script>
+
+</script>
+
+<script>
+(function () {
+  var CONSENT_KEY = 'operlya_cookie_consent';
+
+  function loadGTM() {
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-NDJ27PJH');
+  }
+
+  function loadGtag() {
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=G-MVH7XXTVVL';
+    document.head.appendChild(s);
+
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function () { dataLayer.push(arguments); };
+    gtag('js', new Date());
+    gtag('config', 'G-MVH7XXTVVL');
+  }
+
+  function loadMetaPixel() {
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '7523686261061265');
+    fbq('track', 'PageView');
+  }
+
+  function loadTracking() {
+    loadGTM();
+    loadGtag();
+    loadMetaPixel();
+  }
+
+  var banner = document.getElementById('cookieConsentBanner');
+  var acceptBtn = document.getElementById('cookieConsentAccept');
+  var rejectBtn = document.getElementById('cookieConsentReject');
+  var stored = localStorage.getItem(CONSENT_KEY);
+
+  if (stored === 'granted') {
+    loadTracking();
+  } else if (stored !== 'denied' && banner) {
+    banner.classList.add('is-visible');
+  }
+
+  if (acceptBtn) {
+    acceptBtn.addEventListener('click', function () {
+      localStorage.setItem(CONSENT_KEY, 'granted');
+      if (banner) banner.classList.remove('is-visible');
+      loadTracking();
+    });
+  }
+
+  if (rejectBtn) {
+    rejectBtn.addEventListener('click', function () {
+      localStorage.setItem(CONSENT_KEY, 'denied');
+      if (banner) banner.classList.remove('is-visible');
+    });
+  }
+})();
+</script>
+
+<link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flag-icons/css/flag-icons.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@563&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&family=Inter:wght@563&family=Roboto:ital,wght@0,100..900;1,100..900&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap" rel="stylesheet">
+
+<script src='https://apis.google.com/js/api.js'></script>
+
+</body>
+</html>

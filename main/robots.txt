@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+Disallow: /account.html
+Disallow: /auth/
+Disallow: /opportunities/create.html
+Disallow: /opportunities/manager.html
+Disallow: /opportunities/execution.html
+
+Sitemap: https://www.operlya.com/sitemap.xml

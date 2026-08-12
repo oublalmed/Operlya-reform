@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="/style/index.css" />
+    <link rel="stylesheet" href="login.css" />
+    <link rel="icon" type="image/png" href="/icons/operlya_favicon.png">
+    <title>Operlya - Login</title>
+    <meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+
+<div class="notify2-modal" id="newTaskNotif">
+  <div class="notify2-content">
+    <button title="Close Form" class="notify2-close-top" id="notifyCloseTop"><i class="ri-close-line"></i></button>
+    <div class="notify2-icon" id="notifyIcon"></div>
+    <h3 id="notifyTitle">Title</h3>
+    <p id="notifyMessage">Message goes here</p>
+    <div class="notify2-actions" id="notifyActions">
+      <button class="notify2-btn notify2-btn-secondary" id="notifyCancel">Cancel</button>
+      <button class="notify2-btn notify2-btn-primary" id="notifyConfirm">Reset settings</button>
+    </div>
+  </div>
+</div>
+
+<div id="loginPage" class="login-page">
+  <div class="login-container">
+
+    <div class="login-left">
+
+      <div class="login-topbar">
+        <a class="login-logo" href="/">
+          <img src="/icons/operlya_favicon.png" alt="Operlya Logo" />
+          <span class="login-logo-text ">Operlya</span>
+        </a>
+
+        <div class="login-topbar-actions">
+        <div class="language-select" id="languageSelectorLogin">
+          <div class="selectedLanguage">
+            <span class="fi fi-us"></span> English
+          </div>
+          <ul class="options">
+            <li data-value="en"><span class="fi fi-us"></span> English</li>
+            <li data-value="es"><span class="fi fi-es"></span> Español</li>
+            <li data-value="zh"><span class="fi fi-cn"></span> 中文</li>
+            <li data-value="fr"><span class="fi fi-fr"></span> Français</li>
+            <li data-value="de"><span class="fi fi-de"></span> Deutsch</li>
+            <li data-value="ar"><span class="fi fi-sa"></span> العربية</li>
+            <li data-value="pt"><span class="fi fi-br"></span> Português</li>
+            <li data-value="ja"><span class="fi fi-jp"></span> 日本語</li>
+            <li data-value="ru"><span class="fi fi-ru"></span> Русский</li>
+          </ul>
+        </div>
+        <button id="themeToggleBtn" class="nav_theme-button">
+          <i class="ri-moon-line" id="themeIcon"></i>
+        </button>
+        </div>
+      </div>
+
+      <div class="login-overlay">
+        <h2>Unlock Opportunities. Create Value.</h2>
+        <p>
+          Operlya connects talent, ambition, and real-world needs into a dynamic ecosystem.
+          <br>Earn, collaborate, and grow through meaningful opportunities designed to accelerate your journey.
+        </p>
+      </div>
+
+    </div>
+
+    <!-- RIGHT SIDE (FORM) -->
+    <div class="login-content">
+
+      <div class="login-card" id="login-card">
+        <div class="login-header">
+          <h2 id="loginModalTitle">Welcome Back</h2>
+          <h2 id="loginModalTitleReset">Reset password</h2>
+        </div>
+
+        <p class="login-subtitle" id="loginModalSubTitle">
+          Sign in to continue your journey on Operlya.
+        </p>
+
+        <p class="login-subtitle" id="loginModalSubTitleReset">
+          Enter your email to receive a reset link.
+        </p>
+
+        <input type="email" id="loginEmailforget" placeholder="Email">
+        <input type="email" id="loginEmail" placeholder="Email">
+        <input type="password" id="loginPassword" placeholder="Password">
+
+        <div class="login-actions">
+          <p class="show-password">
+            <span id="showPassword">Show password</span>
+            <span id="sendpassword">Send reset</span>
+          </p>
+          <p class="reset-link">
+            <span id="forgetPassword">Forgot password?</span>
+            <span id="backLogin">Back to login</span>
+          </p>
+        </div>
+
+        <button id="loginBtn">Login</button>
+
+        <p class="login-signup">
+          Don't have an account?
+          <span class="login-link" id="switchToSignup">Sign Up</span>
+        </p>
+      </div>
+
+      <div class="signup-content hidden" id="signup-card">
+        <div class="signup-card">
+          <div class="login-header">
+            <h2 id="signupModalTitle">Create Your Account</h2>
+            <p class="login-subtitle" id="signupModalSubTitle">Join Operlya and access real opportunities to earn, collaborate, and grow.</p>
+          </div>
+          <div class="login-doubleInputs">
+            <div class="login-group">
+              <input type="text" id="signupFirstName" placeholder="First name">
+            </div>
+            <div class="login-group">
+              <input type="text" id="signupLastName" placeholder="Last name">
+            </div>
+          </div>
+          
+          <input type="email" id="signupEmail" placeholder="Email address">
+          <input type="date" id="signupBirthday" placeholder="Birthday (optional)">
+          <input type="password" id="signupPassword" placeholder="Password">
+
+          <div class="login-actions">
+            <p class="show-password">
+              <span id="signupshowPassword">Show password</span>
+            </p>
+          </div>
+          
+          <button id="signupBtn">Sign Up</button>
+          <p id="signup-AlreadyAccount">Already have an account? <span class="signup-link" id="switchToLogin">Login</span></p>
+        </div>
+      </div>
+
+      <div class="social-login">
+        <button id="googleLoginBtn" class="google-btn">
+          <i class="ri-google-fill"></i>
+          <span>Continue with Google</span>
+        </button>
+      </div>
+
+      <div class="login-footer-links">
+        <a href="/privacy.html" target="_blank">Privacy Policy</a>
+        <a href="/terms.html" target="_blank">Terms of Use</a>
+        <a href="/contact.html" target="_blank">Help Center</a>
+      </div>
+
+      <p class="login-footer-copyright">
+        &copy; 2026 Operlya. All rights reserved.
+      </p>
+
+    </div>
+
+  </div>
+</div>
+
+<script type="module" src="login.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flag-icons/css/flag-icons.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@563&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&family=Inter:wght@563&family=Roboto:ital,wght@0,100..900;1,100..900&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap" rel="stylesheet">
+
+<link crossorigin='anonymous' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css' integrity='sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==' referrerpolicy='no-referrer' rel='stylesheet'/>
+<script src='https://apis.google.com/js/api.js'></script>
+
+</body>
+</html>

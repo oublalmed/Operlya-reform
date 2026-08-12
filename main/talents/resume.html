@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="/style/index.css" />
+    <link rel="stylesheet" href="/style/forms.css" />
+    <link rel="stylesheet" href="/auth/login.css" />
+    <link rel="stylesheet" href="resume.css" />
+    <link rel="icon" type="image/png" href="/icons/operlya_favicon.png">
+    <title>Professional ATS Resume Builder | Operlya</title>
+    <link rel="canonical" href="https://www.operlya.com/talents/resume">
+    <meta property="og:url" content="https://www.operlya.com/talents/resume">
+</head>
+<body>
+
+<header class="cvb-topbar">
+  <div class="cvb-topbar-container">
+    <div class="cvb-topbar-left">
+      <a class="cvb-logo" href="/">
+        <img src="/icons/operlya_favicon.png" alt="Operlya Logo" />
+        <span class="cvb-logo-text">Operlya</span>
+      </a>
+
+      <button class="nav_flagButton" id="topBarHelp"><i class="ri-question-line"></i> Need Help?</button>
+    </div>
+
+    <div class="navbar-actionsRight">
+      
+      <div class="topbar-cta">
+        <a href="/feed.html" data-title="opportunitiesExplorer" class="topbar-btn topbar-btn-primary">
+          <i class="ri-compass-discover-line"></i> Opportunities Explorer
+        </a>
+        <a href="/opportunities/execution.html" data-title="executionCenter" class="topbar-btn topbar-btn-outline">
+          <i class="ri-timeline-view"></i> Execution Center
+        </a>
+      </div>
+
+      <div class="language-select" id="languageSelectorSidebar">
+        <div class="selectedLanguage">
+          <span class="fi fi-us"></span>
+          <span class="lang-text">English</span>
+        </div>
+        <ul class="options">
+          <li data-value="en"><span class="fi fi-us"></span> English</li>
+          <li data-value="es"><span class="fi fi-es"></span> Español</li>
+          <li data-value="zh"><span class="fi fi-cn"></span> 中文</li>
+          <li data-value="fr"><span class="fi fi-fr"></span> Français</li>
+          <li data-value="de"><span class="fi fi-de"></span> Deutsch</li>
+          <li data-value="ar"><span class="fi fi-sa"></span> العربية</li>
+          <li data-value="pt"><span class="fi fi-br"></span> Português</li>
+          <li data-value="ja"><span class="fi fi-jp"></span> 日本語</li>
+          <li data-value="ru"><span class="fi fi-ru"></span> Русский</li>
+        </ul>
+      </div>
+
+      <div class="navbar-actions" id="navbarActions"></div>
+
+      <div class="cvb-menu-toggle" id="cvb_menu_toggle">☰</div>
+    </div>
+
+  </div>
+
+  <div class="cvb-topbar-containerMobile">
+    <nav class="cvb-nav-mobile" id="cvb-default-navMobile">
+      <ul>
+        <li><a href="/feed.html" data-title="opportunitiesExplorer"><i class="ri-compass-discover-line"></i> Opportunities Explorer</a></li>
+        <li><a href="/opportunities/execution.html" data-title="executionCenter"><i class="ri-timeline-view"></i> Execution Center</a></li>
+      </ul>
+    </nav>
+    <div class="cvb-mobileLeft">
+      <button class="nav_flagButton" id="openhelpMobile"><i class="ri-question-line"></i> Need Help?</button>
+      <div class="language-select mobile-lang" id="languageSelectorMobile">
+        <div class="selectedLanguage">
+          <span class="fi fi-us"></span>
+          <span class="lang-text">English</span>
+        </div>
+        <ul class="options">
+          <li data-value="en"><span class="fi fi-us"></span> English</li>
+          <li data-value="es"><span class="fi fi-es"></span> Español</li>
+          <li data-value="zh"><span class="fi fi-cn"></span> 中文</li>
+          <li data-value="fr"><span class="fi fi-fr"></span> Français</li>
+          <li data-value="de"><span class="fi fi-de"></span> Deutsch</li>
+          <li data-value="ar"><span class="fi fi-sa"></span> العربية</li>
+          <li data-value="pt"><span class="fi fi-br"></span> Português</li>
+          <li data-value="ja"><span class="fi fi-jp"></span> 日本語</li>
+          <li data-value="ru"><span class="fi fi-ru"></span> Русский</li>
+        </ul>
+      </div>
+    </div>    
+  </div>
+</header>
+
+<div id="helpModal" class="modal">
+  <div class="modal-content">
+    
+    <div class="modal-header">
+      <h2>Need Help?</h2>
+
+      <button class="close-icon" id="closeHelp" title="close help">
+        <i class="ri-close-line"></i>
+      </button>
+    </div>
+
+    <p class="modal-subtitle">
+      We're here to support you. Choose a topic and tell us your issue.
+    </p>
+
+    <!-- Modern Dropdown -->
+    <div class="modal-dropdown-wrapper">
+      <i class="ri-arrow-down-s-line modal-dropdown-icon"></i>
+      <select id="helpCategory" title="Help Category" class="modal-dropdown">
+        <option value="" disabled selected>Select a category</option>
+        <option value="account">Account & Login Issues</option>
+        <option value="coins">Coins & Payments</option>
+        <option value="builder">CV Builder Help</option>
+        <option value="bug">Report a Bug</option>
+      </select>
+    </div>
+
+    <div id="helpFormContainer">
+      <input type="email" id="helpEmail" placeholder="Enter your email">
+      <textarea id="helpMessage" placeholder="Write your message..." rows="4"></textarea>
+      <button id="helpSendBtn">Send Message</button>
+    </div>
+
+  </div>
+</div>
+
+<div class="notify2-modal" id="newTaskNotif">
+  <div class="notify2-content">
+    <button title="Close Form" class="notify2-close-top" id="notifyCloseTop"><i class="ri-close-line"></i></button>
+    <div class="notify2-icon" id="notifyIcon"></div>
+    <h3 id="notifyTitle">Title</h3>
+    <p id="notifyMessage">Message goes here</p>
+    <div class="notify2-actions" id="notifyActions">
+      <button class="notify2-btn notify2-btn-secondary" id="notifyCancel">Cancel</button>
+      <button class="notify2-btn notify2-btn-primary" id="notifyConfirm">Reset settings</button>
+    </div>
+  </div>
+</div>
+
+<div class="loginModalPage" id="loginModalPage"></div>
+
+<div class="app-container" id="cvb-container">
+
+<div class="Exclusive-Infos" id="exclusive-CoinsOnFirstSave">
+  <p><i class="ri-trophy-line"></i>Finish your CV now — unlock <strong>20 coins</strong> and start boosting your career.</p>
+  <button class="close-icon" id="closeExclusiveInfo" title="Close">&times;</button>
+</div>
+
+<div class="progressBar-containerAll">
+<div class="progressBar-title-container">
+  <div class="progressBar-title-row">
+    <h3 class="progressBar-title">Your CV Progress</h3>
+    <i id="cvProgressToggle" class="ri-arrow-up-wide-line progressBar-toggle-icon"></i>
+  </div>
+  <p class="progressBar-description">Track how much of your CV you have completed. Fill each section to achieve a fully completed CV.</p>
+</div>
+
+<div id="progressBar" class="progressBar-container">
+  <div class="step" data-step="Personals">
+    <div class="circle">1</div>
+    <div class="label">Personals</div>
+  </div>
+  <div class="step" data-step="Experience">
+    <div class="circle">2</div>
+    <div class="label">Experiences</div>
+  </div>
+  <div class="step" data-step="Education">
+    <div class="circle">3</div>
+    <div class="label">Educations</div>
+  </div>
+  <div class="step" data-step="Certifications">
+    <div class="circle">4</div>
+    <div class="label">Certifications</div>
+  </div>
+  <div class="step" data-step="Skills">
+    <div class="circle">5</div>
+    <div class="label">Skills</div>
+  </div>
+  <div class="step" data-step="Languages">
+    <div class="circle">6</div>
+    <div class="label">Languages</div>
+  </div>
+  <div class="step" data-step="Interests">
+    <div class="circle">7</div>
+    <div class="label">Interests</div>
+  </div>
+</div>
+</div>
+
+<div class="cvb-mobile-nav">
+  
+  <div class="cvb-mobile-navSub">
+    
+  <button data-target="#cvb-fields" class="active">
+    <div class="cvb-nav-icon green">
+      <img src="images/MobMenu_CV_Creation.png" alt="CV Elements" class="cvb-icon-img">
+    </div>
+    <div class="cvb-nav-text">
+      <h4>CV Creation</h4>
+      <p>Create your resume fields</p>
+    </div>
+  </button>
+
+  <button data-target="#cvb-joboffer">
+    <div class="cvb-nav-icon orange">
+      <img src="images/MobMenu_job_Analyzer.png" alt="Job Offer" class="cvb-icon-img">
+    </div>
+    <div class="cvb-nav-text">
+      <h4>Job Offer</h4>
+      <p>Analyze your job post</p>
+    </div>
+  </button>
+  
+  </div>
+
+  <button data-target="#cvb-theme">
+    <div class="cvb-nav-icon blue">
+      <img src="images/MobMenu_cvTemplates.png" alt="Themes" class="cvb-icon-img">
+    </div>
+    <div class="cvb-nav-text">
+      <h4>Templates</h4>
+      <p>Pick your CV design</p>
+    </div>
+  </button>
+</div>
+
+<div class="cvb-App">
+  
+  <div>
+    <div class="cvb-AppFields" id="cvb-fields">
+
+      <section class="import-container">
+        <div class="import-container-actions">
+          <label class="import-browse-label">
+            <label for="cvbImportFromExcel">Import my CV in XLS format</label>
+            <input id="cvbImportFromExcel" type="file" accept=".xlsx"/>
+            <span>
+              <i class="ri-folder-open-line"></i> Browse
+            </span>
+          </label>
+          <button type="button" class="import-light-btn" id="cvbExportTemplate">
+            Download Empty XLS Template
+          </button>
+        </div>
+      </section>
+
+      <div class="cvb-app-actions" id="cvb-app-actions">
+        <button id="saveCVToFirestore"><i class="ri-upload-line"></i> Save My CV</button>
+        <button id="loadCVFromFirestore"><i class="ri-download-cloud-2-line"></i> Reload My CV</button>
+        <button id="cvbResetAllForms"><i class="ri-restart-line"></i> Clear All</button>
+        <button id="cvbExportToExcel"><i class="ri-file-pdf-line"></i> Download CV XLS</button>
+      </div>
+
+      <div class="horizontal-navContainer">
+        <nav class="horizontal-navigator" id="cvb-tab-nav1">
+          <button data-target="#cvb-personal"><i class="ri-user-line"></i> Personal</button>
+          <button data-target="#cvb-exp-section"><i class="ri-briefcase-line"></i> Experiences</button>
+          <button data-target="#cvb-edu-section"><i class="ri-graduation-cap-line"></i> Educations</button>
+          <button data-target="#cvb-cert-section"><i class="ri-award-line"></i> Certifications</button>
+          <button data-target="#cvb-skills-section"><i class="ri-code-s-slash-line"></i> Skills & Languages</button>
+          <button data-target="#cvb-interests"><i class="ri-heart-line"></i> Interests</button>
+        </nav> 
+        <div class="horizontal-navPages">
+
+            <div class="horizontal-navPage" id="cvb-personal">
+              <!-- 1. Personal Information -->
+              <section class="navCard">
+                  <h2>Personal Information</h2>
+
+                  <!-- Profile Photo -->
+                  <div class="cvb-profile-wrapper">
+                    <div class="cvb-photo-upload">
+                        <label for="cvb-photo">Profile Picture</label>
+                        <input type="file" id="cvb-photo" accept="image/*" />
+                        <p><strong>Tip:</strong> Add a professional headshot to boost your profile visibility.</p>
+                        <div class="navCard-inputGroup" style="margin: 10px 0px 0px 0px;">
+                        <input type="text" id="cvb-photolink" style="font-size: small;" placeholder="https://example.com/photo.jpg" />
+                        </div>
+                    </div>
+                    <!-- Preview -->
+                    <div class="cvb-photo-tip">
+                        <div class="cvb-photo-preview" id="cvb-photo-preview">No photo selected</div>
+                    </div>
+                  </div>
+
+                  <div class="navCard-inputGroup">
+                    <label for="cvb-fullName">Full Name</label>
+                    <input type="text" id="cvb-fullName" placeholder="Adham Grenio"/>
+                  </div>
+
+                  <div class="navCard-inputGroup_x2">
+                    <div class="navCard-inputGroup">
+                        <label for="cvb-phone">Phone Number</label>
+                        <input type="text" id="cvb-phone" placeholder="+1 614 207 3008"/>
+                    </div>
+                    <div class="navCard-inputGroup">
+                        <label for="cvb-email">Email Address</label>
+                        <input type="email" id="cvb-email" placeholder="adham_grenio@example.com"/>
+                    </div>
+                  </div>
+
+                  <div class="navCard-inputGroup_x2">
+                    <div class="navCard-inputGroup">
+                        <label for="cvb-linkedin">LinkedIn / Portfolio</label>
+                        <input type="text" id="cvb-linkedin" placeholder="AdhamGrenio"/>
+                    </div>
+                    <div class="navCard-inputGroup">
+                        <label for="cvb-address">Address (City/Country)</label>
+                        <input type="text" id="cvb-address" placeholder="75 3rd Ave, New York, NY 10003, USA"/>
+                    </div>
+                  </div>
+
+                  <div class="navCard-inputGroup">
+                    <label for="cvb-speciality">Speciality</label>
+                    <input type="text" id="cvb-speciality" placeholder="Digital Marketing, Supply Chain Management, Web Development..."/>
+                  </div>
+
+                  <div class="navCard-inputGroup">
+                    <label for="cvb-summary-text">Professional Summary (3–5 lines)</label>
+                    <textarea id="cvb-summary-text" placeholder="Write a short summary highlighting your experience, key skills, and career goals..."></textarea>
+                  </div>
+              </section>
+            </div>
+
+            <div class="horizontal-navPage" id="cvb-exp-section">
+              <!-- 3. Work Experience -->
+              <section class="navCard">
+                <h2>Work Experience</h2>
+                <div class="navCard-navBar" id="cvb-exp-tabs"></div>
+
+                <!-- Experience pages -->
+                <div class="navCard-content" id="cvb-exp-content"></div>
+
+                <button type="button" onclick="cvbAddExperienceSection()" class="navCard-btn">➕ Add Another Experience</button>
+              </section>
+            </div>
+
+            <div class="horizontal-navPage" id="cvb-edu-section">
+              <!-- 4. Education -->
+              <section class="navCard">
+                <h2>Education</h2>
+                <div class="navCard-navBar" id="cvb-edu-tabs"></div>
+
+                <!-- Education pages -->
+                <div class="navCard-content" id="cvb-edu-content"></div>
+
+                <button type="button" onclick="cvbAddEducationSection()" class="navCard-btn">➕ Add Another Education</button>
+              </section>
+            </div>
+
+            <div class="horizontal-navPage" id="cvb-cert-section">
+              <!-- 6. Courses and Certifications -->
+              <section class="navCard">
+                <h2>Courses &amp; Certifications</h2>
+                <div class="navCard-navBar" id="cvb-cert-tabs"></div>
+
+                <!-- Courses/Certifications Pages -->
+                <div class="navCard-content" id="cvb-cert-content"></div>
+
+                <button type="button" onclick="cvbAddCertSection()" class="navCard-btn">➕ Add Another Course/Certification</button>
+              </section>
+            </div>
+
+            <div class="horizontal-navPage" id="cvb-skills-section">
+            <!-- 5. Skills -->
+            <section class="navCard" id="cvb-skills">
+              <h2>Skills</h2>
+              <div class="navCard-inputGroup">
+                <div>
+                  <div id="cvb-tech-skills-list"></div>
+                  <button type="button" onclick="cvbAddSkill('tech')" class="navCard-btn">➕ Add Technical Skill</button>
+                </div>
+              </div>
+              <div class="cvb-section-Languages">
+                <h2>Languages</h2>
+                <div class="navCard-inputGroup">
+                  <div>
+                    <div id="cvb-soft-skills-list"></div>
+                    <button type="button" onclick="cvbAddSkill('soft')" class="navCard-btn">➕ Add Language</button>
+                  </div>
+                </div>
+              </div>
+            </section>
+            </div>
+
+            <div class="horizontal-navPage" id="cvb-interests">
+            <!-- 7. Interests -->
+            <section class="navCard" id="cvb-interests">
+              <h2>Interests</h2>
+              <div class="navCard-inputGroup">
+              <div id="cvb-interests-list"></div>
+              <button type="button" onclick="cvbAddInterest()" class="navCard-btn">➕ Add Interest</button>
+              </div>
+            </section>
+            </div>
+
+        </div>
+      </div>
+    </div>
+
+    <section class="navCard cvb-joboffer-section" id="cvb-joboffer">
+        <h2 class="cvb-joboffer-title">ATS Job Match Analyzer</h2>
+        <p class="cvb-joboffer-subtitle">
+          Paste a job description to instantly analyze how well your CV matches the role. Our ATS-powered analyzer highlights key skills, keywords, and gaps to improve your chances of passing applicant tracking systems and getting noticed by recruiters.
+        </p>
+
+        <div class="navCard-inputGroup">
+          <textarea
+            id="cvb-joboffer-text"
+            class="cvb-joboffer-textarea"
+            placeholder="e.g. We're looking for a project manager with leadership and strategic planning skills..."
+          ></textarea>
+        </div>
+
+        <div id="cvb-joboffer-keyneeds" class="cvb-keyneeds-inline">
+          <strong>Job Key Needs:</strong>
+          <div id="cvb-keyneeds-list" class="cvb-keyneeds-pill-group"></div>
+        </div>
+
+        <div id="cvb-joboffer-subProgress" class="cvb-joboffer-subProgress">
+          <div id="cvb-job-speciality-result" class="cvb-analyzer-section"></div>
+          <div class="cvb-premium-progress-section" id="cvb-premium-progress-section"></div>
+        </div>
+
+        <div class="cvb-skill-progress-wrapper">
+          <div class="cvb-skill-progress-bar" id="cvb-joboffer-progress-bar"></div>
+          <span id="cvb-joboffer-progress-label">0% Corresponding to selected</span>
+        </div>
+
+        <div class="cvb-joboffer-button-container">
+          <div class="cvb-ai-loading" id="cvb-ai-loading">
+            Analyzing<span id="cvb-loading-dots"></span>
+          </div>
+          <div class="cvb-joboffer-buttons">
+            <button type="button" id="AnalyzeJobOfferMatch" class="cvb-btn-IA-modern">
+              <div class="btn-content">
+                <span>Analyze my CV match</span>
+                <small><i class="ri-coin-fill"></i> 2 coins</small>
+              </div>
+              <i class="ri-search-eye-line"></i>
+            </button>
+
+            <button type="button" id="SelectJobOfferMatch" class="cvb-btn-IA-modern">
+              <div class="btn-content">
+                <span>Auto-fill from job offer</span>
+                <small><i class="ri-coin-fill"></i> 5 coins</small>
+              </div>
+              <i class="ri-user-star-line"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="cvb-joboffer-clear-container">
+          <span id="cvb-clear-joboffer" class="cvb-clear-btn"><i class="ri-restart-line"></i>Clear job analyzer</span>
+        </div>
+    </section>
+  </div>
+
+  <div id="cvb-theme">
+  <div class="cvb-color-picker-wrapper">
+    <div class="cvb-color-picker-section">
+      <h3 class="cvb-color-title">Choose Your CV Style</h3>
+      <div class="cvb-color-form-grid">
+        <div>
+          <div class="cvb-color-dropdown" id="cvb-color-dropdown">
+            <div class="cvb-color-selected" id="cvb-color-selected">
+              <span class="cvb-color-sample"></span>
+              <span class="cvb-color-name">Professional Navy</span>
+            </div>
+            <div class="cvb-color-options" id="cvb-color-options">
+              <!-- populates options -->
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <input type="color" title="CV Color" id="cvb-theme-color" value="#1f497d" class="cvb-color-input" />
+        </div>
+      </div>
+
+      <div>
+        <select id="cvb-language" title="CV Language" class="cvb-lang-input">
+          <option value="en">English</option>
+          <option value="fr">Français</option>
+          <option value="de">Deutsch</option>
+          <option value="es">Español</option>
+          <option value="it">Italiano</option>
+          <option value="pt">Português</option>
+          <option value="nl">Nederlands</option>
+        </select>
+      </div>
+
+      <h4 class="cvb-color-label">Select CV Style:</h4>
+      <div class="cv-style-filters">
+        <button class="cv-style-filter active" data-filter="all">All</button>
+        <button class="cv-style-filter" data-filter="ats">ATS</button>
+        <button class="cv-style-filter" data-filter="modern">Modern</button>
+        <button class="cv-style-filter" data-filter="creative">Creative</button>
+        <button class="cv-style-filter" data-filter="professional">Professional</button>
+      </div>
+    </div>
+
+    <div class="cv-style-selection-wrapper">
+    <div id="cv-style-selection" class="cv-style-selection">
+
+      <div class="cv-style-captioned">
+        <div class="cv-pro-wrapper">
+          <img src="CV_templates/Analyst.jpg" 
+            alt="CV Style Analyst (Professional)"
+            onclick="selectCVStyle('cvbDownloadPDF_Analyst', this)" />
+          <div class="cv-pro-badge">
+            <i class="ri-coin-fill"></i> 20
+          </div>
+        </div>
+        <span>Analyst</span>
+      </div>
+
+      <div class="cv-style-captioned">
+        <div class="cv-pro-wrapper">
+          <img src="CV_templates/Vanguard.jpg" 
+            alt="CV Style Vanguard (ATS)"
+            onclick="selectCVStyle('cvbDownloadPDF_Vanguard', this)" />
+          <div class="cv-pro-badge">
+            <i class="ri-coin-fill"></i> 10
+          </div>
+        </div>
+        <span>Vanguard</span>
+      </div>
+
+      <div class="cv-style-captioned">
+        <div class="cv-pro-wrapper">
+          <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEisLNSzKqqJoHmWN0lVqfqWvc1p10rGpkSGHOUSrXmDXdoLIOeEf5tk_4QXszNU9KWlpjoRYYnCGRaS2pTmBwhHxID5ssN1swH2UI8OafJg3RdfbbPhfgJsR4bZLJjPg_-BamnY5PzRDBPYK910B2zp87mxY5_BxNrUUhhDYjrcowBAJRIyXaqxpC7S934/s1600/Elena_Fischer_CV%20%2893%29_page-0001.jpg" 
+            alt="CV Style Visionary (Modern)"
+            onclick="selectCVStyle('cvbDownloadPDF_Visionary', this)" />
+          <div class="cv-pro-badge">
+            <i class="ri-coin-fill"></i> 15
+          </div>
+        </div>
+        <span>Visionary</span>
+      </div>
+
+      <div class="cv-style-captioned">
+        <div class="cv-pro-wrapper">
+          <img src="CV_templates/Virtuoso.jpg" 
+            alt="CV Style Virtuoso (Professional)"
+            onclick="selectCVStyle('cvbDownloadPDF_Virtuoso', this)" />
+          <div class="cv-pro-badge">
+            <i class="ri-coin-fill"></i> 20
+          </div>
+        </div>
+        <span>Virtuoso</span>
+      </div>
+
+      <div class="cv-style-captioned">
+        <div class="cv-pro-wrapper">
+          <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhxvLLVJyBegF105POpmYT1fVjQsIDjKVlg046KUrhZ3INXPTmvLv0iEIXxt1xU_OOsPXnBmI-u76bcLHHTHA4vl1NIWI79-TSvyixvMGBWXmMYnBUSKNkj_d9bCLnFybV5jcv1v2bmS746bZrCr6XjWTG_JWlUHF9-mkmabdkmWNnVMXNzzUNgJUXWH18/s1600/James_O%27Connell_CV%20%283%29_page-0001.jpg" 
+            alt="CV Style Luminary (Creative)"
+            onclick="selectCVStyle('cvbDownloadPDF_Luminary', this)" />
+          <div class="cv-pro-badge">
+            <i class="ri-coin-fill"></i> 20
+          </div>
+        </div>
+        <span>Luminary</span>
+      </div>
+
+      <div class="cv-style-captioned">
+        <div class="cv-pro-wrapper">
+          <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgc4hM4oLyQgMKF7Ftx7HffMXlWb0_HJOSXACR8FQH_CJ4uoKIhvceCVRgfpsdkrGgwLF9jFAYfrT4xFpyKHas8y1NOC3q_caicanUHY1xhMxL4UIW47elOE3cSbTH75y_sQAk4GWuktbbdcxVFDgK8pcDZoy8TgofTd-VKyenYaEtbegbOSnrlCLW5rOo/s1600/James_O%27Connell_CV%20%287%29_page-0001.jpg" 
+            alt="CV Style Titan (Creative)"
+            onclick="selectCVStyle('cvbDownloadPDF_Titan', this)" />
+          <div class="cv-pro-badge">
+            <i class="ri-coin-fill"></i> 15
+          </div>
+        </div>
+        <span>Titan</span>
+      </div>
+
+      <div class="cv-style-captioned">
+        <div class="cv-pro-wrapper">
+          <img src="CV_templates/Strategist.jpg" 
+            alt="CV Style Strategist (ATS)"
+            onclick="selectCVStyle('cvbDownloadPDF_Strategist', this)" />
+          <div class="cv-pro-badge">
+            <i class="ri-coin-fill"></i> 20
+          </div>
+        </div>
+        <span>Strategist</span>
+      </div>
+
+      <div class="cv-style-captioned">
+        <div class="cv-pro-wrapper">
+          <img src="CV_templates/Minimalist.jpg" 
+            alt="CV Style Minimalist (ATS)"
+            onclick="selectCVStyle('cvbDownloadPDF_Minimalist', this)" />
+          <div class="cv-pro-badge">
+            <i class="ri-coin-fill"></i> 15
+          </div>
+        </div>
+        <span>Minimalist</span>
+      </div>
+
+      <div class="cv-style-captioned">
+        <div class="cv-pro-wrapper">
+          <img src="CV_templates/Mentor.jpg" 
+            alt="CV Style Mentor (Professional)"
+            onclick="selectCVStyle('cvbDownloadPDF_Mentor', this)" />
+          <div class="cv-pro-badge">
+            <i class="ri-coin-fill"></i> 20
+          </div>
+        </div>
+        <span>Mentor</span>
+      </div>
+
+      <div class="cv-style-captioned">
+        <div class="cv-pro-wrapper">
+          <img src="CV_templates/Architect.jpg" 
+            alt="CV Style Architect (ATS)"
+            onclick="selectCVStyle('cvbDownloadPDF_Architect', this)" />
+          <div class="cv-pro-badge">
+            <i class="ri-coin-fill"></i> 15
+          </div>
+        </div>
+        <span>Architect</span>
+      </div>
+
+      <div class="cv-style-captioned">
+        <div class="cv-pro-wrapper">
+          <img src="CV_templates/Authority.jpg" 
+            alt="CV Style Authority (Executive)"
+            onclick="selectCVStyle('cvbDownloadPDF_Authority', this)" />
+          <div class="cv-pro-badge">
+            <i class="ri-coin-fill"></i> 15
+          </div>
+        </div>
+        <span>Authority</span>
+      </div>
+
+      <div class="cv-style-captioned">
+        <div class="cv-pro-wrapper">
+          <img src="CV_templates/Connector.jpg" 
+            alt="CV Style Connector (Creative)"
+            onclick="selectCVStyle('cvbDownloadPDF_Connector', this)" />
+          <div class="cv-pro-badge">
+            <i class="ri-coin-fill"></i> 20
+          </div>
+        </div>
+        <span>Connector</span>
+      </div>
+
+      <div class="cv-style-captioned">
+        <div class="cv-pro-wrapper">
+          <img src="CV_templates/Coordinator.jpg" 
+            alt="CV Style Coordinator (Professional)"
+            onclick="selectCVStyle('cvbDownloadPDF_Coordinator', this)" />
+          <div class="cv-pro-badge">
+            <i class="ri-coin-fill"></i> 15
+          </div>
+        </div>
+        <span>Coordinator</span>
+      </div>
+      
+      <div class="cv-style-captioned">
+        <div class="cv-pro-wrapper">
+          <img src="CV_templates/Specialist.jpg" 
+            alt="CV Style Specialist (ATS)"
+            onclick="selectCVStyle('cvbDownloadPDF_Specialist', this)" />
+          <div class="cv-pro-badge">
+            <i class="ri-coin-fill"></i> 10
+          </div>
+        </div>
+        <span>Specialist</span>
+      </div>
+
+      <div class="cv-style-captioned">
+        <div class="cv-pro-wrapper">
+          <img src="CV_templates/Executive.jpg" 
+            alt="CV Style Executive (Professional)"
+            onclick="selectCVStyle('cvbDownloadPDF_Executive', this)" />
+          <div class="cv-pro-badge">
+            <i class="ri-coin-fill"></i> 15
+          </div>
+        </div>
+        <span>Executive</span>
+      </div>
+
+      <div class="cv-style-captioned">
+        <div class="cv-pro-wrapper">
+          <img src="CV_templates/Precisionist.jpg" 
+            alt="CV Style Precisionist (ATS)"
+            onclick="selectCVStyle('cvbDownloadPDF_Precisionist', this)" />
+          <div class="cv-pro-badge">
+            <i class="ri-coin-fill"></i> 10
+          </div>
+        </div>
+        <span>Precisionist</span>
+      </div>
+
+      <div class="cv-style-captioned">
+        <div class="cv-pro-wrapper">
+          <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh-JPnO5mdxtIbPK_0rcDBxOLz60FlAKwNjlzvL1BGIvb5g_uk-G0KDzacGaCIaI7tE7r1ezqfMj-_4VrUBEPeYLrVMcdAeX_KjPltRY4t1_mlrWCU603OKMwP4r61WzHhb4yJmsR7PqtGDbJZG7oUOKxVyV6_o_8VKO4Zw2VEGv8KMvVvN8buw6xZSVRE/s1600/James_O%27Connell_CV%20%285%29_page-0001.jpg" 
+            alt="CV Style Diplomat (Professional)"
+            onclick="selectCVStyle('cvbDownloadPDF_Diplomat', this)" />
+          <div class="cv-pro-badge">
+            <i class="ri-coin-fill"></i> 10
+          </div>
+        </div>
+        <span>Diplomat</span>
+      </div>
+
+      <div class="cv-style-captioned">
+        <div class="cv-pro-wrapper">
+          <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg3l9J9R8gXyoONKuIPMkIGZbw7tCevQVhUxRk4IPzp3jVcW3iP7EMkF0J0dkbAtFDGdgVFqvFpRlWQMPf2QAl-ibuxb8LCNtiMz2WHJDv4YhbtPLbTODMDn4dBQRzI9VJLUauQGfUYyVmrDQ8PBtS6tsT_lSy4Y0khzdV2R8K1nlmzPyBe9FRCrq5_55U/s1600/James_O%27Connell_CV%20%282%29_page-0001.jpg" 
+            alt="CV Style Commander (Executive)"
+            onclick="selectCVStyle('cvbDownloadPDF_Commander', this)" />
+          <div class="cv-pro-badge">
+            <i class="ri-coin-fill"></i> 10
+          </div>
+        </div>
+        <span>Commander</span>
+      </div>
+
+      <div class="cv-style-captioned">
+        <div class="cv-pro-wrapper">
+          <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhRuOy1U_FRAqIRn-S-prtELiPQ-LLDof49xB0JlWnt1lQPnuBe-RvFPFt5zF2pNBkBZfdFoiiPI0cyEMxEXLY1Rtxnjwx0PKocIDtv7YMdQ5n8TQ6Lh6hH4L9C6dKxQAp7vb8B6gLUWvny6m4W8TOZR3OKNoVLsENj0oO5LRnGc5GJ_aUeUmILKy6gqxU/s1600/Elena_Fischer_CV%20%2894%29_page-0001.jpg" 
+            alt="CV Style Innovator (Modern)"
+            onclick="selectCVStyle('cvbDownloadPDF_Innovator', this)" />
+          <div class="cv-pro-badge">
+            <i class="ri-coin-fill"></i> 10
+          </div>
+        </div>
+        <span>Innovator</span>
+      </div>
+      
+    </div>
+    </div>
+  </div>
+
+  <div class="cvb-preview-wrapper">
+    <!-- Notification bar -->
+    <div id="cvb-notification" class="cvb-InternalNotify hidden">
+      <span id="cvb-notification-text"></span>
+    </div>
+
+    <div class="cvb-preview-body">
+      <div id="cvb-preview-placeholder" class="cvb-preview-placeholder">
+        <i class="ri-refresh-line"></i>
+        <p>We recommend to refresh your CV preview to validate it before saving.</p>
+      </div>
+
+      <img id="cvb-preview-img" class="cvb-preview-frame hidden" alt="CV Preview" />
+
+      <div class="cvb-preview-sidebar">
+        <button class="cvb-btn-sidebar" onclick="previewSelectedCV()" title="Refresh Preview">
+          <i class="ri-refresh-line"></i>
+        </button>
+        <button class="cvb-btn-sidebar" onclick="zoomInPreview()" title="Zoom In">
+          <i class="ri-zoom-in-line"></i>
+        </button>
+        <button class="cvb-btn-sidebar" onclick="zoomOutPreview()" title="Zoom Out">
+          <i class="ri-zoom-out-line"></i>
+        </button>
+        <button class="cvb-btn-sidebar" id="cvb-save-consumption" title="Download PDF">
+          <i class="ri-file-pdf-line"></i>
+        </button>
+        <button class="cvb-btn-sidebar" id="cvbExportToExcelResume" title="Download Excel">
+          <i class="ri-file-excel-line"></i>
+        </button>
+      </div>
+    </div>
+
+  </div>
+  
+  </div>
+
+</div>
+
+</div>
+
+<script src="resume.js" defer></script>
+<script type="module" src="resume_Auth.js"></script>
+<script type="module" src="/auth/login_modal.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/file-saver.js/2.0.5/FileSaver.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.14.305/pdf.min.js"></script>
+
+<link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flag-icons/css/flag-icons.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@563&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&family=Inter:wght@563&family=Roboto:ital,wght@0,100..900;1,100..900&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap" rel="stylesheet">
+
+<script src='https://unpkg.com/xlsx@0.17.3/dist/xlsx.full.min.js' type='text/javascript'></script>
+<script src='https://www.gstatic.com/charts/loader.js' type='text/javascript'></script>
+<script src='https://apis.google.com/js/api.js'></script>
+
+</body>
+</html>

@@ -1,0 +1,968 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="style/index.css" />
+    <link rel="stylesheet" href="style/forms.css" />
+    <link rel="stylesheet" href="u/account.css" />
+    <link rel="icon" type="image/png" href="icons/operlya_favicon.png">
+    <title>Account | Operlya</title>
+    <meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+
+<header class="cvb-topbar">
+  <div class="cvb-topbar-container">
+    <div class="cvb-topbar-left">
+      <a class="cvb-logo" href="/">
+        <img src="icons/operlya_favicon.png" alt="Operlya Logo" />
+        <span class="cvb-logo-text">Operlya</span>
+      </a>
+
+      <button class="nav_helpButton" id="topBarHelp"><i class="ri-question-line"></i> Need Help?</button>
+    </div>
+
+    <div class="navbar-actionsRight">
+      
+      <div class="topbar-cta">
+        <a href="feed.html" data-title="opportunitiesExplorer" class="topbar-btn topbar-btn-primary">
+          <i class="ri-compass-discover-line"></i> Tasks Explorer
+        </a>
+
+        <a href="opportunities/execution.html" data-title="executionCenter" class="topbar-btn topbar-btn-outline">
+          <i class="ri-timeline-view"></i> Execution Center
+        </a>
+
+        <a href="talents/resume.html" data-title="resumeBuilder" class="topbar-btn topbar-btn-outline">
+          <i class="ri-file-list-3-line"></i> Resume Builder
+        </a>
+      </div>
+
+      <div class="language-select" id="languageSelectorSidebar">
+        <div class="selectedLanguage">
+          <span class="fi fi-us"></span>
+          <span class="lang-text">English</span>
+        </div>
+        <ul class="options">
+          <li data-value="en"><span class="fi fi-us"></span> English</li>
+          <li data-value="es"><span class="fi fi-es"></span> Español</li>
+          <li data-value="zh"><span class="fi fi-cn"></span> 中文</li>
+          <li data-value="fr"><span class="fi fi-fr"></span> Français</li>
+          <li data-value="de"><span class="fi fi-de"></span> Deutsch</li>
+          <li data-value="ar"><span class="fi fi-sa"></span> العربية</li>
+          <li data-value="pt"><span class="fi fi-br"></span> Português</li>
+          <li data-value="ja"><span class="fi fi-jp"></span> 日本語</li>
+          <li data-value="ru"><span class="fi fi-ru"></span> Русский</li>
+        </ul>
+      </div>
+
+      <div class="navbar-actions" id="navbarActions"></div>
+
+      <div class="cvb-menu-toggle" id="cvb_menu_toggle">☰</div>
+    </div>
+
+  </div>
+
+  <div class="cvb-topbar-containerMobile">
+    <nav class="cvb-nav-mobile" id="cvb-default-navMobile">
+      <ul>
+        <li><a href="feed.html" data-title="opportunitiesExplorer"><i class="ri-compass-3-line"></i> Tasks Explorer</a></li>
+        <li><a href="opportunities/execution.html" data-title="executionCenter"><i class="ri-timeline-view"></i> Execution Center</a></li>
+        <li><a href="talents/resume.html" data-title="resumeBuilder"><i class="ri-file-list-3-line"></i> Resume Builder</a></li>
+      </ul>
+    </nav>
+    <div class="cvb-mobileLeft">
+      <div class="language-select mobile-lang" id="languageSelectorMobile">
+        <div class="selectedLanguage">
+          <span class="fi fi-us"></span>
+          <span class="lang-text">English</span>
+        </div>
+        <ul class="options">
+          <li data-value="en"><span class="fi fi-us"></span> English</li>
+          <li data-value="es"><span class="fi fi-es"></span> Español</li>
+          <li data-value="zh"><span class="fi fi-cn"></span> 中文</li>
+          <li data-value="fr"><span class="fi fi-fr"></span> Français</li>
+          <li data-value="de"><span class="fi fi-de"></span> Deutsch</li>
+          <li data-value="ar"><span class="fi fi-sa"></span> العربية</li>
+          <li data-value="pt"><span class="fi fi-br"></span> Português</li>
+          <li data-value="ja"><span class="fi fi-jp"></span> 日本語</li>
+          <li data-value="ru"><span class="fi fi-ru"></span> Русский</li>
+        </ul>
+      </div>
+      <button class="nav_flagButton" id="openhelpMobile"><i class="ri-question-line"></i> Need Help?</button>
+    </div>    
+  </div>
+</header>
+
+<div id="helpModal" class="modal">
+  <div class="modal-content">
+    
+    <div class="modal-header">
+      <h2>Need Help?</h2>
+
+      <button class="close-icon" id="closeHelp" title="close help">
+        <i class="ri-close-line"></i>
+      </button>
+    </div>
+
+    <p class="modal-subtitle">
+      We're here to support you. Choose a topic and tell us your issue.
+    </p>
+
+    <!-- Modern Dropdown -->
+    <div class="modal-dropdown-wrapper">
+      <i class="ri-arrow-down-s-line modal-dropdown-icon"></i>
+      <select id="helpCategory" title="Help Category" class="modal-dropdown">
+        <option value="" disabled selected>Select a category</option>
+        <option value="account">Account & Login Issues</option>
+        <option value="coins">Coins & Payments</option>
+        <option value="builder">CV Builder Help</option>
+        <option value="bug">Report a Bug</option>
+      </select>
+    </div>
+
+    <div id="helpFormContainer">
+      <input type="email" id="helpEmail" placeholder="Enter your email">
+      <textarea id="helpMessage" placeholder="Write your message..." rows="4"></textarea>
+      <button id="helpSendBtn">Send Message</button>
+    </div>
+
+  </div>
+</div>
+
+<div class="notify2-modal" id="newTaskNotif">
+  <div class="notify2-content">
+    <button title="Close Form" class="notify2-close-top" id="notifyCloseTop"><i class="ri-close-line"></i></button>
+    <div class="notify2-icon" id="notifyIcon"></div>
+    <h3 id="notifyTitle">Title</h3>
+    <p id="notifyMessage">Message goes here</p>
+    <div class="notify2-actions" id="notifyActions">
+      <button class="notify2-btn notify2-btn-secondary" id="notifyCancel">Cancel</button>
+      <button class="notify2-btn notify2-btn-primary" id="notifyConfirm">Reset settings</button>
+    </div>
+  </div>
+</div>
+
+<div class="profilPage">
+
+  <div class="profilDisplay">
+    <section class="profile-header">
+
+      <div class="profile-card">
+
+        <div class="profile-cover" id="profileCover">
+          <canvas id="profileCanvas"></canvas>
+        </div>
+
+        <div class="profile-avatar">
+          <img id="profileAvatar"
+              src="images/default_avatar.png"
+              alt="Profile Avatar">
+          <button title="Edit Avatar" class="avatar-edit-btn" id="editAvatarBtn">
+            <i class="ri-camera-line"></i>
+          </button>
+        </div>
+
+        <div class="avatar-actions" id="avatarActions">
+          <button class="avatar-btn cancel" id="cancelAvatarBtn">
+            <i class="ri-close-line"></i> Cancel
+          </button>
+          <button class="avatar-btn save" id="saveAvatarBtn">
+            <i class="ri-check-line"></i> Save avatar
+          </button>
+        </div>
+
+        <div class="profile-identity">
+          <h2 id="profileFullName"></h2>
+          <p class="profile-headline" id="profileHeadline"></p>
+          <p class="profile-industry" id="profileIndustry"></p>
+        </div>
+
+        <!-- Right : Stats / Badges -->
+        <div class="profile-stats">
+          
+          <div id="profileVerified" class="profile-badge verified">
+            <i class="ri-shield-check-line"></i>
+            <span>Verification</span>
+          </div>
+
+          <div class="profile-badge role" id="profileRole">
+            <i class="ri-briefcase-line"></i>
+            <span>Status</span>
+          </div>
+
+          <div class="profile-badge availability" id="profileAvailability">
+            <i class="ri-time-line"></i>
+            <span>Availability</span>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <div class="cvb-usertab-nav" id="cvb-user-info-formNav">
+      <button class="cvb-usertab-btn active" data-tab="infoTab">
+        <i class="ri-user-line"></i> Profile
+      </button>
+      <button class="cvb-usertab-btn" data-tab="historyTab">
+        <i class="ri-time-line"></i> Activity
+      </button>
+      <button class="cvb-usertab-btn" data-tab="buyCoinsTab">
+        <i class="ri-shopping-bag-3-line"></i> Billing
+      </button>
+      <button class="cvb-usertab-btn" data-tab="affiliationTab">
+        <i class="ri-share-forward-line"></i> Affiliation
+      </button>
+      <button class="cvb-usertab-btn" data-tab="securityTab">
+        <i class="ri-lock-password-line"></i> Security
+      </button>
+    </div>
+
+    <div class="sidebar-footer-cta">
+      <div class="cta-content">
+        <h4>Boost Your Earnings</h4>
+        <p>Share your link and unlock bonus coins</p>
+        <button class="cta-btn">
+          <i class="ri-share-forward-line"></i>
+          Share Now
+        </button>
+        <div class="cta-stats">
+          <span>Unlock up to 25% with your network.</span>
+        </div>
+      </div>
+      <img title="Operlya Coin" src="images/operlya_coin.png" class="cta-coin" />
+    </div>
+  </div>
+
+  <div class="cvb-user-info-form" id="cvb-user-info-form" >
+    <div class="cvb-user-info-container">
+      <div class="cvb-InternalNotify hidden" id="cvb-user-form-notify"></div>
+
+      <div id="profileCompletionBox" class="profile-completion-box hidden">
+        <div class="pc-left">
+          <div class="pc-text">
+            <strong>Complete your profile</strong>
+          </div>
+        </div>
+
+        <div class="pc-bar">
+          <div class="pc-bar-fill" id="pc-bar-fill"></div>
+          <span class="pc-reward" id="pc-reward">+20 coins</span>
+        </div>
+
+        <p>Finish your profile to unlock 20 coins</p>
+      </div>
+
+      <div class="cvb-usertab-content active" id="infoTab">
+        <div class="cvb-usertab-contentDiv">
+
+          <div class="cvb-page-header">
+            <div class="cvb-page-title">
+              <i class="ri-user-line"></i>
+              <div>
+                <h2>Profile</h2>
+                <p>Manage your personal details and profile settings</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="cvb-user-section">
+            <div class="cvb-user-subSection">
+              <label for="userFirstName">Full Name:</label>
+              <input type="text" id="userFirstName">
+            </div>
+            <div class="cvb-user-subSection">
+              <label for="userLastName">Last Name:</label>
+              <input type="text" id="userLastName">
+            </div>
+            <div class="cvb-user-subSection">
+              <label for="userEmail">Email:</label>
+              <input type="email" id="userEmail" readonly>
+            </div>
+            <div class="cvb-user-subSection">
+              <label for="userBirthday">Birthday:</label>
+              <input type="date" id="userBirthday">
+            </div>
+            <div class="cvb-user-subSection">
+              <label for="userCountry">Country:</label>
+              <select id="userCountry">
+                <option value="">Select a country</option>
+              </select>
+            </div>
+            <div class="cvb-user-subSection">
+              <label for="userPhone">Phone Number:</label>
+              <input type="tel" id="userPhone" placeholder="+32 600 000 000">
+            </div>
+            <div class="cvb-user-subSection">
+              <label for="userIndustrySelect">Industry</label>
+              <select id="userIndustrySelect">
+                <option value="">Select an industry</option>
+              </select>
+            </div>
+            <div class="cvb-user-subSection">
+              <label for="userspecialitySelect">speciality</label>
+              <select id="userspecialitySelect">
+                <option value="">Select a speciality</option>
+              </select>
+            </div>
+            <div class="cvb-user-subSection">
+              <label for="userHeadline">Headline:</label>
+              <input type="text" id="userHeadline">
+            </div>
+            <div class="cvb-user-subSection">
+              <label for="userAvailability">Availability</label>
+              <select id="userAvailability">
+                <option value="">Select availability</option>
+                <option value="full_time">Full-time</option>
+                <option value="part_time">Part-time</option>
+                <option value="freelance">Freelance</option>
+                <option value="open_projects">Open for projects</option>
+                <option value="temporarily_unavailable">Temporarily unavailable</option>
+              </select>
+            </div>
+            <div class="cvb-user-subSection">
+              <label for="userRole">Status</label>
+              <select id="userRole">
+                <option value="">Select your status</option>
+                <option value="Talent">Talent</option>
+                <option value="Organization">Organization</option>
+                <option value="Freelancer">Freelancer</option>
+                <option value="Student">Student</option>
+                <option value="Team">Team</option>
+              </select>
+            </div>
+
+            <div class="cvb-user-subSection">
+              <label for="userGoals">Goals</label>
+              <select id="userGoals">
+                <option value="">Select your goal</option>
+                <option value="money">Earn money</option>
+                <option value="experience">Gain experience</option>
+                <option value="network">Build network</option>
+                <option value="learn">Learn new skills</option>
+                <option value="hire">Hire talent</option>
+                <option value="outsource_tasks">Outsource tasks</option>
+              </select>
+            </div>
+          </div>
+
+          <button id="updateUserNameBtn" class="import-light-btn">
+            <i class="ri-save-3-line"></i> Update informations
+          </button>
+
+          <p class="cvb-user-info-notice" id="cvb-user-info-noticeInfos">
+            <i class="ri-information-line"></i>
+            This information is <strong>not used for your CV</strong>.  
+            It helps us improve your experience and provide more personalized service.
+          </p>
+
+        </div>
+      </div>
+
+      <div class="cvb-usertab-content" id="historyTab">
+        <div class="cvb-usertab-contentDiv">
+          <div class="cvb-page-header">
+            <div class="cvb-page-title">
+              <i class="ri-time-line"></i>
+              <div>
+                <h2 id="history-page-title">Activity</h2>
+                <p id="history-page-description">Track your actions and coins usage over time</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="cvb-history-filters">
+            <input type="text" id="consumption-search" placeholder="Search file or action...">
+            <input type="date" id="consumption-start-date" placeholder="From">
+            <input type="date" id="consumption-end-date" placeholder="to">
+            <button id="consumption-filter-btn">Filter</button>
+          </div>
+
+          <div class="cvb-history-kpis">
+            <div class="cvb-kpi-card">
+              <span class="cvb-kpi-label" id="kpi-label-available">Available Coins</span>
+              <span class="cvb-kpi-value" id="kpi-available">0</span>
+            </div>
+
+            <div class="cvb-kpi-card">
+              <span class="cvb-kpi-label" id="kpi-label-used">Coins Used (30d)</span>
+              <span class="cvb-kpi-value" id="kpi-used">0</span>
+            </div>
+
+            <div class="cvb-kpi-card">
+              <span class="cvb-kpi-label" id="kpi-label-last">Last Activity</span>
+              <span class="cvb-kpi-value date" id="kpi-last-date">-</span>
+            </div>
+          </div>
+
+          <div class="cvb-history-graph">
+            <canvas id="consumptionChart"></canvas>
+          </div>
+
+          <div class="cvb-user-consumption">
+            <h3 class="cvb-usertab-tableTitle">Your activity history</h3>
+
+            <div class="cvb-usertab-tableWrapper">
+              <table class="cvb-usertab-table">
+                <thead>
+                  <tr>
+                    <th>Coins</th>
+                    <th>Description</th>
+                    <th>Date</th>
+                  </tr>
+                </thead>
+                <tbody id="cvb-history-body" class="cvb-user-history">
+                  <tr><td colspan="4">No history available</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cvb-usertab-content" id="buyCoinsTab">
+        <div class="cvb-usertab-contentDiv">
+
+          <div class="cvb-page-header">
+            <div class="cvb-page-title">
+              <i class="ri-coin-line"></i>
+              <div>
+                <h2 id="userPayTitle">Billing</h2>
+                <p id="userPayDescription">Increase your balance to unlock more actions</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="cvb-user-section">
+
+            <div class="cvb-user-subSection">
+              <label for="coinsPack">Select Coins Pack:</label>
+              <select id="coinsPack">
+                <option value="50" data-price="3" data-currency="USD">50 coins – $3</option>
+                <option value="100" data-price="5" data-currency="USD">100 coins – $5</option>
+                <option value="120" data-price="6" data-currency="USD">120 coins – $6</option>
+                <option value="250" data-price="10" data-currency="USD" selected>250 coins – $10</option>
+                <option value="700" data-price="20" data-currency="USD">700 coins – $20</option>
+                <option value="1500" data-price="35" data-currency="USD">1500 coins – $35</option>
+                <option value="custom">Custom Amount</option>
+              </select>
+            </div>
+
+            <div class="cvb-user-subSection" id="customCoinsContainer" style="display:none;">
+              <label for="customCoins">Enter Custom Coins:</label>
+              <input type="number" id="customCoins" min="10" step="10" placeholder="e.g. 200">
+            </div>
+
+            <div class="cvb-user-subSection">
+              <label for="paymentMethod">Payment Method:</label>
+              <select id="paymentMethod">
+                <option value="Stripe">Stripe</option>
+                <option value="PayPal">PayPal</option>
+                <option value="Google Pay">Google Pay</option>
+                <option value="Western Union">Western Union</option>
+                <option value="Bank Transfert">Bank Transfert</option>
+              </select>
+            </div>
+          </div>
+
+          <button id="purchaseCoinsBtn" class="btn-default">
+            <i class="ri-shopping-cart-2-line"></i> Order Coins
+          </button>
+
+          <div class="cvb-user-orders">
+            <h3 class="cvb-usertab-tableTitle" id="coinsOrdersTableTitle">Your Coins Orders</h3>
+
+            <div class="cvb-usertab-tableWrapper">
+            <table class="cvb-usertab-table" id="coinsOrdersTable">
+            <thead>
+              <tr>
+                <th>Order Date</th>
+                <th>Status</th>
+                <th>Description</th>
+                <th>Price</th>
+                <th>Payment Method</th>
+                <th>Payment Address</th>
+                <th>Instructions</th>
+                <th>Deadline</th>
+                <th>Reference</th>
+                <th>Payment Date</th>
+                <th>Proof</th>
+                <th>Confirmation</th>
+              </tr>
+            </thead>
+              <tbody class="cvb-user-history" id="coinsOrdersTablebody" >
+                <tr><td colspan="6">No orders available</td></tr>
+              </tbody>
+            </table>
+            </div>
+
+            <p class="cvb-order-note">
+              <i class="ri-time-line"></i> Your new orders will appear here once submitted.  
+              You can contact us anytime if you need to update or confirm your order.
+            </p>
+          </div>
+
+          <div class="cvb-payment-methods">
+            <p>Available Payment Methods</p>
+            <div class="cvb-payment-logos">
+              <img src="images/Stripe_Logo,_revised_2016.svg.png" alt="Stripe" loading="lazy">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" alt="PayPal">
+              <img src="images/google-pay-logo_1280x531.png" alt="Google Pay" loading="lazy">
+              <img src="images/Western-Union-Logo-2013.png" alt="Western Union" loading="lazy">
+              <img src="images/bank-transfer-icon-md.png" alt="Bank Transfert" loading="lazy">
+            </div>
+          </div>
+          <br>
+          <p class="cvb-user-info-notice" id="cvb-user-info-noticePay">
+            <i class="ri-shield-check-line"></i>
+            <strong>Secure & Personalized Purchase:</strong>  
+            Once you submit this form, our team will contact you directly to confirm your order and guide you through the payment process.  
+            <br>
+            We work manually to ensure <strong>safe transactions</strong>, <strong>quick coin activation</strong>, and <strong>personalized assistance</strong> for every user.  
+            <br>
+            You can pay using <strong>PayPal, Western Union, Stripe (manual), Google Pay, or bank transfer,</strong> whichever feels most convenient for you.  
+            <br>
+            <em>Our priority is your confidence, security, and satisfaction. You’re in good hands.</em>
+          </p>
+
+        </div>
+      </div>
+
+      <div class="cvb-usertab-content" id="affiliationTab">
+
+        <div class="cvb-affiliation-hero">
+
+          <div class="cvb-hero-left" id="cvb-hero-left">
+            <h1>Affiliate Program</h1>
+            <h2>Invite. Engage. Earn.</h2>
+            <p>
+              Earn coins when users join, activate, and complete actions through your referral link.
+            </p>
+
+            <div class="cvb-hero-actions">
+              <button class="cvb-hero-btn primary" id="shareReferralBtn">
+                <i class="ri-share-forward-line"></i>
+                Share Link
+              </button>
+
+              <button class="cvb-hero-btn icon" id="openReferralBtn">
+                <i class="ri-links-line"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="cvb-hero-card">
+
+            <h4>Your Referral Link</h4>
+            <div class="cvb-hero-link">
+              <input title="Referral link" type="text" id="referralLinkInput" readonly>
+              <button title="Copy referral link" id="copyReferralBtn">
+                <i class="ri-file-copy-line"></i>
+              </button>
+            </div>
+            
+            <h4>Share on</h4>
+            <div class="cvb-hero-social">
+              <button title="Share on Facebook" id="shareFacebook"><i class="ri-facebook-fill"></i></button>
+              <button title="Share on Twitter" id="shareTwitter"><i class="ri-twitter-x-line"></i></button>
+              <button title="Share on LinkedIn" id="shareLinkedIn"><i class="ri-linkedin-fill"></i></button>
+              <button title="Share on WhatsApp" id="shareWhatsApp"><i class="ri-whatsapp-line"></i></button>
+              <button title="Share on email" id="shareEmail"><i class="ri-mail-line"></i></button>
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="cvb-affiliation-stats">
+
+          <div class="cvb-kpi-card">
+            <span class="cvb-kpi-label">Accepted Invites</span>
+            <span class="cvb-kpi-value" id="affInvites">0</span>
+          </div>
+
+          <div class="cvb-kpi-card">
+            <span class="cvb-kpi-label">Affilate Conversions</span>
+            <span class="cvb-kpi-value" id="affConversions">0</span>
+          </div>
+
+          <div class="cvb-kpi-card">
+            <span class="cvb-kpi-label">Confirmed Rewards</span>
+            <span class="cvb-kpi-value" id="affCoins">0</span>
+          </div>
+
+        </div>
+
+        <div class="cvb-affiliation-grid">
+
+          <div class="cvb-aff-card">
+
+            <h3>How You Earn</h3>
+
+            <div class="cvb-aff-steps">
+
+              <div class="cvb-aff-step">
+                <div class="cvb-aff-icon blue">
+                  <i class="ri-task-line"></i>
+                </div>
+                <div>
+                  <h4>Complete Actions</h4>
+                  <p>Earn coins by completing your profile, creating CVs, and applying</p>
+                </div>
+              </div>
+
+              <div class="cvb-aff-step">
+                <div class="cvb-aff-icon blue">
+                  <i class="ri-user-add-line"></i>
+                </div>
+                <div>
+                  <h4>Invite Users</h4>
+                  <p>Share your referral link with your network</p>
+                </div>
+              </div>
+
+              <div class="cvb-aff-step">
+                <div class="cvb-aff-icon green">
+                  <i class="ri-user-follow-line"></i>
+                </div>
+                <div>
+                  <h4>They Join</h4>
+                  <p>You earn when they create an account</p>
+                </div>
+              </div>
+
+              <div class="cvb-aff-step">
+                <div class="cvb-aff-icon orange">
+                  <i class="ri-task-line"></i>
+                </div>
+                <div>
+                  <h4>They Activate</h4>
+                  <p>Earn more when they complete actions on Operlya</p>
+                </div>
+              </div>
+
+              <div class="cvb-aff-step">
+                <div class="cvb-aff-icon purple">
+                  <i class="ri-line-chart-line"></i>
+                </div>
+                <div>
+                  <h4>Scale Earnings</h4>
+                  <p>Increase rewards as your network grows</p>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="cvb-aff-card">
+
+            <div class="cvb-aff-progress-header">
+              <div>
+                <h3>Your Progress</h3>
+                <div class="cvb-aff-level-header">
+                  <div class="cvb-level-ring operator">
+                    <div class="cvb-level-badge">
+                      <i class="ri-medal-line"></i>
+                    </div>
+                  </div>
+                  <span class="cvb-aff-level">Operator Affiliate</span>
+                </div>
+              </div>
+              <span class="cvb-aff-level-num">Level 1</span>
+            </div>
+
+            <div class="cvb-aff-progress-bar">
+              <div class="cvb-aff-progress-fill" style="width: 0%"></div>
+            </div>
+            <span class="cvb-aff-progress-text">0 / 100 Coins to Builder</span>
+
+            <div class="cvb-aff-benefits">
+              <h4>Benefits</h4>
+
+              <ul id="affiliateBenefitsList">
+                <li><i class="ri-check-line"></i> +10% referral reward boost (active users only)</li>
+                <li><i class="ri-check-line"></i> Increased CV visibility in opportunity search</li>
+                <li><i class="ri-check-line"></i> Faster reward unlock cycles</li>
+                <li><i class="ri-check-line"></i> Priority in new feature access (beta tools)</li>
+              </ul>
+            </div>
+            
+            <button class="cvb-aff-btn">
+              View All Levels
+            </button>
+
+          </div>
+
+        </div>
+
+        <div class="cvb-affiliation-analytics">
+
+          <div class="cvb-aff-card cvb-aff-chart-card">
+            
+            <div class="cvb-aff-card-header">
+              <h3>Earned Coins Overview</h3>
+              <span class="cvb-aff-muted">Last 360 days</span>
+            </div>
+
+            <div class="cvb-aff-chart-container">
+              <canvas id="affiliateCoinsChart"></canvas>
+            </div>
+
+          </div>
+
+          <div class="cvb-aff-card cvb-aff-referrers-card">
+
+            <div class="cvb-aff-card-header">
+              <h3>Top Referrers</h3>
+              <span class="cvb-aff-muted">Network ranking</span>
+            </div>
+
+            <div class="cvb-referrers-list" id="referrersList"></div>
+
+          </div>
+
+        </div>
+
+        <div class="cvb-aff-card cvb-aff-rewards-card">
+          <div class="cvb-aff-card-header">
+            <h3>User Rewards</h3>
+            <span class="cvb-aff-muted">Latest activity</span>
+          </div>
+          <div class="cvb-rewards-list" id="userRewardsList"></div>
+        </div>
+
+        <div class="cvb-aff-badges-overlay" id="affBadgesOverlay">
+          
+          <div class="cvb-aff-badges-header">
+            <h3>All Affiliate Levels</h3>
+            <button title="Close the badges" id="closeBadgesBtn">
+              <i class="ri-close-line"></i>
+            </button>
+          </div>
+
+          <div class="cvb-aff-badges-grid">
+
+            <div class="cvb-badge-card operator" data-badge="operator">
+              <div class="cvb-level-ring operator">
+                <div class="cvb-level-badge">
+                  <i class="ri-medal-line"></i>
+                </div>
+              </div>
+              <h4>Operator</h4>
+              <p>Enter the system. Start earning from your first actions.</p>
+            </div>
+
+            <div class="cvb-badge-card builder" data-badge="builder">
+              <div class="cvb-level-ring builder">
+                <div class="cvb-level-badge">
+                  <i class="ri-hammer-line"></i>
+                </div>
+              </div>
+              <h4>Builder</h4>
+              <p>Turn activity into growth. Expand your referral engine.</p>
+            </div>
+
+            <div class="cvb-badge-card architect" data-badge="architect">
+              <div class="cvb-level-ring architect">
+                <div class="cvb-level-badge">
+                  <i class="ri-building-2-line"></i>
+                </div>
+              </div>
+              <h4>Architect</h4>
+              <p>Design influence. Structure a high-performing network.</p>
+            </div>
+
+            <div class="cvb-badge-card elite" data-badge="elite">
+              <div class="cvb-level-ring elite">
+                <div class="cvb-level-badge">
+                  <i class="ri-vip-crown-line"></i>
+                </div>
+              </div>
+              <h4>Elite</h4>
+              <p>Unlock premium rewards. Operate at top-tier performance.</p>
+            </div>
+
+            <div class="cvb-badge-card core" data-badge="core">
+              <div class="cvb-level-ring core">
+                <div class="cvb-level-badge">
+                  <i class="ri-star-smile-line"></i>
+                </div>
+              </div>
+              <h4>Core</h4>
+              <p>Inner circle access. Shape the future of the ecosystem.</p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="cvb-usertab-content" id="securityTab">
+        <div class="cvb-usertab-contentDiv">
+
+          <div class="cvb-page-header">
+            <div class="cvb-page-title">
+              <i class="ri-lock-password-line"></i>
+              <div>
+                <h2 id="securityTitle">Security</h2>
+                <p id="securityDescription">Control your account safety and data preferences</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="cvb-security-card">
+            <div class="cvb-security-header">
+              <div>
+                <h4 id="profilePrivacyTitle">Profile Privacy</h4>
+                <p id="profilePrivacyDesc">Control who can see your profile information</p>
+              </div>
+              <!-- Profile Visibility Dropdown -->
+              <div class="cvb-security-row">
+                <label for="profileVisibilitySelect">Profile Visibility:</label>
+                <select id="profileVisibilitySelect" class="modern-select">
+                  <option value="public">Public (everyone)</option>
+                  <option value="registered">Registered users only</option>
+                  <option value="verified">Only verified users</option>
+                  <option value="private">Private (only me)</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="cvb-security-card">
+            <div class="cvb-security-header">
+              <div>
+                <h4 id="fieldVisibilityTitle">Field-Level Visibility</h4>
+                <p id="fieldVisibilityDesc">
+                  Choose which personal details are visible on your profile.<br>
+                  Hidden fields will not be shared with other users.
+                </p>
+              </div>
+
+              <div>
+                <div class="cvb-security-row field-visibility">
+                  <span data-key="email">Email</span>
+                  <label class="modern-checkbox">
+                    <input title="Email" type="checkbox" id="visibilityEmail">
+                    <span></span>
+                  </label>
+                </div>
+                <div class="cvb-security-row field-visibility">
+                  <span data-key="phone">Phone</span>
+                  <label class="modern-checkbox">
+                    <input title="Phone" type="checkbox" id="visibilityPhone">
+                    <span></span>
+                  </label>
+                </div>
+                <div class="cvb-security-row field-visibility">
+                  <span data-key="location">Location</span>
+                  <label class="modern-checkbox">
+                    <input title="Location" type="checkbox" id="visibilityLocation">
+                    <span></span>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="cvb-security-card">
+            <div class="cvb-security-header">
+              <div>
+                <h4 id="passwordTitle">Password & Login</h4>
+                <p id="passwordDesc">Secure access to your account</p>
+              </div>
+              <div class="cvb-security-row">
+                <button class="btn-outline" id="changePassword">
+                  <i class="ri-door-lock-line"></i> Change Password
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="cvb-security-card">
+            <div class="cvb-security-header">
+              <div>
+                <h4 id="dataUsageTitle">Data Usage Preferences</h4>
+                <p id="dataUsageDesc">
+                  Help us improve by sharing anonymous usage data.
+                  <a class="cvb-read-more" href="/privacy.html" id="dataUsageReadMore">Read more</a>
+                </p>
+              </div>
+              <div>
+                <div class="cvb-security-row field-visibility">
+                  <span data-key="product-improvements">Product improvements</span>
+                  <label class="modern-checkbox">
+                    <input title="Product improvements" type="checkbox" id="productImprovements">
+                    <span></span>
+                  </label>
+                </div>
+                <div class="cvb-security-row field-visibility">
+                  <span data-key="personalization">Personalization</span>
+                  <label class="modern-checkbox">
+                    <input title="Personalization" type="checkbox" id="personalization">
+                    <span></span>
+                  </label>
+                </div>
+                <div class="cvb-security-row field-visibility">
+                  <span data-key="marketing">Marketing communications</span>
+                  <label class="modern-checkbox">
+                    <input title="Marketing communications" type="checkbox" id="marketingCommunications">
+                    <span></span>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="cvb-security-card">
+            <div class="cvb-security-header">
+              <div>
+                <h4 id="dataExportTitle">Data Export & Portability</h4>
+                <p id="dataExportDesc">
+                  Download a copy of your personal data in a structured and secure format.<br>
+                  This includes your profile information, activity history, and preferences.
+                </p>
+              </div>
+              <div class="cvb-security-row">
+                <button class="btn-danger" id="exportUserDataBtn">
+                  <i class="ri-file-download-line"></i> Export My Data
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <button id="saveSecurityBtn" class="import-light-btn" style="display:none; margin-top:16px;">
+            <i class="ri-save-3-line"></i> Save changes
+          </button>
+
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+</div>
+
+<input type="file" id="profileAvatarFile" accept="image/*" hidden>
+<input type="hidden" id="profileAvatarLink">
+
+<script type="module" src="u/account.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flag-icons/css/flag-icons.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@563&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&family=Inter:wght@563&family=Roboto:ital,wght@0,100..900;1,100..900&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap" rel="stylesheet">
+
+<link crossorigin='anonymous' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css' integrity='sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==' referrerpolicy='no-referrer' rel='stylesheet'/>
+<script src='https://apis.google.com/js/api.js'></script>
+
+</body>
+</html>

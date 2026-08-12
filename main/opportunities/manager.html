@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="/style/index.css" />
+    <link rel="stylesheet" href="/style/forms.css" />
+    <link rel="stylesheet" href="tasks.css" />
+    <link rel="stylesheet" href="manager.css" />
+    <link rel="icon" type="image/png" href="/icons/operlya_favicon.png">
+    <title>Opportunities Manager | Operlya</title>
+    <meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+
+<header class="cvb-topbar">
+  <div class="cvb-topbar-container">
+    <div class="cvb-topbar-left">
+      <a class="cvb-logo" href="/">
+        <img src="/icons/operlya_favicon.png" alt="Operlya Logo" />
+        <span class="cvb-logo-text">Operlya</span>
+      </a>
+
+      <button class="nav_helpButton" id="topBarHelp"><i class="ri-question-line"></i> Need Help?</button>
+    </div>
+
+    <div class="navbar-actionsRight">
+      
+      <div class="topbar-cta">
+        <a href="create.html" data-title="postOpportunity" class="topbar-btn topbar-btn-primary">
+          <i class="ri-add-circle-line"></i> Create Opportunity
+        </a>
+
+        <a href="/feed.html" data-title="opportunitiesExplorer" class="topbar-btn topbar-btn-outline">
+          <i class="ri-compass-discover-line"></i> Opportunities Explorer
+        </a>
+
+        <a href="execution.html" data-title="executionCenter" class="topbar-btn topbar-btn-outline">
+          <i class="ri-timeline-view"></i> Execution Center
+        </a>
+      </div>
+
+      <div class="language-select" id="languageSelectorSidebar">
+        <div class="selectedLanguage">
+          <span class="fi fi-us"></span>
+          <span class="lang-text">English</span>
+        </div>
+        <ul class="options">
+          <li data-value="en"><span class="fi fi-us"></span> English</li>
+          <li data-value="es"><span class="fi fi-es"></span> Español</li>
+          <li data-value="zh"><span class="fi fi-cn"></span> 中文</li>
+          <li data-value="fr"><span class="fi fi-fr"></span> Français</li>
+          <li data-value="de"><span class="fi fi-de"></span> Deutsch</li>
+          <li data-value="ar"><span class="fi fi-sa"></span> العربية</li>
+          <li data-value="pt"><span class="fi fi-br"></span> Português</li>
+          <li data-value="ja"><span class="fi fi-jp"></span> 日本語</li>
+          <li data-value="ru"><span class="fi fi-ru"></span> Русский</li>
+        </ul>
+      </div>
+
+      <div class="navbar-actions" id="navbarActions"></div>
+
+      <div class="cvb-menu-toggle" id="cvb_menu_toggle">☰</div>
+    </div>
+
+  </div>
+
+  <div class="cvb-topbar-containerMobile">
+    <nav class="cvb-nav-mobile" id="cvb-default-navMobile">
+      <ul>
+        <li><a href="create.html" data-title="postOpportunity"><i class="ri-add-circle-line"></i> Create Opportunity</a></li>
+        <li><a href="/feed.html" data-title="opportunitiesExplorer"><i class="ri-compass-discover-line"></i> Opportunities Explorer</a></li>
+        <li><a href="execution.html" data-title="executionCenter"><i class="ri-timeline-view"></i> Execution Center</a></li>
+      </ul>
+    </nav>
+    <div class="cvb-mobileLeft">
+      <div class="language-select mobile-lang" id="languageSelectorMobile">
+        <div class="selectedLanguage">
+          <span class="fi fi-us"></span>
+          <span class="lang-text">English</span>
+        </div>
+        <ul class="options">
+          <li data-value="en"><span class="fi fi-us"></span> English</li>
+          <li data-value="es"><span class="fi fi-es"></span> Español</li>
+          <li data-value="zh"><span class="fi fi-cn"></span> 中文</li>
+          <li data-value="fr"><span class="fi fi-fr"></span> Français</li>
+          <li data-value="de"><span class="fi fi-de"></span> Deutsch</li>
+          <li data-value="ar"><span class="fi fi-sa"></span> العربية</li>
+          <li data-value="pt"><span class="fi fi-br"></span> Português</li>
+          <li data-value="ja"><span class="fi fi-jp"></span> 日本語</li>
+          <li data-value="ru"><span class="fi fi-ru"></span> Русский</li>
+        </ul>
+      </div>
+      <button class="nav_helpButton" id="openhelpMobile"><i class="ri-question-line"></i> Need Help?</button>
+    </div>    
+  </div>
+</header>
+
+<div id="helpModal" class="modal">
+  <div class="modal-content">
+    
+    <div class="modal-header">
+      <h2>Need Help?</h2>
+
+      <button class="close-icon" id="closeHelp" title="close help">
+        <i class="ri-close-line"></i>
+      </button>
+    </div>
+
+    <p class="modal-subtitle">
+      We're here to support you. Choose a topic and tell us your issue.
+    </p>
+
+    <!-- Modern Dropdown -->
+    <div class="modal-dropdown-wrapper">
+      <i class="ri-arrow-down-s-line modal-dropdown-icon"></i>
+      <select id="helpCategory" title="Help Category" class="modal-dropdown">
+        <option value="" disabled selected>Select a category</option>
+        <option value="account">Account & Login Issues</option>
+        <option value="coins">Coins & Payments</option>
+        <option value="builder">CV Builder Help</option>
+        <option value="bug">Report a Bug</option>
+      </select>
+    </div>
+
+    <div id="helpFormContainer">
+      <input type="email" id="helpEmail" placeholder="Enter your email">
+      <textarea id="helpMessage" placeholder="Write your message..." rows="4"></textarea>
+      <button id="helpSendBtn">Send Message</button>
+    </div>
+
+  </div>
+</div>
+
+<div class="notify2-modal" id="newTaskNotif">
+  <div class="notify2-content">
+    <button title="Close Form" class="notify2-close-top" id="notifyCloseTop"><i class="ri-close-line"></i></button>
+    <div class="notify2-icon" id="notifyIcon"></div>
+    <h3 id="notifyTitle">Title</h3>
+    <p id="notifyMessage">Message goes here</p>
+    <div class="notify2-actions" id="notifyActions">
+      <button class="notify2-btn notify2-btn-secondary" id="notifyCancel">Cancel</button>
+      <button class="notify2-btn notify2-btn-primary" id="notifyConfirm">Reset settings</button>
+    </div>
+  </div>
+</div>
+
+<div class="tm-header">
+  <div class="tm-headerLeft">
+    <h2>Opportunities Manager</h2>
+    <p>Track and manage your tasks, jobs and opportunities.</p>
+  </div>
+
+  <div class="tm-headerRight">
+    <div class="tm-viewSwitcher">
+      <button title="Table" class="tm-viewBtn active" data-view="table">
+        <i class="ri-table-line"></i>
+      </button>
+      <button title="Board" class="tm-viewBtn" data-view="board">
+        <i class="ri-kanban-view"></i>
+      </button>
+      <button title="Gantt" class="tm-viewBtn" data-view="gantt">
+        <i class="ri-timeline-view"></i>
+      </button>
+    </div>
+
+    <div class="tm-kpiGrid">
+      <div class="tm-kpiCard">
+        <div class="tm-kpiContent">
+          <span><i class="ri-briefcase-line"></i> Opportunities</span>
+          <h3 id="tm-totalTasks">0</h3>
+        </div>
+      </div>
+
+      <div class="tm-kpiCard">
+        <div class="tm-kpiContent">
+          <span><i class="ri-eye-line"></i> Total Views</span>
+          <h3 id="tm-totalViews">0</h3>
+        </div>
+      </div>
+
+      <div class="tm-kpiCard">
+        <div class="tm-kpiContent">
+          <span><i class="ri-send-plane-line"></i> Applies</span>
+          <h3 id="tm-totalApplies">0</h3>
+        </div>
+      </div>
+
+      <div class="tm-kpiCard highlight">
+        <div class="tm-kpiContent">
+          <span><i class="ri-line-chart-line"></i> Conversion Rate</span>
+          <h3 id="tm-conversionRate">0%</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="opportunitiesManager-wrapper">
+
+  <div class="tm-tasksList">
+
+    <div class="tm-tasksTopBar">
+      <div class="tm-topBarContent">
+        <div class="tm-search">
+          <i class="ri-search-line"></i>
+          <input type="text" id="tm-searchInput" placeholder="Search by title...">
+        </div>
+
+        <div class="tm-advancedToggle" id="tm-advancedToggle">
+          <i class="ri-equalizer-line"></i>
+          <span></span>
+          <i class="ri-arrow-down-s-line tm-rotateIcon"></i>
+        </div>
+      </div>
+
+      <div class="tm-advancedFilters" id="tm-advancedFilters">
+        <select title="Period" id="tm-periodFilter">
+          <option value="all">All time</option>
+          <option value="7">Last 7 days</option>
+          <option value="30">Last month</option>
+          <option value="90">Last 3 months</option>
+          <option value="365">Last year</option>
+          <option value="custom">Custom range</option>
+        </select>
+
+        <input title="From" type="datetime-local" id="tm-startDate">
+        <input title="To" type="datetime-local" id="tm-endDate">
+      </div>
+    </div>
+
+    <div class="tm-tasksCards" id="tasksDisplay"></div>
+
+  </div>
+    
+  <div class="tm-tasksWrapper" id="tm-tasksWrapper">
+    <div class="cvb-InternalNotify hidden" id="cvb-workspace-form-notify"></div>
+    <div class="tm-appliersLayout" id="tm-appliersLayout">
+      <div class="tasksList" id="tm-tasksView"></div>
+      <div class="tm-applierNotification" id="tm-appliersNotification"></div>
+      <div id="tm-appliersPanel"></div>
+    </div>
+  </div>
+
+  <div class="tm-boardWrapper" id="tm-boardWrapper">
+    <div class="tm-board" id="tm-board"></div>
+  </div>
+
+  <div class="tm-ganttWrapper" id="tm-ganttWrapper"></div>
+
+</div>
+
+<script type="module" src="manager.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flag-icons/css/flag-icons.min.css">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&family=Inter:wght@563&family=Roboto:ital,wght@0,100..900;1,100..900&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap" rel="stylesheet">
+
+<link crossorigin='anonymous' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css' integrity='sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==' referrerpolicy='no-referrer' rel='stylesheet'/>
+<script src='https://apis.google.com/js/api.js'></script>
+
+</body>
+</html>

@@ -1,0 +1,3299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="/style/landing.css" />
+    <link rel="stylesheet" href="/style/index.css" />
+    <link rel="stylesheet" href="/style/forms.css" />
+    <link rel="stylesheet" href="/auth/login.css" />
+    <link rel="stylesheet" href="create.css" />
+    <link rel="icon" type="image/png" href="/icons/operlya_favicon.png">
+    <title>Find Top Talent & Hire Professionals  | Operlya</title>
+    <meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+
+<header class="cvb-topbar" id="cvb-topbar1">
+  <div class="cvb-topbar-container">
+    <div class="cvb-topbar-left">
+      <a class="cvb-logo" href="/">
+        <img src="/icons/operlya_favicon.png" alt="Operlya Logo" />
+        <span class="cvb-logo-text">Operlya</span>
+      </a>
+
+      <button class="nav_flagButton" id="topBarHelp"><i class="ri-question-line"></i> Need Help?</button>
+    </div>
+
+    <div class="navbar-actionsRight">
+      
+      <div class="topbar-cta">
+        <a href="manager.html" data-title="opportunitiesManager" class="topbar-btn topbar-btn-primary">
+          <i class="ri-speed-up-fill"></i> Opportunities Manager
+        </a>
+        
+        <a href="/feed.html" data-title="opportunitiesExplorer" class="topbar-btn topbar-btn-outline">
+          <i class="ri-compass-discover-line"></i> Opportunities Explorer
+        </a>
+      </div>
+
+      <div class="language-select" id="languageSelectorSidebar">
+        <div class="selectedLanguage">
+          <span class="fi fi-us"></span>
+          <span class="lang-text">English</span>
+        </div>
+        <ul class="options">
+          <li data-value="en"><span class="fi fi-us"></span> English</li>
+          <li data-value="es"><span class="fi fi-es"></span> Español</li>
+          <li data-value="zh"><span class="fi fi-cn"></span> 中文</li>
+          <li data-value="fr"><span class="fi fi-fr"></span> Français</li>
+          <li data-value="de"><span class="fi fi-de"></span> Deutsch</li>
+          <li data-value="ar"><span class="fi fi-sa"></span> العربية</li>
+          <li data-value="pt"><span class="fi fi-br"></span> Português</li>
+          <li data-value="ja"><span class="fi fi-jp"></span> 日本語</li>
+          <li data-value="ru"><span class="fi fi-ru"></span> Русский</li>
+        </ul>
+      </div>
+
+      <div class="navbar-actions" id="navbarActions"></div>
+
+      <div class="cvb-menu-toggle" id="cvb_menu_toggle">☰</div>
+    </div>
+
+  </div>
+
+  <div class="cvb-topbar-containerMobile">
+    <nav class="cvb-nav-mobile" id="cvb-default-navMobile">
+      <ul>
+        <li><a href="manager.html" data-title="opportunitiesManager"><i class="ri-speed-up-fill"></i> Opportunities Manager</a></li>
+        <li><a href="/feed.html" data-title="opportunitiesExplorer"><i class="ri-compass-discover-line"></i> Opportunities Explorer</a></li>
+      </ul>
+    </nav>
+    <div class="cvb-mobileLeft">
+      <button class="nav_flagButton" id="openhelpMobile"><i class="ri-question-line"></i> Need Help?</button>
+      <div class="language-select mobile-lang" id="languageSelectorMobile">
+        <div class="selectedLanguage">
+          <span class="fi fi-us"></span>
+          <span class="lang-text">English</span>
+        </div>
+        <ul class="options">
+          <li data-value="en"><span class="fi fi-us"></span> English</li>
+          <li data-value="es"><span class="fi fi-es"></span> Español</li>
+          <li data-value="zh"><span class="fi fi-cn"></span> 中文</li>
+          <li data-value="fr"><span class="fi fi-fr"></span> Français</li>
+          <li data-value="de"><span class="fi fi-de"></span> Deutsch</li>
+          <li data-value="ar"><span class="fi fi-sa"></span> العربية</li>
+          <li data-value="pt"><span class="fi fi-br"></span> Português</li>
+          <li data-value="ja"><span class="fi fi-jp"></span> 日本語</li>
+          <li data-value="ru"><span class="fi fi-ru"></span> Русский</li>
+        </ul>
+      </div>
+    </div>    
+  </div>
+</header>
+
+<div id="helpModal" class="modal">
+  <div class="modal-content">
+    
+    <div class="modal-header">
+      <h2>Need Help?</h2>
+
+      <button class="close-icon" id="closeHelp" title="close help">
+        <i class="ri-close-line"></i>
+      </button>
+    </div>
+
+    <p class="modal-subtitle">
+      We're here to support you. Choose a topic and tell us your issue.
+    </p>
+
+    <!-- Modern Dropdown -->
+    <div class="modal-dropdown-wrapper">
+      <i class="ri-arrow-down-s-line modal-dropdown-icon"></i>
+      <select id="helpCategory" title="Help Category" class="modal-dropdown">
+        <option value="" disabled selected>Select a category</option>
+        <option value="account">Account & Login Issues</option>
+        <option value="coins">Coins & Payments</option>
+        <option value="builder">CV Builder Help</option>
+        <option value="bug">Report a Bug</option>
+      </select>
+    </div>
+
+    <div id="helpFormContainer">
+      <input type="email" id="helpEmail" placeholder="Enter your email">
+      <textarea id="helpMessage" placeholder="Write your message..." rows="4"></textarea>
+      <button id="helpSendBtn">Send Message</button>
+    </div>
+
+  </div>
+</div>
+
+<div class="notify2-modal" id="newTaskNotif">
+  <div class="notify2-content">
+    <button title="Close Form" class="notify2-close-top" id="notifyCloseTop"><i class="ri-close-line"></i></button>
+    <div class="notify2-icon" id="notifyIcon"></div>
+    <h3 id="notifyTitle">Title</h3>
+    <p id="notifyMessage">Message goes here</p>
+    <div class="notify2-actions" id="notifyActions">
+      <button class="notify2-btn notify2-btn-secondary" id="notifyCancel">Cancel</button>
+      <button class="notify2-btn notify2-btn-primary" id="notifyConfirm">Reset settings</button>
+    </div>
+  </div>
+</div>
+
+<div class="loginModalPage" id="loginModalPage"></div>
+
+<div id="draftsContainer" class="draftsWrapper">
+    <div class="draftsHeader">
+        <div class="draftsHeader-left">
+            <h3>Your Drafts<span id="draftsCount" class="draftsCount">0</span></h3>
+            <p>Continue editing unfinished opportunities.</p>
+        </div>
+        <button title="Draft Toggle" id="draftsToggleBtn" class="draftsToggleBtn">
+            <i class="ri-arrow-up-s-line"></i>
+        </button>
+    </div>
+    <div id="draftsGrid" class="draftsGrid"></div>
+</div>
+
+<div class="addNewForm" id="addNewPage">
+    <div class="rightMiniBar">
+        <div class="rightMiniBar-inner">
+
+            <button class="rmb-item active" data-target="#taskPage">
+                <i class="ri-task-line"></i>
+                <span>Tasks</span>
+            </button>
+
+            <button class="rmb-item" data-target="#jobPage">
+                <i class="ri-briefcase-4-line"></i>
+                <span>Jobs</span>
+            </button>
+
+            <button class="rmb-item" data-target="#internshipPage">
+                <i class="ri-graduation-cap-line"></i>
+                <span>Internship</span>
+            </button>
+
+            <button class="rmb-item" data-target="#volunteerPage">
+                <i class="ri-hand-heart-line"></i>
+                <span>Volunteer</span>
+            </button>
+
+            <button class="rmb-item" data-target="challengePage">
+                <i class="ri-trophy-line"></i>
+                <span>Challenge</span>
+            </button>
+
+            <button class="rmb-item" data-target="mentorshipPage">
+                <i class="ri-user-star-line"></i>
+                <span>Mentorship</span>
+            </button>
+
+            <button class="rmb-item" data-target="researchPage">
+                <i class="ri-flask-line"></i>
+                <span>Research</span>
+            </button>
+
+        </div>
+    </div>
+
+    <div id="addNewPages">
+        <div class="tasksPage" id="taskPage">
+            
+            <div class="nt-header">
+                <div>
+                    <h2>Add New Task</h2>
+                    <p>Create a new task to assign work, define requirements, and receive applications.</p>
+                </div>
+
+                <div class="nt-header-actions">
+                    <button type="button" class="nt-header-icon" id="cleanTask" title="Clear all fields">
+                        <i class="ri-restart-line"></i>
+                    </button>
+
+                    <button type="button" class="nt-header-icon" id="saveDraft" title="Save as draft">
+                        <i class="ri-draft-line"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="tasksForm">
+                <div class="horizontal-newTaskContainer">
+                    <nav class="horizontal-newTask" id="newTaskNavs">
+                        <button class="active" data-target="#taskIdentity">
+                            <span class="step-circle">1</span>
+                            <span class="step-label">Task Definition</span>
+                        </button>
+
+                        <button data-target="#taskSkills">
+                            <span class="step-circle">2</span>
+                            <span class="step-label">Required Capabilities</span>
+                        </button>
+
+                        <button data-target="#taskMode">
+                            <span class="step-circle">3</span>
+                            <span class="step-label">Execution Conditions</span>
+                        </button>
+                        
+                        <button data-target="#taskEvaluation">
+                            <span class="step-circle">4</span>
+                            <span class="step-label">Acceptance Criteria</span>
+                        </button>
+
+                        <button data-target="#taskPayment">
+                            <span class="step-circle">5</span>
+                            <span class="step-label">Compensation & Guarantees</span>
+                        </button>
+                    </nav>
+                    <div class="horizontal-newTaskPages" id="newTaskPages">
+                        <div class="horizontal-newTaskPage active" id="taskIdentity">
+                            <section class="navCard">
+                                <h2>Task Definition</h2>
+
+                                <div class="navCard-inputGroup">
+                                <label for="task_title">Task Title</label>
+                                <input type="text" id="task_title" placeholder="Design homepage mockup"/>
+                                </div>
+
+                                <div class="navCard-inputGroup">
+                                <label for="task_goal">Task Description</label>
+                                <textarea id="task_goal" rows="3" placeholder="Define the scope, objectives, constraints, and expected outcome of the task."></textarea>
+                                </div>
+
+                                <div class="navCard-inputGroup_x2Auto1">
+                                    <div class="navCard-inputGroup">
+                                        <label for="task_type">Work Nature</label>
+                                        <select id="task_type" name="task_type">
+                                            <option value="" disabled selected>Select work nature</option>
+                                            <option value="Development">Development</option>
+                                            <option value="Operations">Operations</option>
+                                            <option value="Maintenance">Maintenance</option>
+                                            <option value="Support">Support</option>
+                                            <option value="Construction">Construction</option>
+                                            <option value="Consulting">Consulting</option>
+                                            <option value="Repair">Repair</option>
+                                            <option value="Creative">Creative</option>
+                                            <option value="Audit">Audit</option>
+                                            <option value="Other">Other</option>
+                                        </select>
+                                    </div>
+                                    <div class="navCard-inputGroup_x2">
+                                        <div class="navCard-inputGroup">
+                                            <label for="task_industry">Task Industry</label>
+                                            <select id="task_industry" name="task_industry">
+                                            <option value="">Select an industry</option>
+                                            </select>
+                                        </div>
+                                        <div class="navCard-inputGroup">
+                                            <label for="task_speciality">Task Speciality</label>
+                                            <select id="task_speciality" name="task_speciality">
+                                            <option value="">Select a speciality</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="navCard-inputGroup_x2Auto3">
+                                    <div class="navCard-inputGroup">
+                                        <label for="task_start_date">Task Period</label>
+                                        <div class="navCard-inputGroup_x2">
+                                            <input type="datetime-local" id="task_start_date" placeholder="Task Start"/>
+                                            <input type="datetime-local" id="task_end_date" placeholder="Task End"/>
+                                        </div>
+                                    </div>
+                                    <div class="navCard-inputGroup">
+                                        <label for="task_estimated_duration">Estimated Duration</label>
+                                        <div class="navCard-percentInput">
+                                            <input type="number" id="task_estimated_duration" placeholder="10"/>
+                                            <span>hours</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="navCard-inputGroup_x2Auto1">
+                                    <div class="inputRadio2">
+                                        <label class="Label" for="task_time_flexibility">Time Flexibility</label>
+                                        <div class="inputRadio2-group" id="task_time_flexibility">
+                                            <input id="TaskTimeFlex-Flexible" name="Task-TaskTimeFlex" type="radio" value="Flexible" />
+                                            <label for="TaskTimeFlex-Flexible">Flexible</label>
+                                            
+                                            <input id="TaskTimeFlex-Moderate" name="Task-TaskTimeFlex" type="radio" value="Moderate" />
+                                            <label for="TaskTimeFlex-Moderate">Moderate</label>
+
+                                            <input id="TaskTimeFlex-Strict" name="Task-TaskTimeFlex" type="radio" value="Strict" />
+                                            <label for="TaskTimeFlex-Strict">Strict</label>
+                                        </div>
+                                    </div>
+                                    <div class="navCard-inputGroup">
+                                        <label for="task_hard_deadline">Hard Deadline</label>
+                                        <input type="datetime-local" id="task_hard_deadline" placeholder="Deadline Date"/>
+                                    </div>
+                                </div>
+
+                                <div class="navCard-footer">
+                                <button class="navCard-btn nextStep">Next →</button>
+                                </div>
+                            </section>
+                        </div>
+                        <div class="horizontal-newTaskPage" id="taskSkills">
+                            <section class="navCard">
+                            <h2>Required Capabilities</h2>
+                                <div class="navCard-sub">
+                                    <h3>Skills</h3>
+                                    <div class="navCard-inputGroup">
+                                        <div>
+                                        <div id="taskSkills-skills"></div>
+                                        <button type="button" id="taskAddSkill" class="navCard-subBtn">➕ Add Technical Skill</button>
+                                        </div>
+                                    </div>
+                                    <h3>Languages</h3>
+                                    <div class="navCard-inputGroup">
+                                    <div>
+                                        <div id="taskSkills-Langs"></div>
+                                        <button type="button" id="taskAddLang" class="navCard-subBtn">➕ Add Language</button>
+                                    </div>
+                                    </div>
+                                </div>
+                                <div class="navCard-footer">
+                                <button class="navCard-subBtn prevStep">← Previous</button>
+                                <button class="navCard-btn nextStep">Next →</button>
+                                </div>
+                            </section>
+                        </div>
+                        <div class="horizontal-newTaskPage" id="taskMode">
+                            <section class="navCard">
+                            <h2>Execution Conditions</h2>
+                                <div class="navCard-sub">
+                                    <div class="inputRadio2">
+                                        <label for="task_entity" class="Label">Execution Entity</label>
+                                        <div class="inputRadio3-grid" id="task_entity">
+                                            <label class="inputRadio3-card">
+                                                <input type="radio" name="Task-Exec" value="Individual" />
+                                                <i class="ri-user-line"></i>
+                                                <div class="inputRadio3-description">
+                                                    <strong>Individual</strong>
+                                                    <span>Single person executing the task independently</span>
+                                                </div>
+                                            </label>
+                                            <label class="inputRadio3-card">
+                                                <input type="radio" name="Task-Exec" value="Professional" />
+                                                <i class="ri-briefcase-line"></i>
+                                                <div class="inputRadio3-description">
+                                                    <strong>Professional</strong>
+                                                    <span>Certified or experienced specialist</span>
+                                                </div>
+                                            </label>
+                                            <label class="inputRadio3-card">
+                                                <input type="radio" name="Task-Exec" value="Organization" />
+                                                <i class="ri-building-line"></i>
+                                                <div class="inputRadio3-description">
+                                                    <strong>Organization</strong>
+                                                    <span>Company, agency, or formal entity</span>
+                                                </div>
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <div class="navCard-inputGroup">
+                                        <label for="task_max_executors">Maximum Executors</label>
+                                        <input type="number" id="task_max_executors" placeholder="4"/>
+                                        <small for="task_max_executors" class="navCard-inputHint">
+                                        Controls how many executors can join this task
+                                        </small>
+                                    </div>
+
+                                    <div class="inputRadio2">
+                                        <label class="Label" for="task_scale">Task Scale</label>
+                                        <div class="inputRadio2-group" id="task_scale">
+
+                                            <input id="TaskScale-Micro" name="Task-TaskScale" type="radio" value="Micro" />
+                                            <label for="TaskScale-Micro">
+                                                Micro
+                                                <small class="subLabel">Small task for 1–2 people, simple scope</small>
+                                            </label>
+
+                                            <input id="TaskScale-Standard" name="Task-TaskScale" type="radio" value="Standard" />
+                                            <label for="TaskScale-Standard">
+                                                Standard
+                                                <small class="subLabel">Medium complexity, may involve a small team</small>
+                                            </label>
+
+                                            <input id="TaskScale-Project" name="Task-TaskScale" type="radio" value="Project" />
+                                            <label for="TaskScale-Project">
+                                                Project
+                                                <small class="subLabel">Large task with multiple executors and stages</small>
+                                            </label>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="inputRadio2">
+                                        <label class="Label" for="task_execution_mode">Work Setting</label>
+                                        <div class="inputRadio2-group" id="task_execution_mode">
+                                            <input id="ExecMode-Remote" name="Task-ExecMode" type="radio" value="Remote" />
+                                            <label for="ExecMode-Remote">
+                                                Remote
+                                                <small class="subLabel">Performed off-site using digital tools</small>
+                                            </label>
+
+                                            <input id="ExecMode-OnSite" name="Task-ExecMode" type="radio" value="OnSite" />
+                                            <label for="ExecMode-OnSite">
+                                                On-Site
+                                                <small class="subLabel">Executed physically at a specific location</small>
+                                            </label>
+
+                                            <input id="ExecMode-Hybrid" name="Task-ExecMode" type="radio" value="Hybrid" />
+                                            <label for="ExecMode-Hybrid">
+                                                Hybrid
+                                                <small class="subLabel">Combination of remote and on-site work</small>
+                                            </label>
+
+                                            <input id="ExecMode-Independent" name="Task-ExecMode" type="radio" value="Independent" />
+                                            <label for="ExecMode-Independent">
+                                                Independent
+                                                <small class="subLabel">Flexible execution without location constraints</small>
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <div class="inputRadio2">
+                                        <label class="Label" for="task_execution_engine">Work Dynamics</label>
+                                        <div class="inputRadio2-group" id="task_execution_engine">
+                                            <input id="engine-Supervised" name="Task-Engine" type="radio" value="Supervised" />
+                                            <label for="engine-Supervised">
+                                                Supervised
+                                                <small class="subLabel">Guided execution under oversight</small>
+                                            </label>
+
+                                            <input id="engine-Team" name="Task-Engine" type="radio" value="Team" />
+                                            <label for="engine-Team">
+                                                Team
+                                                <small class="subLabel">Collaborative execution by multiple people</small>
+                                            </label>
+
+                                            <input id="engine-Solo" name="Task-Engine" type="radio" value="Solo" />
+                                            <label for="engine-Solo">
+                                                Solo
+                                                <small class="subLabel">Independent execution by one person</small>
+                                            </label>
+
+                                            <input id="engine-Simulation" name="Task-Engine" type="radio" value="Simulation" />
+                                            <label for="engine-Simulation">
+                                                Simulated
+                                                <small class="subLabel">Controlled or virtual environment execution</small>
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <div class="inputRadio2">
+                                        <label class="Label" for="task_submission_type">Proof of Completion</label>
+                                        <div class="inputRadio2-group" id="task_submission_type">
+                                            <input id="submit-milestones" name="Task-Submit" type="radio" value="Milestones" />
+                                            <label for="submit-milestones">
+                                                Milestones
+                                                <small class="subLabel">Tracked stages demonstrate progress</small>
+                                            </label>
+
+                                            <input id="submit-executable" name="Task-Submit" type="radio" value="Executable" />
+                                            <label for="submit-executable">
+                                                Executable
+                                                <small class="subLabel">Delivered program or software running</small>
+                                            </label>
+
+                                            <input id="submit-assessment" name="Task-Submit" type="radio" value="Assessment" />
+                                            <label for="submit-assessment">
+                                                Assessment
+                                                <small class="subLabel">Validated via tests or evaluations</small>
+                                            </label>
+
+                                            <input id="submit-files" name="Task-Submit" type="radio" value="Files" />
+                                            <label for="submit-files">
+                                                Files
+                                                <small class="subLabel">Digital documents or deliverables reports</small>
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <div class="navCard-inputGroup">
+                                        <label for="task_instructions">Execution Instructions</label>
+                                        <textarea id="task_instructions" rows="5" placeholder="Steps, constraints, deliverables, environment notes..."></textarea>
+                                    </div>
+
+                                    <div class="navCard-inputGroup_x2">
+                                        <div class="navCard-inputGroup">
+                                            <label for="task_location">Reference Location</label>
+                                            <input type="text" id="task_location" placeholder="Casablanca, Morocco or 33.5731,-7.5898"/>
+                                            <small class="navCard-inputHint">
+                                                Add or select a location if needed.
+                                            </small>
+                                        </div>
+                                        <div class="navCard-inputGroup">
+                                            <label for="task_max_distance_km">Maximum Distance</label>
+                                            <div class="navCard-percentInput">
+                                                <input type="number" id="task_max_distance_km" placeholder="140"/>
+                                                <span>km</span>
+                                            </div>
+                                            <input type="range" title="Maximum Distance" id="task_max_distance_slider" min="0" max="2000" step="10" value="140" class="navCard-range"/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="navCard-footer">
+                                <button class="navCard-subBtn prevStep">← Previous</button>
+                                <button class="navCard-btn nextStep">Next →</button>
+                                </div>
+                            </section>
+                        </div>
+                        <div class="horizontal-newTaskPage" id="taskEvaluation">
+                            <section class="navCard">
+                            <h2>Acceptance Criteria</h2>
+                                <div class="navCard-sub">
+                                    <div class="inputRadio2">
+                                        <label class="Label" for="task_evaluation_method">Validation Logic</label>
+                                        <div class="inputRadio2-group" id="task_evaluation_method">
+
+                                            <input id="EvalMeth-Objective" name="Task-EvalMeth" type="radio" value="Objective" />
+                                            <label for="EvalMeth-Objective">
+                                                Objective
+                                                <small class="subLabel">Task meets defined goals</small>
+                                            </label>
+
+                                            <input id="EvalMeth-Inspection" name="Task-EvalMeth" type="radio" value="Inspection" />
+                                            <label for="EvalMeth-Inspection">
+                                                Inspection
+                                                <small class="subLabel">Checked against Criteria</small>
+                                            </label>
+
+                                            <input id="EvalMeth-Approval" name="Task-EvalMeth" type="radio" value="Approval" />
+                                            <label for="EvalMeth-Approval">
+                                                Approval
+                                                <small class="subLabel">Final authorization required</small>
+                                            </label>
+
+                                            <input id="EvalMeth-Collective" name="Task-EvalMeth" type="radio" value="Collective" />
+                                            <label for="EvalMeth-Collective">
+                                                Collective
+                                                <small class="subLabel">Validated by the team</small>
+                                            </label>
+
+                                        </div>
+                                    </div>
+                                    <div class="criteria-inputGroup">
+                                    <label class="Label" for="task_acceptance_criteria">Acceptance Criteria</label>
+                                    <div class="criteria-list" id="task_acceptance_criteria">
+
+                                        <!-- Deadline respected -->
+                                        <label class="criteria-item">
+                                        <input type="checkbox" id="task_criteria_deadline" checked>
+                                        <div class="criteria-content">
+                                            <strong>Deadline respected</strong>
+                                            <span>Uses hard deadline defined in Schedule</span>
+                                        </div>
+                                        </label>
+
+                                        <!-- Requirements fulfilled -->
+                                        <label class="criteria-item">
+                                        <input type="checkbox" id="task_criteria_requirements" checked>
+                                        <div class="criteria-content">
+                                            <strong>Requirements fulfilled</strong>
+                                            <span>Based on task instructions & deliverables</span>
+                                        </div>
+                                        </label>
+
+                                        <!-- Quality score -->
+                                        <label class="criteria-item">
+                                        <input type="checkbox" id="task_criteria_quality" checked>
+                                        <div class="criteria-content">
+                                            <strong>Quality score threshold</strong>
+                                            <div class="criteria-inline">
+                                            Minimum score:
+                                            <input type="number" id="task_criteria_min_score" min="0" max="100" value="90">
+                                            %
+                                            </div>
+                                        </div>
+                                        </label>
+
+                                        <!-- Client approval -->
+                                        <label class="criteria-item">
+                                        <input type="checkbox" id="task_criteria_client">
+                                        <div class="criteria-content">
+                                            <strong>Client approval required</strong>
+                                            <span>Task is accepted only after explicit client validation</span>
+                                        </div>
+                                        </label>
+
+                                    </div>
+                                    </div>
+                                    <div class="navCard-inputGroup">
+                                        <div class="navCard-switchInput_Group">
+                                        <label for="revision_allowed">Allow Revision</label>
+                                        <label class="navCard-switchInput">
+                                            <input type="checkbox" title="Revision Allowed" id="task_revision_allowed">
+                                            <span class="navCard-switchInputSlider round"></span>
+                                        </label>
+                                        <div class="navCard-percentInput">
+                                            <input type="number" title="Maximum attempts" id="task_max_attempts" placeholder="2"/>
+                                            <span>Max times</span>
+                                        </div>
+                                        </div>
+                                        <small class="navCard-inputHint">
+                                            Enable this if users are allowed to submit revisions for this task.
+                                        </small>
+                                    </div>
+                                </div>
+                                <div class="navCard-footer">
+                                <button class="navCard-subBtn prevStep">← Previous</button>
+                                <button class="navCard-btn nextStep">Next →</button>
+                                </div>
+                            </section>
+                        </div>
+                        <div class="horizontal-newTaskPage" id="taskPayment">
+                            <section class="navCard">
+                            <h2>Compensation & Guarantees</h2>
+                                <div class="navCard-sub">
+                                    <div class="navCard-inputGroup_x2">
+                                        <div class="navCard-inputGroup">
+                                            <label for="task_price">Task Price</label>
+                                            <input type="number" id="task_price" placeholder=""/>
+                                        </div>
+                                        <div class="navCard-inputGroup">
+                                            <label for="task_priceCurrency">Currency</label>
+                                            <select id="task_priceCurrency">
+                                                <option value="USD">USD – US Dollar ($)</option>
+                                                <option value="EUR">EUR – Euro (€)</option>
+                                                <option value="GBP">GBP – British Pound (£)</option>
+                                                <option value="MAD">MAD – Moroccan Dirham (DH)</option>
+                                                <option value="CAD">CAD – Canadian Dollar ($)</option>
+                                                <option value="AUD">AUD – Australian Dollar ($)</option>
+                                                <option value="CHF">CHF – Swiss Franc</option>
+                                                <option value="JPY">JPY – Japanese Yen (¥)</option>
+                                                <option value="CNY">CNY – Chinese Yuan (¥)</option>
+                                                <option value="INR">INR – Indian Rupee (₹)</option>
+                                                <option value="BRL">BRL – Brazilian Real (R$)</option>
+                                                <option value="ZAR">ZAR – South African Rand (R)</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="criteria-inputGroup">
+                                    <label class="Label">Additional Cost Coverage</label>
+                                    <div class="criteria-list">
+
+                                        <label class="criteria-item">
+                                        <input type="checkbox" id="task_cover_materials">
+                                        <div class="criteria-content">
+                                            <strong>Materials & Supplies</strong>
+                                            <span>Client covers raw materials, consumables, or parts</span>
+                                        </div>
+                                        </label>
+
+                                        <label class="criteria-item">
+                                        <input type="checkbox" id="task_cover_transport">
+                                        <div class="criteria-content">
+                                            <strong>Transport & Travel</strong>
+                                            <span>Fuel, tickets, delivery, or commuting expenses</span>
+                                        </div>
+                                        </label>
+
+                                        <label class="criteria-item">
+                                        <input type="checkbox" id="task_cover_tools">
+                                        <div class="criteria-content">
+                                            <strong>Tools & Equipment</strong>
+                                            <span>Rental or usage of required equipment</span>
+                                        </div>
+                                        </label>
+
+                                        <label class="criteria-item">
+                                        <input type="checkbox" id="task_cover_accommodation">
+                                        <div class="criteria-content">
+                                            <strong>Accommodation</strong>
+                                            <span>Hotel or lodging for on-site or remote locations</span>
+                                        </div>
+                                        </label>
+
+                                        <label class="criteria-item">
+                                        <input type="checkbox" id="task_cover_fees">
+                                        <div class="criteria-content">
+                                            <strong>Administrative / Legal Fees</strong>
+                                            <span>Permits, certifications, or documentation costs</span>
+                                        </div>
+                                        </label>
+
+                                    </div>
+                                    </div>
+                                    <div class="navCard-inputGroup">
+                                        <label for="task_reimbursement_mode">Reimbursement Mode</label>
+                                        <select id="task_reimbursement_mode">
+                                            <option value="" selected disabled>Select reimbursement mode</option>
+                                            <option value="Reimbursed">Reimbursed After Proof</option>
+                                            <option value="Prepaid">Prepaid by Client</option>
+                                        </select>
+                                        <small class="navCard-inputHint">
+                                            Applies only if additional costs are selected above.
+                                        </small>
+                                    </div>
+                                    <div class="criteria-inputGroup">
+                                        <label class="Label">Guarantees & Protections</label>
+                                        <div class="criteria-list">
+
+                                            <label class="criteria-item">
+                                            <input type="checkbox" id="task_late_penalty">
+                                            <div class="criteria-content">
+                                                <strong>Late delivery penalty</strong>
+                                                <span>Payment reduced if deadline is missed</span>
+                                                <div class="criteria-inline">Penalty:<input type="number" id="task_late_penalty_percent" min="0" max="100" step="1" placeholder="10">%</div>
+                                            </div>
+                                            </label>
+                                            <label class="criteria-item">
+                                            <input type="checkbox" id="task_damage_liability">
+                                            <div class="criteria-content">
+                                                <strong>Damage responsibility</strong>
+                                                <span>Executor liable for damages caused during execution</span>
+                                            </div>
+                                            </label>
+
+                                            <label class="criteria-item">
+                                            <input type="checkbox" id="task_replacement_required">
+                                            <div class="criteria-content">
+                                                <strong>Replacement guarantee</strong>
+                                                <span>Executor must fix or redo failed work</span>
+                                            </div>
+                                            </label>
+
+                                        </div>
+                                    </div>
+                                    <div class="navCard-inputGroup double2">
+                                        <label for="task_payment_model">Payment Model</label>
+                                        <select id="task_payment_model">
+                                            <option value="Fixed">Fixed</option>
+                                            <option value="Milestone">Milestone</option>
+                                            <option value="Performance">Performance Based</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="navCard-footer">
+                                    <button class="navCard-subBtn prevStep">← Previous</button>
+
+                                    <button type="button" id="publishTask" class="navCard-btn">
+                                        <div class="btn-content">
+                                            <span>Publish Task</span>
+                                            <small><i class="ri-coin-fill"></i> 10 coins</small>
+                                        </div>
+                                        <i class="ri-send-plane-line"></i>
+                                    </button>
+
+                                    <button type="button" id="boostTask" class="navCard-btn Boost">
+                                        <div class="btn-content">
+                                            <span>Publish Boosted Task</span>
+                                            <small><i class="ri-coin-fill"></i> 15 coins</small>
+                                        </div>
+                                        <i class="ri-rocket-2-line"></i>
+                                    </button>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tasksPage" id="jobPage">
+            <div class="nt-header">
+                <div>
+                    <h2>Add New Job Offer</h2>
+                    <p>Create a new job offer to define requirements, assign work, and receive applications.</p>
+                </div>
+
+                <div class="nt-header-actions">
+                    <button type="button" class="nt-header-icon" id="cleanJobForm" title="Clear all fields">
+                        <i class="ri-restart-line"></i>
+                    </button>
+
+                    <button type="button" class="nt-header-icon" id="saveJobDraft" title="Save as draft">
+                        <i class="ri-draft-line"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="tasksForm">
+                <div class="horizontal-newTaskContainer">
+                    <nav class="horizontal-newTask" id="newJobNavs">
+                        <button class="active" data-target="#jobIdentity">
+                            <span class="step-circle">1</span>
+                            <span class="step-label">Job Definition</span>
+                        </button>
+
+                        <button data-target="#jobSkills">
+                            <span class="step-circle">2</span>
+                            <span class="step-label">Required Capabilities</span>
+                        </button>
+
+                        <button data-target="#jobMode">
+                            <span class="step-circle">3</span>
+                            <span class="step-label">Work Conditions</span>
+                        </button>
+                        
+                        <button data-target="#jobEvaluation">
+                            <span class="step-circle">4</span>
+                            <span class="step-label">Evaluation & Expectations</span>
+                        </button>
+
+                        <button data-target="#jobPayment">
+                            <span class="step-circle">5</span>
+                            <span class="step-label">Compensation & Guarantees</span>
+                        </button>
+                    </nav>
+                    <div class="horizontal-newTaskPages" id="newJobPages">
+                        <div class="horizontal-newTaskPage active" id="jobIdentity">
+                            <section class="navCard">
+                                <h2>Job Definition</h2>
+
+                                <div class="navCard-inputGroup">
+                                    <label for="job_title">Job Title</label>
+                                    <input type="text" id="job_title" placeholder="e.g. Frontend Developer, Marketing Manager"/>
+                                </div>
+
+                                <div class="navCard-inputGroup">
+                                    <label for="job_goal">Job Description</label>
+                                    <textarea id="job_goal" rows="3" placeholder="Describe the role, key responsibilities, and expectations."></textarea>
+                                </div>
+
+                                <div class="navCard-inputGroup_x2">
+                                    <div class="navCard-inputGroup">
+                                        <label for="job_industry">Job Industry</label>
+                                        <select id="job_industry" name="job_industry">
+                                        <option value="">Select an industry</option>
+                                        </select>
+                                    </div>
+                                    <div class="navCard-inputGroup">
+                                        <label for="job_speciality">Job Speciality</label>
+                                        <select id="job_speciality" name="job_speciality">
+                                        <option value="">Select a speciality</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="navCard-inputGroup_x2Auto3">
+                                    <div class="navCard-inputGroup">
+                                        <label for="application_start_date">Employment Timeline</label>
+                                        <div class="navCard-inputGroup_x2">
+                                            <input type="datetime-local" id="application_start_date" placeholder="Timeline Start"/>
+                                            <input type="datetime-local" id="application_end_date" placeholder="Timeline End"/>
+                                        </div>
+                                    </div>
+                                    <div class="navCard-inputGroup">
+                                        <label for="application_deadline">Application Deadline</label>
+                                        <input type="datetime-local" id="application_deadline" />
+                                    </div>
+                                </div>
+
+                                <div class="navCard-footer">
+                                <button class="navCard-btn nextStep">Next →</button>
+                                </div>
+                            </section>
+                        </div>
+                        <div class="horizontal-newTaskPage" id="jobSkills">
+                            <section class="navCard">
+                                <h2>Required Capabilities</h2>
+                                <div class="navCard-sub">
+                                    <h3>Skills</h3>
+                                    <div class="navCard-inputGroup">
+                                        <div>
+                                        <div id="jobSkills-skills"></div>
+                                        <button type="button" id="jobAddSkill" class="navCard-subBtn">➕ Add Skill</button>
+                                        </div>
+                                    </div>
+                                    <h3>Languages</h3>
+                                    <div class="navCard-inputGroup">
+                                    <div>
+                                        <div id="jobSkills-Langs"></div>
+                                        <button type="button" id="jobAddLang" class="navCard-subBtn">➕ Add Language</button>
+                                    </div>
+                                    </div>
+                                </div>
+                                <div class="navCard-footer">
+                                <button class="navCard-subBtn prevStep">← Previous</button>
+                                <button class="navCard-btn nextStep">Next →</button>
+                                </div>
+                            </section>
+                        </div>
+                        <div class="horizontal-newTaskPage" id="jobMode">
+                            <section class="navCard">
+                            <h2>Work Conditions</h2>
+                                <div class="navCard-sub">
+                                    <div class="inputRadio2">
+                                        <label for="job_seniority_level" class="Label">Seniority Level</label>
+                                        <div class="inputRadio3-grid" id="job_seniority_level">
+
+                                            <label class="inputRadio3-card">
+                                                <input type="radio" name="job_seniority" value="Junior" />
+                                                <i class="ri-seedling-line"></i>
+                                                <div class="inputRadio3-description">
+                                                    <strong>Junior</strong>
+                                                    <span>Entry-level, guided</span>
+                                                </div>
+                                            </label>
+
+                                            <label class="inputRadio3-card">
+                                                <input type="radio" name="job_seniority" value="Mid" />
+                                                <i class="ri-user-star-line"></i>
+                                                <div class="inputRadio3-description">
+                                                    <strong>Mid-level</strong>
+                                                    <span>Independent, experienced</span>
+                                                </div>
+                                            </label>
+
+                                            <label class="inputRadio3-card">
+                                                <input type="radio" name="job_seniority" value="Senior" />
+                                                <i class="ri-award-line"></i>
+                                                <div class="inputRadio3-description">
+                                                    <strong>Senior</strong>
+                                                    <span>Expert, handles complexity</span>
+                                                </div>
+                                            </label>
+
+                                            <label class="inputRadio3-card">
+                                                <input type="radio" name="job_seniority" value="Lead" />
+                                                <i class="ri-team-line"></i>
+                                                <div class="inputRadio3-description">
+                                                    <strong>Lead</strong>
+                                                    <span>Leads and mentors</span>
+                                                </div>
+                                            </label>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="navCard-inputGroup">
+                                        <label for="job_numb_positions">Number of positions</label>
+                                        <input type="number" id="job_numb_positions" placeholder="4"/>
+                                        <small for="job_numb_positions" class="navCard-inputHint">
+                                        Defines how many candidates can be hired for this role
+                                        </small>
+                                    </div>
+
+                                    <div class="inputRadio2">
+                                        <label class="Label" for="job_execution_mode">Work Setting</label>
+                                        <div class="inputRadio2-group" id="job_execution_mode">
+                                            <input id="job_ExecMode-OnSite" name="job-ExecMode" type="radio" value="OnSite" />
+                                            <label for="job_ExecMode-OnSite">On-Site
+                                            <small class="subLabel">Executed physically at a specific location</small>
+                                            </label>
+
+                                            <input id="job_ExecMode-Hybrid" name="job-ExecMode" type="radio" value="Hybrid" />
+                                            <label for="job_ExecMode-Hybrid">Hybrid
+                                            <small class="subLabel">Combination of remote and on-site work</small>
+                                            </label>
+
+                                            <input id="job_ExecMode-Remote" name="job-ExecMode" type="radio" value="Remote" />
+                                            <label for="job_ExecMode-Remote">Remote
+                                            <small class="subLabel">Performed off-site using digital tools</small>
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <div class="navCard-inputGroup_x2">
+                                        <div class="navCard-inputGroup">
+                                            <label for="job_location">Reference Location</label>
+                                            <input type="text" id="job_location" placeholder="Casablanca, Morocco or 33.5731,-7.5898"/>
+                                            <small class="navCard-inputHint">
+                                                Add or select a location if needed.
+                                            </small>
+                                        </div>
+                                        <div class="navCard-inputGroup">
+                                            <label for="job_max_distance_km">Maximum Distance</label>
+                                            <div class="navCard-percentInput">
+                                                <input type="number" id="job_max_distance_km" placeholder="140"/>
+                                                <span>km</span>
+                                            </div>
+                                            <input type="range" title="Maximum Distance" id="job_max_distance_slider" min="0" max="2000" step="10" value="140" class="navCard-range"/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="navCard-footer">
+                                <button class="navCard-subBtn prevStep">← Previous</button>
+                                <button class="navCard-btn nextStep">Next →</button>
+                                </div>
+                            </section>
+                        </div>
+                        <div class="horizontal-newTaskPage" id="jobEvaluation">
+                            <section class="navCard">
+                            <h2>Evaluation & Expectations</h2>
+                                <div class="navCard-sub">
+                                    <div class="inputRadio2">
+                                        <label class="Label" for="job_evaluation_method">Evaluation Method</label>
+                                        <div class="inputRadio2-group" id="job_evaluation_method">
+
+                                        <input id="EvalMeth-Manager" name="Job-EvalMeth" type="radio" value="Manager" />
+                                        <label for="EvalMeth-Manager">
+                                            Manager Review
+                                            <small class="subLabel">Evaluated by supervisor or manager</small>
+                                        </label>
+
+                                        <input id="EvalMeth-KPI" name="Job-EvalMeth" type="radio" value="KPI" />
+                                        <label for="EvalMeth-KPI">
+                                            KPI-Based
+                                            <small class="subLabel">Measured using defined performance metrics</small>
+                                        </label>
+
+                                        <input id="EvalMeth-Peer" name="Job-EvalMeth" type="radio" value="Peer" />
+                                        <label for="EvalMeth-Peer">
+                                            Peer Review
+                                            <small class="subLabel">Feedback from team members</small>
+                                        </label>
+
+                                        <input id="EvalMeth-Probation" name="Job-EvalMeth" type="radio" value="Probation" />
+                                        <label for="EvalMeth-Probation">
+                                            Probation Period
+                                            <small class="subLabel">Evaluated during initial trial period</small>
+                                        </label>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="criteria-inputGroup">
+                                        <label class="Label">Performance Criteria</label>
+                                        <div class="criteria-list">
+
+                                            <label class="criteria-item">
+                                                <input type="checkbox" id="job_criteria_commitment" checked>
+                                                <div class="criteria-content">
+                                                    <strong>Commitment & reliability</strong>
+                                                    <span>Consistent attendance and engagement</span>
+                                                </div>
+                                            </label>
+
+                                            <label class="criteria-item">
+                                                <input type="checkbox" id="job_criteria_objectives" checked>
+                                                <div class="criteria-content">
+                                                    <strong>Objectives achieved</strong>
+                                                    <span>Meets assigned goals and responsibilities</span>
+                                                </div>
+                                            </label>
+
+                                            <label class="criteria-item">
+                                                <input type="checkbox" id="job_criteria_performance" checked>
+                                                <div class="criteria-content">
+                                                    <strong>Performance level</strong>
+                                                    <div class="criteria-inline">
+                                                        <span class="min-rating-label">Minimum rating:</span>
+                                                        <input type="number" id="job_criteria_min_score" min="0" max="100" value="80">
+                                                        %
+                                                    </div>
+                                                </div>
+                                            </label>
+
+                                            <label class="criteria-item">
+                                                <input type="checkbox" id="job_criteria_team">
+                                                <div class="criteria-content">
+                                                    <strong>Team collaboration</strong>
+                                                    <span>Works effectively within the team</span>
+                                                </div>
+                                            </label>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="navCard-footer">
+                                <button class="navCard-subBtn prevStep">← Previous</button>
+                                <button class="navCard-btn nextStep">Next →</button>
+                                </div>
+                            </section>
+                        </div>
+                        <div class="horizontal-newTaskPage" id="jobPayment">
+                            <section class="navCard">
+                            <h2>Compensation & Benefits</h2>
+                                <div class="navCard-sub">
+                                    <div class="navCard-inputGroup">
+                                        <label for="employment_type">Employment Type</label>
+                                        <select id="employment_type">
+                                            <option value="" disabled selected>Select type</option>
+                                            <option value="Full">Full-time</option>
+                                            <option value="Part">Part-time</option>
+                                            <option value="Contract">Contract</option>
+                                            <option value="Internship">Internship</option>
+                                        </select>
+                                    </div>
+                                    <div class="navCard-inputGroup_x2">
+                                        <div class="navCard-inputGroup">
+                                            <label for="job_salary_min">Salary Range</label>
+                                            <div class="navCard-inputGroup_x2">
+                                                <input type="number" id="job_salary_min" placeholder="Min"/>
+                                                <input type="number" id="job_salary_max" placeholder="Max"/>
+                                            </div>
+
+                                            <div class="navCard-requiresGroup" id="job_salary_negotiableCheckbox">
+                                                <input type="checkbox" title="Salary negotiable" id="job_salary_negotiable">
+                                                <label for="job_salary_negotiable">Negotiable</label>
+                                            </div>
+                                        </div>
+                                        <div class="navCard-inputGroup">
+                                            <label for="job_priceCurrency">Currency</label>
+                                            <select id="job_priceCurrency">
+                                                <option value="" selected disabled>Select currency</option>
+                                                <option value="USD">USD – US Dollar ($)</option>
+                                                <option value="EUR">EUR – Euro (€)</option>
+                                                <option value="GBP">GBP – British Pound (£)</option>
+                                                <option value="MAD">MAD – Moroccan Dirham (DH)</option>
+                                                <option value="CAD">CAD – Canadian Dollar ($)</option>
+                                                <option value="AUD">AUD – Australian Dollar ($)</option>
+                                                <option value="CHF">CHF – Swiss Franc</option>
+                                                <option value="JPY">JPY – Japanese Yen (¥)</option>
+                                                <option value="CNY">CNY – Chinese Yuan (¥)</option>
+                                                <option value="INR">INR – Indian Rupee (₹)</option>
+                                                <option value="BRL">BRL – Brazilian Real (R$)</option>
+                                                <option value="ZAR">ZAR – South African Rand (R)</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="criteria-inputGroup">
+                                        <label class="Label">Benefits & Perks</label>
+                                        <div class="criteria-list">
+
+                                            <label class="criteria-item">
+                                                <input type="checkbox" id="job_benefit_health">
+                                                <div class="criteria-content">
+                                                    <strong>Health coverage</strong>
+                                                    <span>Insurance or medical support</span>
+                                                </div>
+                                            </label>
+
+                                            <label class="criteria-item">
+                                                <input type="checkbox" id="job_benefit_transport">
+                                                <div class="criteria-content">
+                                                    <strong>Transport support</strong>
+                                                    <span>Commute or travel assistance</span>
+                                                </div>
+                                            </label>
+
+                                            <label class="criteria-item">
+                                                <input type="checkbox" id="job_benefit_equipment">
+                                                <div class="criteria-content">
+                                                    <strong>Equipment provided</strong>
+                                                    <span>Laptop, tools, or resources</span>
+                                                </div>
+                                            </label>
+
+                                            <label class="criteria-item">
+                                                <input type="checkbox" id="job_benefit_remote">
+                                                <div class="criteria-content">
+                                                    <strong>Remote flexibility</strong>
+                                                    <span>Work-from-home options</span>
+                                                </div>
+                                            </label>
+
+                                            <label class="criteria-item">
+                                                <input type="checkbox" id="job_benefit_bonus">
+                                                <div class="criteria-content">
+                                                    <strong>Bonuses</strong>
+                                                    <span>Performance or annual bonuses</span>
+                                                </div>
+                                            </label>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="navCard-footer">
+                                    <button class="navCard-subBtn prevStep">← Previous</button>
+
+                                    <button type="button" id="publishJob" class="navCard-btn">
+                                        <div class="btn-content">
+                                            <span>Publish Job</span>
+                                            <small><i class="ri-coin-fill"></i> 20 coins</small>
+                                        </div>
+                                        <i class="ri-send-plane-line"></i>
+                                    </button>
+
+                                    <button type="button" id="boostJob" class="navCard-btn Boost">
+                                        <div class="btn-content">
+                                            <span>Publish Boosted Job</span>
+                                            <small><i class="ri-coin-fill"></i> 25 coins</small>
+                                        </div>
+                                        <i class="ri-rocket-2-line"></i>
+                                    </button>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tasksPage" id="internshipPage">
+            <div class="nt-header">
+                <div>
+                    <h2>Add New Internship Offer</h2>
+                    <p>Create an internship opportunity to attract learners, define responsibilities, and evaluate applications.</p>
+                </div>
+
+                <div class="nt-header-actions">
+                    <button type="button" class="nt-header-icon" id="cleanInternshipForm" title="Clear all fields">
+                        <i class="ri-restart-line"></i>
+                    </button>
+
+                    <button type="button" class="nt-header-icon" id="saveInternshipDraft" title="Save as draft">
+                        <i class="ri-draft-line"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="tasksForm">
+                <div class="horizontal-newTaskContainer">
+                    <nav class="horizontal-newTask" id="newInternshipNavs">
+
+                        <button class="active" data-target="#internshipIdentity">
+                            <span class="step-circle">1</span>
+                            <span class="step-label">Internship Definition</span>
+                        </button>
+
+                        <button data-target="#internshipSkills">
+                            <span class="step-circle">2</span>
+                            <span class="step-label">Required Capabilities</span>
+                        </button>
+
+                        <button data-target="#internshipConditions">
+                            <span class="step-circle">3</span>
+                            <span class="step-label">Work Conditions</span>
+                        </button>
+
+                        <button data-target="#internshipEvaluation">
+                            <span class="step-circle">4</span>
+                            <span class="step-label">Evaluation Process</span>
+                        </button>
+
+                        <button data-target="#internshipBenefits">
+                            <span class="step-circle">5</span>
+                            <span class="step-label">Growth & Benefits</span>
+                        </button>
+
+                    </nav>
+                    <div class="horizontal-newTaskPages" id="newInternshipPages">
+                        <div class="horizontal-newTaskPage active" id="internshipIdentity">
+                            <section class="navCard">
+                                <h2>Internship Definition</h2>
+
+                                <div class="navCard-inputGroup">
+                                    <label for="internship_title">Internship Title</label>
+                                    <input type="text" id="internship_title" placeholder="Marketing Internship"/>
+                                </div>
+
+                                <div class="navCard-inputGroup">
+                                    <label for="internship_description">Internship Description</label>
+                                    <textarea id="internship_description" rows="3"
+                                        placeholder="Describe the internship mission, learning goals, and main activities."></textarea>
+                                </div>
+
+                                <div class="navCard-inputGroup_x2">
+                                    <div class="navCard-inputGroup">
+                                        <label for="internship_industry">Industry</label>
+                                        <select id="internship_industry">
+                                            <option value="">Select an industry</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="navCard-inputGroup">
+                                        <label for="internship_speciality">Speciality</label>
+                                        <select id="internship_speciality">
+                                            <option value="">Select a speciality</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="navCard-inputGroup_x2Auto3">
+                                    <div class="navCard-inputGroup">
+                                        <label for="internship_start_date">Internship Timeline</label>
+                                        <div class="navCard-inputGroup_x2">
+                                            <input type="datetime-local" id="internship_start_date" />
+                                            <input type="datetime-local" id="internship_end_date" />
+                                        </div>
+                                    </div>
+
+                                    <div class="navCard-inputGroup">
+                                        <label for="internship_deadline">Application Deadline</label>
+                                        <input type="datetime-local" id="internship_deadline" />
+                                    </div>
+                                </div>
+
+                                <div class="navCard-inputGroup">
+                                    <label for="internship_positions">Available positions</label>
+                                    <input type="number" id="internship_positions" placeholder="3"/>
+                                    <small class="navCard-inputHint">
+                                        Number of available internship spots
+                                    </small>
+                                </div>
+
+                                <div class="navCard-footer">
+                                    <button class="navCard-btn nextStep">Next →</button>
+                                </div>
+                            </section>
+                        </div>
+                        <div class="horizontal-newTaskPage" id="internshipSkills">
+                            <section class="navCard">
+                                <h2>Required Capabilities</h2>
+
+                                <div class="navCard-sub">
+                                    <h3>Required Skills</h3>
+                                    <div class="navCard-inputGroup">
+                                        <div>
+                                            <div id="internshipSkills-skills"></div>
+                                            <button type="button" id="internshipAddSkill" class="navCard-subBtn">➕ Add Skill</button>
+                                        </div>
+                                    </div>
+
+                                    <h3>Language Requirements</h3>
+                                    <div class="navCard-inputGroup">
+                                        <div>
+                                            <div id="internshipSkills-Langs"></div>
+                                            <button type="button" id="internshipAddLang" class="navCard-subBtn">➕ Add Language</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="navCard-footer">
+                                    <button class="navCard-subBtn prevStep">← Previous</button>
+                                    <button class="navCard-btn nextStep">Next →</button>
+                                </div>
+                            </section>
+                        </div>
+
+                        <div class="horizontal-newTaskPage" id="internshipConditions">
+                            <section class="navCard">
+                                <h2>Work Conditions</h2>
+
+                                <div class="navCard-inputGroup_x2">
+                                    <div class="navCard-inputGroup">
+                                        <label for="internship_academic_required">Academic Requirement</label>
+                                        <select id="internship_academic_required">
+                                            <option value="">Select option</option>
+                                            <option value="Required">University required</option>
+                                            <option value="NotRequired">Not required</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="navCard-inputGroup">
+                                        <label for="internship_credit_eligibility">Credit Eligibility</label>
+                                        <select id="internship_credit_eligibility">
+                                            <option value="">Select option</option>
+                                            <option value="Yes">Eligible</option>
+                                            <option value="No">Not eligible</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="inputRadio2">
+                                    <label class="Label">Work Setting</label>
+                                    <div class="inputRadio2-group">
+
+                                        <input id="internship_remote" name="internship_mode" type="radio" value="Remote">
+                                        <label for="internship_remote">
+                                            Remote
+                                            <small class="subLabel">Completed entirely online</small>
+                                        </label>
+
+                                        <input id="internship_hybrid" name="internship_mode" type="radio" value="Hybrid">
+                                        <label for="internship_hybrid">
+                                            Hybrid
+                                            <small class="subLabel">Combination of online and on-site participation</small>
+                                        </label>
+
+                                        <input id="internship_onsite" name="internship_mode" type="radio" value="OnSite">
+                                        <label for="internship_onsite">
+                                            On-site
+                                            <small class="subLabel">Completed at a designated location</small>
+                                        </label>
+
+                                    </div>
+                                </div>
+
+                                <div class="inputRadio2">
+                                    <label class="Label">Schedule Type</label>
+
+                                    <div class="inputRadio2-group">
+
+                                        <input id="internship_hours_flexible" name="internship_hours" type="radio" value="Flexible">
+                                        <label for="internship_hours_flexible">
+                                            Flexible
+                                            <small class="subLabel">Schedule adapts to intern availability</small>
+                                        </label>
+
+                                        <input id="internship_hours_fixed" name="internship_hours" type="radio" value="Fixed">
+                                        <label for="internship_hours_fixed">
+                                            Fixed
+                                            <small class="subLabel">Defined daily working schedule</small>
+                                        </label>
+
+                                        <input id="internship_hours_parttime" name="internship_hours" type="radio" value="PartTime">
+                                        <label for="internship_hours_parttime">
+                                            Part-time
+                                            <small class="subLabel">Reduced weekly hours</small>
+                                        </label>
+
+                                        <input id="internship_hours_fulltime" name="internship_hours" type="radio" value="FullTime">
+                                        <label for="internship_hours_fulltime">
+                                            Full-time
+                                            <small class="subLabel">Standard full schedule commitment</small>
+                                        </label>
+
+                                    </div>
+                                </div>
+
+                                <div class="navCard-inputGroup_x2">
+                                    <div class="navCard-inputGroup">
+                                        <label for="internship_start_period">Start Date</label>
+                                        <input type="datetime-local" id="internship_start_period" >
+                                    </div>
+
+                                    <div class="navCard-inputGroup">
+                                        <label for="internship_end_period">End Date</label>
+                                        <input type="datetime-local" id="internship_end_period" >
+                                    </div>
+                                </div>
+
+                                <div class="navCard-inputGroup_x2">
+                                    <div class="navCard-inputGroup">
+                                        <label for="internship_location">Reference Location</label>
+                                        <input type="text" id="internship_location" placeholder="Casablanca, Morocco or 33.5731,-7.5898"/>
+                                        <small class="navCard-inputHint">
+                                            Specify where the internship takes place if applicable.
+                                        </small>
+                                    </div>
+                                    <div class="navCard-inputGroup">
+                                        <label for="internship_max_distance_km">Maximum Distance</label>
+                                        <div class="navCard-percentInput">
+                                            <input type="number" id="internship_max_distance_km" placeholder="140"/>
+                                            <span>km</span>
+                                        </div>
+                                        <input type="range" title="Maximum Distance" id="internship_max_distance_slider" min="0" max="2000" step="10" value="140" class="navCard-range"/>
+                                    </div>
+                                </div>
+
+                                <div class="navCard-footer">
+                                    <button class="navCard-subBtn prevStep">← Previous</button>
+                                    <button class="navCard-btn nextStep">Next →</button>
+                                </div>
+                            </section>
+                        </div>
+
+                        <div class="horizontal-newTaskPage" id="internshipEvaluation">
+                            <section class="navCard">
+                                <h2>Evaluation Process</h2>
+
+                                <div class="criteria-inputGroup">
+                                    <label class="Label">Learning Evaluation</label>
+                                    <div class="criteria-list">
+
+                                        <label class="criteria-item">
+                                            <input type="checkbox" id="internship_learning_progress" checked>
+                                            <div class="criteria-content">
+                                                <strong>Learning progress</strong>
+                                                <span>Skill growth during internship</span>
+                                            </div>
+                                        </label>
+
+                                        <label class="criteria-item">
+                                            <input type="checkbox" id="internship_task_completion" checked>
+                                            <div class="criteria-content">
+                                                <strong>Project Completion</strong>
+                                                <span>Ability to deliver assigned work</span>
+                                            </div>
+                                        </label>
+
+                                        <label class="criteria-item">
+                                            <input type="checkbox" id="internship_engagement">
+                                            <div class="criteria-content">
+                                                <strong>Engagement</strong>
+                                                <span>Participation consistency</span>
+                                            </div>
+                                        </label>
+
+                                    </div>
+                                </div>
+
+                                <div class="navCard-inputGroup_x2">
+                                    <div class="navCard-inputGroup">
+                                        <label for="internship_feedback_frequency">Mentor Feedback Frequency</label>
+                                        <select id="internship_feedback_frequency">
+                                            <option value="">Select frequency</option>
+                                            <option value="Weekly">Weekly</option>
+                                            <option value="Monthly">Monthly</option>
+                                            <option value="EndOnly">End only</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="navCard-inputGroup">
+                                        <label for="internship_evaluation_format">Evaluation Format</label>
+                                        <select id="internship_evaluation_format">
+                                            <option value="">Select format</option>
+                                            <option value="Report">Report</option>
+                                            <option value="Presentation">Presentation</option>
+                                            <option value="Project">Project based</option>
+                                            <option value="Continuous">Continuous review</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="navCard-inputGroup_x2">
+                                    <div class="navCard-inputGroup">
+                                        <label for="internship_completion_requirement">Completion Requirement</label>
+                                        <select id="internship_completion_requirement">
+                                            <option value="">Select requirement</option>
+                                            <option value="Attendance">Attendance based</option>
+                                            <option value="Project">Project completion</option>
+                                            <option value="Hybrid">Hybrid evaluation</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="navCard-inputGroup">
+                                        <label for="internship_final_output">Final Output</label>
+                                        <select id="internship_final_output">
+                                            <option value="">Select output</option>
+                                            <option value="Portfolio">Portfolio</option>
+                                            <option value="CaseStudy">Case study</option>
+                                            <option value="Project">Final project</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="navCard-footer">
+                                    <button class="navCard-subBtn prevStep">← Previous</button>
+                                    <button class="navCard-btn nextStep">Next →</button>
+                                </div>
+                            </section>
+                        </div>
+
+                        <div class="horizontal-newTaskPage" id="internshipBenefits">
+                            <section class="navCard">
+                                <h2>Growth & Benefits</h2>
+
+                                <div class="navCard-inputGroup">
+                                    <label for="internship_type">Internship Type</label>
+                                    <select id="internship_type">
+                                        <option value="">Select type</option>
+                                        <option value="Paid">Paid</option>
+                                        <option value="Unpaid">Unpaid</option>
+                                        <option value="Stipend">Stipend</option>
+                                        <option value="AcademicCredit">Academic Credit</option>
+                                    </select>
+                                </div>
+
+                                <div class="criteria-inputGroup">
+                                    <label class="Label">Career Outcomes</label>
+                                    <div class="criteria-list">
+
+                                        <label class="criteria-item">
+                                            <input type="checkbox" id="internship_job_offer">
+                                            <div class="criteria-content">
+                                                <strong>Job opportunity</strong>
+                                                <span>Potential full-time offer after completion</span>
+                                            </div>
+                                        </label>
+
+                                        <label class="criteria-item">
+                                            <input type="checkbox" id="internship_certificate">
+                                            <div class="criteria-content">
+                                                <strong>Certificate</strong>
+                                                <span>Official internship completion certificate</span>
+                                            </div>
+                                        </label>
+
+                                        <label class="criteria-item">
+                                            <input type="checkbox" id="internship_portfolio">
+                                            <div class="criteria-content">
+                                                <strong>Portfolio building</strong>
+                                                <span>Real project experience for portfolio</span>
+                                            </div>
+                                        </label>
+
+                                        <label class="criteria-item">
+                                            <input type="checkbox" id="internship_recommendation_guarantee">
+                                            <div class="criteria-content">
+                                                <strong>Recommendation support</strong>
+                                                <span>Guaranteed or optional recommendation letter</span>
+                                            </div>
+                                        </label>
+
+                                    </div>
+                                </div>
+
+                                <div class="criteria-inputGroup">
+                                    <label class="Label">Support & Onboarding</label>
+                                    <div class="criteria-list">
+
+                                        <label class="criteria-item">
+                                            <input type="checkbox" id="internship_onboarding">
+                                            <div class="criteria-content">
+                                                <strong>Onboarding included</strong>
+                                                <span>Introduction session before starting</span>
+                                            </div>
+                                        </label>
+
+                                        <label class="criteria-item">
+                                            <input type="checkbox" id="internship_tools">
+                                            <div class="criteria-content">
+                                                <strong>Tools access</strong>
+                                                <span>Software and accounts provided</span>
+                                            </div>
+                                        </label>
+
+                                        <label class="criteria-item">
+                                            <input type="checkbox" id="internship_mentorship">
+                                            <div class="criteria-content">
+                                                <strong>Mentorship</strong>
+                                                <span>Guidance from experienced professionals</span>
+                                            </div>
+                                        </label>
+
+                                        <label class="criteria-item">
+                                            <input type="checkbox" id="internship_communication">
+                                            <div class="criteria-content">
+                                                <strong>Communication channel</strong>
+                                                <span>Dedicated support channel</span>
+                                            </div>
+                                        </label>
+
+                                    </div>
+                                </div>
+
+                                <div class="navCard-footer">
+                                    <button class="navCard-subBtn prevStep">← Previous</button>
+                                    <button type="button" id="publishInternship" class="navCard-btn">
+                                        <div class="btn-content">
+                                            <span>Publish Internship</span>
+                                            <small><i class="ri-coin-fill"></i> 5 coins</small>
+                                        </div>
+                                        <i class="ri-send-plane-line"></i>
+                                    </button>
+                                    <button type="button" id="boostInternship" class="navCard-btn Boost">
+                                        <div class="btn-content">
+                                            <span>Publish Boosted Internship</span>
+                                            <small><i class="ri-coin-fill"></i> 10 coins</small>
+                                        </div>
+                                        <i class="ri-rocket-2-line"></i>
+                                    </button>
+                                </div>
+                            </section>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tasksPage" id="volunteerPage">
+            <div class="nt-header">
+                <div>
+                    <h2>Create New Volunteer</h2>
+                    <p>Engage volunteers around a mission, event, community initiative, or social impact project.</p>
+                </div>
+
+                <div class="nt-header-actions">
+                    <button type="button" class="nt-header-icon" id="cleanVolunteer">
+                        <i class="ri-restart-line"></i>
+                    </button>
+
+                    <button type="button" class="nt-header-icon" id="saveVolunteerDraft">
+                        <i class="ri-draft-line"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="tasksForm">
+                <div class="horizontal-newTaskContainer">
+                    <nav class="horizontal-newTask" id="newVolunteerNavs">
+
+                        <button class="active" data-target="#volunteerIdentity">
+                            <span class="step-circle">1</span>
+                            <span class="step-label">Volunteer Definition</span>
+                        </button>
+
+                        <button data-target="#volunteerRequirements">
+                            <span class="step-circle">2</span>
+                            <span class="step-label">Required Capabilities</span>
+                        </button>
+
+                        <button data-target="#volunteerConditions">
+                            <span class="step-circle">3</span>
+                            <span class="step-label">Volunteer Conditions</span>
+                        </button>
+
+                        <button data-target="#volunteerSelection">
+                            <span class="step-circle">4</span>
+                            <span class="step-label">Selection Process</span>
+                        </button>
+
+                        <button data-target="#volunteerBenefits">
+                            <span class="step-circle">5</span>
+                            <span class="step-label">Volunteer Benefits</span>
+                        </button>
+
+                    </nav>
+                    <div class="horizontal-newTaskPages" id="newVolunteerPages">
+                        <div class="horizontal-newTaskPage active" id="volunteerIdentity">
+                            <section class="navCard">
+                                <h2>Volunteer Definition</h2>
+
+                                <div class="navCard-inputGroup">
+                                    <label>Volunteer Title</label>
+                                    <input type="text" id="volunteer_title" placeholder="Community Outreach Volunteer">
+                                </div>
+
+                                <div class="navCard-inputGroup">
+                                    <label>Volunteer Description</label>
+                                    <textarea id="volunteer_description" rows="5" placeholder="Describe the volunteer mission, responsibilities, impact..."></textarea>
+                                </div>
+
+
+                                <div class="navCard-inputGroup_x2">
+                                    <div class="navCard-inputGroup">
+                                        <label for="volunteer_industry">Volunteer Industry</label>
+                                        <select id="volunteer_industry">
+                                        <option value="">Select an industry</option>
+                                        </select>
+                                    </div>
+                                    <div class="navCard-inputGroup">
+                                        <label for="volunteer_speciality">Volunteer Speciality</label>
+                                        <select id="volunteer_speciality">
+                                        <option value="">Select a speciality</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="navCard-inputGroup_x2Auto3">
+                                    <div class="navCard-inputGroup">
+                                        <label for="vol_application_start_date">Volunteer Timeline</label>
+                                        <div class="navCard-inputGroup_x2">
+                                            <input type="datetime-local" id="vol_application_start_date" placeholder="Timeline Start"/>
+                                            <input type="datetime-local" id="vol_application_end_date" placeholder="Timeline End"/>
+                                        </div>
+                                    </div>
+                                    <div class="navCard-inputGroup">
+                                        <label for="vol_application_deadline">Application Deadline</label>
+                                        <input type="datetime-local" id="vol_application_deadline" />
+                                    </div>
+                                </div>
+
+                                <div class="navCard-footer">
+                                    <button class="navCard-btn nextStep">Next →</button>
+                                </div>
+                            </section>
+                        </div>
+                        <div class="horizontal-newTaskPage" id="volunteerRequirements">
+                            <section class="navCard">
+                                <h2>Required Capabilities</h2>
+
+                                <div class="navCard-inputGroup">
+                                    <label for="vol_min_age">Minimum age</label>
+                                    <input type="number" id="vol_min_age" placeholder="17"/>
+                                    <small for="vol_min_age" class="navCard-inputHint">
+                                    Applicants must be at least this age to join.
+                                    </small>
+                                </div>
+
+                                <div class="navCard-sub">
+                                    <h3>Skills</h3>
+                                    <div class="navCard-inputGroup">
+                                        <div>
+                                        <div id="volunteerSkills-skills"></div>
+                                        <button type="button" id="volunteerAddSkill" class="navCard-subBtn">➕ Add Skill</button>
+                                        </div>
+                                    </div>
+                                    <h3>Languages</h3>
+                                    <div class="navCard-inputGroup">
+                                    <div>
+                                        <div id="volunteerSkills-Langs"></div>
+                                        <button type="button" id="volunteerAddLang" class="navCard-subBtn">➕ Add Language</button>
+                                    </div>
+                                    </div>
+                                </div>
+
+                                <div class="navCard-footer">
+                                    <button class="navCard-btn nextStep">Next →</button>
+                                </div>
+                            </section>
+                        </div>
+                        <div class="horizontal-newTaskPage" id="volunteerConditions">
+                            <section class="navCard">
+                                <h2>Volunteer Conditions</h2>
+
+                                <div class="inputRadio2">
+                                    <label class="Label" for="vol_execution_mode">Volunteer Setting</label>
+                                    <div class="inputRadio2-group" id="vol_execution_mode">
+                                        <input id="vol_ExecMode-OnSite" name="vol-ExecMode" type="radio" value="OnSite" />
+                                        <label for="vol_ExecMode-OnSite">On-Site
+                                        <small class="subLabel">Executed physically at a specific location</small>
+                                        </label>
+
+                                        <input id="vol_ExecMode-Hybrid" name="vol-ExecMode" type="radio" value="Hybrid" />
+                                        <label for="vol_ExecMode-Hybrid">Hybrid
+                                        <small class="subLabel">Combination of remote and on-site work</small>
+                                        </label>
+
+                                        <input id="vol_ExecMode-Remote" name="vol-ExecMode" type="radio" value="Remote" />
+                                        <label for="vol_ExecMode-Remote">Remote
+                                        <small class="subLabel">Performed off-site using digital tools</small>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="navCard-inputGroup">
+                                    <label for="vol_numb_positions">Number of positions</label>
+                                    <input type="number" id="vol_numb_positions" placeholder="4"/>
+                                    <small for="vol_numb_positions" class="navCard-inputHint">
+                                    Defines how many volunteers can participate.
+                                    </small>
+                                </div>
+
+                                <div class="navCard-inputGroup_x2">
+                                    <div class="navCard-inputGroup">
+                                        <label for="volunteer_start_period">Start Date</label>
+                                        <input type="datetime-local" id="volunteer_start_period">
+                                    </div>
+
+                                    <div class="navCard-inputGroup">
+                                        <label for="volunteer_end_period">End Date</label>
+                                        <input type="datetime-local" id="volunteer_end_period">
+                                    </div>
+                                </div>
+
+                                <div class="inputRadio2">
+                                    <label class="Label">Commitment</label>
+
+                                    <div class="inputRadio2-group">
+                                        <input id="volOneTime" name="volCommitment" type="radio">
+                                        <label for="volOneTime">One Time</label>
+
+                                        <input id="volWeekly" name="volCommitment" type="radio">
+                                        <label for="volWeekly">Weekly</label>
+
+                                        <input id="volMonthly" name="volCommitment" type="radio">
+                                        <label for="volMonthly">Monthly</label>
+                                    </div>
+                                </div>
+
+                                <div class="navCard-inputGroup_x2">
+                                    <div class="navCard-inputGroup">
+                                        <label for="volunteer_location">Reference Location</label>
+                                        <input type="text" id="volunteer_location" placeholder="Casablanca, Morocco or 33.5731,-7.5898"/>
+                                        <small class="navCard-inputHint">
+                                            Add or select a location if needed.
+                                        </small>
+                                    </div>
+                                    <div class="navCard-inputGroup">
+                                        <label for="volunteer_max_distance_km">Maximum Distance</label>
+                                        <div class="navCard-percentInput">
+                                            <input type="number" id="volunteer_max_distance_km" placeholder="140"/>
+                                            <span>km</span>
+                                        </div>
+                                        <input type="range" title="Maximum Distance" id="volunteer_max_distance_slider" min="0" max="2000" step="10" value="140" class="navCard-range"/>
+                                    </div>
+                                </div>
+
+                                <div class="navCard-footer">
+                                    <button class="navCard-btn nextStep">Next →</button>
+                                </div>
+                            </section>
+                        </div>
+                        <div class="horizontal-newTaskPage" id="volunteerSelection">
+                            <section class="navCard">
+                                <h2>Selection Process</h2>
+
+                                <div class="criteria-inputGroup">
+                                    <label class="Label">Selection Requirements</label>
+                                    <div class="criteria-list">
+
+                                        <label class="criteria-item">
+                                            <input type="checkbox" id="vol_interview" checked>
+                                            <div class="criteria-content">
+                                                <strong>Interview Required</strong>
+                                                <span>Applicants must complete an interview before joining.</span>
+                                            </div>
+                                        </label>
+
+                                        <label class="criteria-item">
+                                            <input type="checkbox" id="vol_background">
+                                            <div class="criteria-content">
+                                                <strong>Background Check</strong>
+                                                <span>Verification required before participation.</span>
+                                            </div>
+                                        </label>
+
+                                        <label class="criteria-item">
+                                            <input type="checkbox" id="vol_agreement">
+                                            <div class="criteria-content">
+                                                <strong>Volunteer Agreement</strong>
+                                                <span>Applicants must accept the volunteer terms.</span>
+                                            </div>
+                                        </label>
+
+                                    </div>
+                                </div>
+
+                                <div class="navCard-inputGroup">
+                                    <label for="volunteer_terms">Volunteer Terms</label>
+                                    <textarea id="volunteer_terms" rows="6" placeholder="Define participation rules and conditions..."></textarea>
+                                    <small class="navCard-inputHint">
+                                        Define the conditions volunteers must agree to before participating.
+                                    </small>
+                                </div>
+
+                                <div class="navCard-footer">
+                                    <button class="navCard-btn nextStep">Next →</button>
+                                </div>
+                            </section>
+                        </div>
+                        <div class="horizontal-newTaskPage" id="volunteerBenefits">
+                            <section class="navCard">
+                                <h2>Volunteer Benefits</h2>
+                                
+                                <div class="criteria-inputGroup">
+                                    <label class="Label">Recognition</label>
+                                    <div class="criteria-list">
+                                        <label class="criteria-item">
+                                            <input type="checkbox" id="vol_certificate" checked>
+                                            <div class="criteria-content">
+                                                <strong>Certificate</strong>
+                                                <span>Official participation certificate</span>
+                                            </div>
+                                        </label>
+
+                                        <label class="criteria-item">
+                                            <input type="checkbox" id="vol_recommendation">
+                                            <div class="criteria-content">
+                                                <strong>Recommendation Letter</strong>
+                                                <span>Professional recommendation provided</span>
+                                            </div>
+                                        </label>
+
+                                        <label class="criteria-item">
+                                            <input type="checkbox" id="vol_reference">
+                                            <div class="criteria-content">
+                                                <strong>Professional Reference</strong>
+                                                <span>Can be used as a future reference for applications</span>
+                                            </div>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="criteria-inputGroup">
+                                    <label class="Label">Learning Opportunities</label>
+                                    <div class="criteria-list">
+                                        <label class="criteria-item">
+                                            <input type="checkbox" id="vol_training">
+                                            <div class="criteria-content">
+                                                <strong>Training</strong>
+                                                <span>Access to educational sessions</span>
+                                            </div>
+                                        </label>
+
+                                        <label class="criteria-item">
+                                            <input type="checkbox" id="vol_mentorship">
+                                            <div class="criteria-content">
+                                                <strong>Mentorship</strong>
+                                                <span>Guidance from experienced professionals</span>
+                                            </div>
+                                        </label>
+
+                                        <label class="criteria-item">
+                                            <input type="checkbox" id="vol_networking">
+                                            <div class="criteria-content">
+                                                <strong>Professional Networking</strong>
+                                                <span>Meet professionals, volunteers, and organizations</span>
+                                            </div>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="criteria-inputGroup">
+                                    <label class="Label">Volunteer Support</label>
+                                    <div class="criteria-list">
+                                        <label class="criteria-item">
+                                            <input type="checkbox" id="vol_transport">
+                                            <div class="criteria-content">
+                                                <strong>Transport Covered</strong>
+                                                <span>Transportation expenses reimbursed</span>
+                                            </div>
+                                        </label>
+
+                                        <label class="criteria-item">
+                                            <input type="checkbox" id="vol_meals">
+                                            <div class="criteria-content">
+                                                <strong>Meals Included</strong>
+                                                <span>Food and refreshments included</span>
+                                            </div>
+                                        </label>
+
+                                        <label class="criteria-item">
+                                            <input type="checkbox" id="vol_accommodation">
+                                            <div class="criteria-content">
+                                                <strong>Accommodation Provided</strong>
+                                                <span>Housing arranged during participation</span>
+                                            </div>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="navCard-footer">
+                                    <button class="navCard-subBtn prevStep">← Previous</button>
+                                    <button type="button" id="publishVolunteer" class="navCard-btn">
+                                        <div class="btn-content">
+                                            <span>Publish Volunteer</span>
+                                            <small><i class="ri-coin-fill"></i> 5 coins</small>
+                                        </div>
+                                        <i class="ri-send-plane-line"></i>
+                                    </button>
+                                    <button type="button" id="boostVolunteer" class="navCard-btn Boost">
+                                        <div class="btn-content">
+                                            <span>Publish Boosted Volunteer</span>
+                                            <small><i class="ri-coin-fill"></i> 10 coins</small>
+                                        </div>
+                                        <i class="ri-rocket-2-line"></i>
+                                    </button>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tasksPage" id="challengePage">
+
+            <div class="nt-header">
+                <div>
+                    <h2>Create New Challenge</h2>
+                    <p>Launch a challenge, define objectives, participation rules, evaluation criteria, and rewards.</p>
+                </div>
+
+                <div class="nt-header-actions">
+                    <button type="button" class="nt-header-icon" id="cleanChallengeForm">
+                        <i class="ri-restart-line"></i>
+                    </button>
+
+                    <button type="button" class="nt-header-icon" id="saveChallengeDraft">
+                        <i class="ri-draft-line"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="tasksForm">
+                <div class="horizontal-newTaskContainer">
+
+                    <nav class="horizontal-newTask" id="newChallengeNavs">
+
+                        <button class="active" data-target="#challengeIdentity">
+                            <span class="step-circle">1</span>
+                            <span class="step-label">Challenge Definition</span>
+                        </button>
+
+                        <button data-target="#challengeRequirements">
+                            <span class="step-circle">2</span>
+                            <span class="step-label">Participation Requirements</span>
+                        </button>
+
+                        <button data-target="#challengeFormat">
+                            <span class="step-circle">3</span>
+                            <span class="step-label">Challenge Format</span>
+                        </button>
+
+                        <button data-target="#challengeEvaluation">
+                            <span class="step-circle">4</span>
+                            <span class="step-label">Evaluation & Judging</span>
+                        </button>
+
+                        <button data-target="#challengeRewards">
+                            <span class="step-circle">5</span>
+                            <span class="step-label">Rewards & Recognition</span>
+                        </button>
+
+                    </nav>
+
+                    <div class="horizontal-newTaskPages" id="newChallengePages">
+
+                        <div class="horizontal-newTaskPage active" id="challengeIdentity">
+                            <section class="navCard">
+
+                                <h2>Challenge Definition</h2>
+
+                                <div class="navCard-inputGroup">
+                                    <label for="challenge_title">Challenge Title</label>
+                                    <input type="text" id="challenge_title" placeholder="AI Sustainability Challenge">
+                                </div>
+
+                                <div class="navCard-inputGroup">
+                                    <label for="challenge_description">Challenge Description</label>
+                                    <textarea id="challenge_description" rows="5"
+                                        placeholder="Describe the challenge, objectives, context, and expected outcomes."></textarea>
+                                </div>
+
+                                <div class="navCard-inputGroup_x2">
+                                    <div class="navCard-inputGroup">
+                                        <label for="challenge_industry">Industry</label>
+                                        <select id="challenge_industry">
+                                            <option value="">Select industry</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="navCard-inputGroup">
+                                        <label for="challenge_speciality">Speciality</label>
+                                        <select id="challenge_speciality">
+                                            <option value="">Select speciality</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="inputRadio2">
+                                    <label class="Label">Challenge Type</label>
+
+                                    <div class="inputRadio2-group">
+
+                                        <input id="challenge_innovation" name="challenge_type" type="radio" value="Innovation">
+                                        <label for="challenge_innovation">
+                                            Innovation
+                                            <small class="subLabel">Create new ideas or solutions</small>
+                                        </label>
+
+                                        <input id="challenge_research" name="challenge_type" type="radio" value="Research">
+                                        <label for="challenge_research">
+                                            Research
+                                            <small class="subLabel">Investigate and explore a topic</small>
+                                        </label>
+
+                                        <input id="challenge_design" name="challenge_type" type="radio" value="Design">
+                                        <label for="challenge_design">
+                                            Design
+                                            <small class="subLabel">Visual, UX, product or system design</small>
+                                        </label>
+
+                                        <input id="challenge_technical" name="challenge_type" type="radio" value="Technical">
+                                        <label for="challenge_technical">
+                                            Technical
+                                            <small class="subLabel">Build a technical solution</small>
+                                        </label>
+
+                                    </div>
+                                </div>
+                                
+                                <div class="navCard-inputGroup_x2Auto3">
+                                    <div class="navCard-inputGroup">
+                                        <label for="challenge_start_date">Challenge Period</label>
+                                        <div class="navCard-inputGroup_x2">
+                                            <input type="datetime-local" id="challenge_start_date" placeholder="Task Start"/>
+                                            <input type="datetime-local" id="challenge_end_date" placeholder="Task End"/>
+                                        </div>
+                                    </div>
+                                    <div class="navCard-inputGroup">
+                                        <label for="challenge_deadline">Submission Deadline</label>
+                                        <input type="datetime-local" id="challenge_deadline">
+                                    </div>
+                                </div>
+
+                                <div class="navCard-inputGroup">
+                                    <label for="challenge_max_participants">
+                                        Maximum Participants
+                                    </label>
+
+                                    <input
+                                        type="number"
+                                        id="challenge_max_participants"
+                                        placeholder="500">
+                                </div>
+
+                                <div class="navCard-footer">
+                                    <button class="navCard-btn nextStep">Next →</button>
+                                </div>
+
+                            </section>
+                        </div>
+
+                        <div class="horizontal-newTaskPage" id="challengeRequirements">
+                            <section class="navCard">
+
+                                <h2>Participation Requirements</h2>
+
+                                <div class="navCard-inputGroup">
+                                    <label for="challenge_min_age">Minimum age</label>
+                                    <input type="number" id="challenge_min_age" placeholder="14"/>
+                                    <small for="challenge_min_age" class="navCard-inputHint">
+                                    Applicants must be at least this age to join.
+                                    </small>
+                                </div>
+
+                                <div class="navCard-sub">
+                                    <h3>Skills</h3>
+                                    <div class="navCard-inputGroup">
+                                        <div>
+                                        <div id="challengeSkills-skills"></div>
+                                        <button type="button" id="challengeAddSkill" class="navCard-subBtn">➕ Add Skill</button>
+                                        </div>
+                                    </div>
+                                    <h3>Languages</h3>
+                                    <div class="navCard-inputGroup">
+                                    <div>
+                                        <div id="challengeSkills-Langs"></div>
+                                        <button type="button" id="challengeAddLang" class="navCard-subBtn">➕ Add Language</button>
+                                    </div>
+                                    </div>
+                                </div>
+
+                                <div class="navCard-footer">
+                                    <button class="navCard-subBtn prevStep">← Previous</button>
+                                    <button class="navCard-btn nextStep">Next →</button>
+                                </div>
+
+                            </section>
+                        </div>
+
+                        <div class="horizontal-newTaskPage" id="challengeFormat">
+                            <section class="navCard">
+
+                                <h2>Challenge Format</h2>
+
+                                <div class="inputRadio2">
+                                    <label class="Label">Difficulty Level</label>
+
+                                    <div class="inputRadio2-group">
+
+                                        <input id="challenge_beginner" name="challenge_level" type="radio">
+                                        <label for="challenge_beginner">
+                                            Beginner
+                                            <small class="subLabel">Accessible to newcomers</small>
+                                        </label>
+
+                                        <input id="challenge_intermediate" name="challenge_level" type="radio">
+                                        <label for="challenge_intermediate">
+                                            Intermediate
+                                            <small class="subLabel">Some experience required</small>
+                                        </label>
+
+                                        <input id="challenge_advanced" name="challenge_level" type="radio">
+                                        <label for="challenge_advanced">
+                                            Advanced
+                                            <small class="subLabel">Expert-level challenge</small>
+                                        </label>
+
+                                    </div>
+                                </div>
+
+                                <div class="inputRadio2">
+                                    <label class="Label">Participation Mode</label>
+
+                                    <div class="inputRadio2-group">
+
+                                        <input id="challenge_individual" name="challenge_mode" type="radio" value="Individual">
+                                        <label for="challenge_individual">
+                                            Individual
+                                            <small class="subLabel">Participants compete alone</small>
+                                        </label>
+
+                                        <input id="challenge_team" name="challenge_mode" type="radio" value="Team">
+                                        <label for="challenge_team">
+                                            Team
+                                            <small class="subLabel">Participants collaborate in teams</small>
+                                        </label>
+
+                                        <input id="challenge_both" name="challenge_mode" type="radio" value="Both">
+                                        <label for="challenge_both">
+                                            Both
+                                            <small class="subLabel">Individual and team participation allowed</small>
+                                        </label>
+
+                                    </div>
+                                </div>
+
+                                <div class="inputRadio2">
+                                    <label class="Label">Submission Format</label>
+
+                                    <div class="inputRadio2-group">
+
+                                        <input id="challenge_project" name="challenge_submission" type="radio" value="Project">
+                                        <label for="challenge_project">Project</label>
+
+                                        <input id="challenge_prototype" name="challenge_submission" type="radio" value="Prototype">
+                                        <label for="challenge_prototype">Prototype</label>
+
+                                        <input id="challenge_report" name="challenge_submission" type="radio" value="Report">
+                                        <label for="challenge_report">Report</label>
+
+                                        <input id="challenge_presentation" name="challenge_submission" type="radio" value="Presentation">
+                                        <label for="challenge_presentation">Presentation</label>
+
+                                    </div>
+                                </div>
+
+                                <div class="navCard-inputGroup">
+                                    <label for="challenge_brief">Challenge Brief</label>
+                                    <textarea id="challenge_brief" rows="6"
+                                        placeholder="Problem statement, requirements, constraints, and resources."></textarea>
+                                </div>
+
+                                <div class="navCard-footer">
+                                    <button class="navCard-subBtn prevStep">← Previous</button>
+                                    <button class="navCard-btn nextStep">Next →</button>
+                                </div>
+
+                            </section>
+                        </div>
+
+                        <div class="horizontal-newTaskPage" id="challengeEvaluation">
+                            <section class="navCard">
+
+                                <h2>Evaluation & Judging</h2>
+
+                                <div class="criteria-inputGroup">
+
+                                    <label class="Label">Judging Criteria</label>
+
+                                    <div class="criteria-list">
+
+                                        <label class="criteria-item">
+                                            <input type="checkbox" checked>
+                                            <div class="criteria-content">
+                                                <strong>Innovation</strong>
+                                                <span>Originality and creativity</span>
+                                            </div>
+                                        </label>
+
+                                        <label class="criteria-item">
+                                            <input type="checkbox" checked>
+                                            <div class="criteria-content">
+                                                <strong>Impact</strong>
+                                                <span>Potential value and usefulness</span>
+                                            </div>
+                                        </label>
+
+                                        <label class="criteria-item">
+                                            <input type="checkbox" checked>
+                                            <div class="criteria-content">
+                                                <strong>Feasibility</strong>
+                                                <span>Practical implementation potential</span>
+                                            </div>
+                                        </label>
+
+                                        <label class="criteria-item">
+                                            <input type="checkbox">
+                                            <div class="criteria-content">
+                                                <strong>Presentation Quality</strong>
+                                                <span>Communication and clarity</span>
+                                            </div>
+                                        </label>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="inputRadio2">
+                                    <label class="Label">Winner Selection</label>
+                                    <div class="inputRadio2-group">
+                                        <input id="challenge_jury" name="challenge_selection" type="radio" value="Jury">
+                                        <label for="challenge_jury">Expert Jury</label>
+
+                                        <input id="challenge_public" name="challenge_selection" type="radio" value="Public">
+                                        <label for="challenge_public">Public Voting</label>
+
+                                        <input id="challenge_hybrid_vote" name="challenge_selection" type="radio" value="Hybrid">
+                                        <label for="challenge_hybrid_vote">Hybrid</label>
+                                    </div>
+                                </div>
+                                
+                                <div class="navCard-inputGroup">
+                                    <label for="challenge_winners">Number of Winners</label>
+                                    <input type="number" id="challenge_winners" placeholder="3">
+                                </div>
+
+                                <div class="navCard-footer">
+                                    <button class="navCard-subBtn prevStep">← Previous</button>
+                                    <button class="navCard-btn nextStep">Next →</button>
+                                </div>
+
+                            </section>
+                        </div>
+
+                        <div class="horizontal-newTaskPage" id="challengeRewards">
+                            <section class="navCard">
+
+                                <h2>Rewards & Recognition</h2>
+
+                                <div class="criteria-inputGroup">
+
+                                    <label class="Label">Rewards</label>
+
+                                    <div class="criteria-list">
+
+                                        <label class="criteria-item">
+                                            <input type="checkbox" id="challenge_cash">
+                                            <div class="criteria-content">
+                                                <strong>Cash Prize</strong>
+                                                <span>Monetary reward for winners</span>
+                                            </div>
+                                        </label>
+
+                                        <label class="criteria-item">
+                                            <input type="checkbox" id="challenge_certificate">
+                                            <div class="criteria-content">
+                                                <strong>Certificate</strong>
+                                                <span>Official recognition</span>
+                                            </div>
+                                        </label>
+
+                                        <label class="criteria-item">
+                                            <input type="checkbox" id="challenge_internship">
+                                            <div class="criteria-content">
+                                                <strong>Internship Opportunity</strong>
+                                                <span>Access to internship positions</span>
+                                            </div>
+                                        </label>
+
+                                        <label class="criteria-item">
+                                            <input type="checkbox" id="challenge_job">
+                                            <div class="criteria-content">
+                                                <strong>Job Opportunity</strong>
+                                                <span>Potential recruitment opportunity</span>
+                                            </div>
+                                        </label>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="navCard-inputGroup">
+                                    <label for="challenge_reward_description">
+                                        Reward Details
+                                    </label>
+                                    <textarea id="challenge_reward_description" rows="4"></textarea>
+                                </div>
+
+                                <div class="navCard-footer">
+                                    <button class="navCard-subBtn prevStep">← Previous</button>
+                                    <button type="button" id="publishChallenge" class="navCard-btn">
+                                        <div class="btn-content">
+                                            <span>Publish Challenge</span>
+                                            <small><i class="ri-coin-fill"></i> 5 coins</small>
+                                        </div>
+                                        <i class="ri-send-plane-line"></i>
+                                    </button>
+                                    <button type="button" id="boostChallenge" class="navCard-btn Boost">
+                                        <div class="btn-content">
+                                            <span>Publish Boosted Challenge</span>
+                                            <small><i class="ri-coin-fill"></i> 10 coins</small>
+                                        </div>
+                                        <i class="ri-rocket-2-line"></i>
+                                    </button>
+                                </div>
+
+                            </section>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="tasksPage" id="mentorshipPage">
+
+            <div class="nt-header">
+                <div>
+                    <h2>Create Mentorship</h2>
+                    <p>Connect mentors and mentees through structured guidance, learning, and professional development.</p>
+                </div>
+
+                <div class="nt-header-actions">
+                    <button type="button" class="nt-header-icon" id="cleanMentorshipForm">
+                        <i class="ri-restart-line"></i>
+                    </button>
+
+                    <button type="button" class="nt-header-icon" id="saveMentorshipDraft">
+                        <i class="ri-draft-line"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="tasksForm">
+                <div class="horizontal-newTaskContainer">
+
+                    <nav class="horizontal-newTask" id="newMentorshipNavs">
+
+                        <button class="active" data-target="#mentorshipIdentity">
+                            <span class="step-circle">1</span>
+                            <span class="step-label">Mentorship Definition</span>
+                        </button>
+
+                        <button data-target="#mentorshipRequirements">
+                            <span class="step-circle">2</span>
+                            <span class="step-label">Mentor Requirements</span>
+                        </button>
+
+                        <button data-target="#mentorshipStructure">
+                            <span class="step-circle">3</span>
+                            <span class="step-label">Program Structure</span>
+                        </button>
+
+                        <button data-target="#mentorshipOutcomes">
+                            <span class="step-circle">4</span>
+                            <span class="step-label">Outcomes & Expectations</span>
+                        </button>
+
+                        <button data-target="#mentorshipBenefits">
+                            <span class="step-circle">5</span>
+                            <span class="step-label">Benefits & Recognition</span>
+                        </button>
+
+                    </nav>
+
+                    <div class="horizontal-newTaskPages" id="newMentorshipPages">
+
+                        <div class="horizontal-newTaskPage active" id="mentorshipIdentity">
+                            <section class="navCard">
+
+                                <h2>Mentorship Definition</h2>
+
+                                <div class="navCard-inputGroup">
+                                    <label for="mentorship_title">Program Title</label>
+                                    <input type="text" id="mentorship_title" placeholder="Product Management Mentorship Program">
+                                </div>
+
+                                <div class="navCard-inputGroup">
+                                    <label for="mentorship_description">Description</label>
+                                    <textarea id="mentorship_description"
+                                            rows="5"
+                                            placeholder="Describe the mentorship goals, target audience, and learning objectives."></textarea>
+                                </div>
+
+                                <div class="navCard-inputGroup_x2">
+                                    <div class="navCard-inputGroup">
+                                        <label for="mentorship_industry">Industry</label>
+                                        <select id="mentorship_industry">
+                                            <option>Select industry</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="navCard-inputGroup">
+                                        <label for="mentorship_speciality">Speciality</label>
+                                        <select id="mentorship_speciality">
+                                            <option>Select speciality</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="inputRadio2">
+                                    <label class="Label">Mentorship Focus</label>
+                                    <div class="inputRadio2-group">
+                                        <input id="mentor_career" name="mentorship_focus" type="radio">
+                                        <label for="mentor_career">
+                                            Career Guidance <small class="subLabel">Career planning and growth</small>
+                                        </label>
+
+                                        <input id="mentor_skill" name="mentorship_focus" type="radio">
+                                        <label for="mentor_skill">
+                                            Skill Development <small class="subLabel">Learn practical capabilities</small>
+                                        </label>
+
+                                        <input id="mentor_leadership" name="mentorship_focus" type="radio">
+                                        <label for="mentor_leadership">
+                                            Leadership <small class="subLabel">Management and leadership growth</small>
+                                        </label>
+
+                                        <input id="mentor_startup" name="mentorship_focus" type="radio">
+                                        <label for="mentor_startup">
+                                            Entrepreneurship <small class="subLabel">Startup and business guidance</small>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="navCard-inputGroup_x2Auto3">
+
+                                    <div class="navCard-inputGroup">
+                                        <label>Program Period</label>
+                                        <div class="navCard-inputGroup_x2">
+                                            <input type="datetime-local" id="mentorship_start_date">
+                                            <input type="datetime-local" id="mentorship_end_date">
+                                        </div>
+                                    </div>
+
+                                    <div class="navCard-inputGroup">
+                                        <label for="mentorship_slots">Available Mentee Slots</label>
+                                        <input type="number" id="mentorship_slots" placeholder="20">
+                                    </div>
+
+                                </div>
+
+                                <div class="navCard-footer">
+                                    <button class="navCard-btn nextStep">Next →</button>
+                                </div>
+
+                            </section>
+                        </div>
+
+                        <div class="horizontal-newTaskPage" id="mentorshipRequirements">
+                            <section class="navCard">
+
+                                <h2>Mentor Requirements</h2>
+                                <div class="inputRadio2">
+                                    <label class="Label"> Mentor Experience Level </label>
+                                    <div class="inputRadio2-group">
+                                        <input id="mentor_mid" name="mentor_level" type="radio">
+                                        <label for="mentor_mid">
+                                            Mid-Level <small class="subLabel">3+ years experience</small>
+                                        </label>
+
+                                        <input id="mentor_senior" name="mentor_level" type="radio">
+                                        <label for="mentor_senior">
+                                            Senior <small class="subLabel">5+ years experience</small>
+                                        </label>
+
+                                        <input id="mentor_expert" name="mentor_level" type="radio">
+                                        <label for="mentor_expert">
+                                            Expert <small class="subLabel">Recognized specialist</small>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="navCard-sub">
+                                    <h3>Skills</h3>
+                                    <div class="navCard-inputGroup">
+                                        <div>
+                                        <div id="mentorshipSkills-skills"></div>
+                                        <button type="button" id="mentorshipAddSkill" class="navCard-subBtn">➕ Add Skill</button>
+                                        </div>
+                                    </div>
+                                    <h3>Languages</h3>
+                                    <div class="navCard-inputGroup">
+                                    <div>
+                                        <div id="mentorshipSkills-Langs"></div>
+                                        <button type="button" id="mentorshipAddLang" class="navCard-subBtn">➕ Add Language</button>
+                                    </div>
+                                    </div>
+                                </div>
+
+                                <div class="navCard-footer">
+                                    <button class="navCard-subBtn prevStep">← Previous</button>
+                                    <button class="navCard-btn nextStep">Next →</button>
+                                </div>
+
+                            </section>
+                        </div>
+
+                        <div class="horizontal-newTaskPage" id="mentorshipStructure">
+                            <section class="navCard">
+                                <h2>Program Structure</h2>
+
+                                <div class="inputRadio2">
+                                    <label class="Label">Session Format</label>
+                                    <div class="inputRadio2-group">
+                                        <input id="mentor_1to1" name="session_type" type="radio">
+                                        <label for="mentor_1to1">One-to-One</label>
+
+                                        <input id="mentor_group" name="session_type" type="radio">
+                                        <label for="mentor_group">Group Mentorship</label>
+
+                                        <input id="mentor_hybrid" name="session_type" type="radio">
+                                        <label for="mentor_hybrid">Hybrid</label>
+                                    </div>
+                                </div>
+
+                                <div class="inputRadio2">
+                                    <label class="Label">Meeting Mode</label>
+                                    <div class="inputRadio2-group">
+                                        <input id="mentor_remote" name="meeting_mode" type="radio">
+                                        <label for="mentor_remote">Remote</label>
+
+                                        <input id="mentor_onsite" name="meeting_mode" type="radio">
+                                        <label for="mentor_onsite">On-Site</label>
+
+                                        <input id="mentor_hybrid_meeting" name="meeting_mode" type="radio">
+                                        <label for="mentor_hybrid_meeting">Hybrid</label>
+                                    </div>
+                                </div>
+
+                                <div class="navCard-inputGroup_x2">
+
+                                    <div class="navCard-inputGroup">
+                                        <label for="mentorship_sessions_per_month">Sessions Per Month</label>
+                                        <input type="number" id="mentorship_sessions_per_month" placeholder="4">
+                                    </div>
+
+                                    <div class="navCard-inputGroup">
+                                        <label for="mentorship_session_duration">Session Duration</label>
+                                        <input type="number" id="mentorship_session_duration" placeholder="60">
+                                    </div>
+
+                                </div>
+
+                                <div class="navCard-footer">
+                                    <button class="navCard-subBtn prevStep">← Previous</button>
+                                    <button class="navCard-btn nextStep">Next →</button>
+                                </div>
+
+                            </section>
+                        </div>
+
+                        <div class="horizontal-newTaskPage" id="mentorshipOutcomes">
+                            <section class="navCard">
+
+                                <h2>Outcomes & Expectations</h2>
+
+                                <div class="criteria-inputGroup">
+
+                                    <label class="Label">
+                                        Expected Outcomes
+                                    </label>
+
+                                    <div class="criteria-list">
+
+                                        <label class="criteria-item">
+                                            <input type="checkbox" id="mentorship_outcome_career">
+                                            <div class="criteria-content">
+                                                <strong>Career Development</strong>
+                                            </div>
+                                        </label>
+
+                                        <label class="criteria-item">
+                                            <input type="checkbox" id="mentorship_outcome_portfolio">
+                                            <div class="criteria-content">
+                                                <strong>Portfolio Building</strong>
+                                            </div>
+                                        </label>
+
+                                        <label class="criteria-item">
+                                            <input type="checkbox" id="mentorship_outcome_interview">
+                                            <div class="criteria-content">
+                                                <strong>Interview Preparation</strong>
+                                            </div>
+                                        </label>
+
+                                        <label class="criteria-item">
+                                            <input type="checkbox" id="mentorship_outcome_networking">
+                                            <div class="criteria-content">
+                                                <strong>Networking Growth</strong>
+                                            </div>
+                                        </label>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="navCard-inputGroup">
+                                    <label for="mentorship_expectations">Mentorship Expectations</label>
+                                    <textarea id="mentorship_expectations" rows="5"></textarea>
+                                </div>
+
+                                <div class="navCard-footer">
+                                    <button class="navCard-subBtn prevStep">← Previous</button>
+                                    <button class="navCard-btn nextStep">Next →</button>
+                                </div>
+
+                            </section>
+                        </div>
+
+                        <div class="horizontal-newTaskPage" id="mentorshipBenefits">
+                            <section class="navCard">
+
+                                <h2>Benefits & Recognition</h2>
+
+                                <div class="criteria-inputGroup">
+
+                                    <label class="Label">Benefits</label>
+
+                                    <div class="criteria-list">
+
+                                        <label class="criteria-item">
+                                            <input type="checkbox" id="mentorship_certificate">
+                                            <div class="criteria-content">
+                                                <strong>Certificate</strong>
+                                            </div>
+                                        </label>
+
+                                        <label class="criteria-item">
+                                            <input type="checkbox" id="mentorship_recommendation">
+                                            <div class="criteria-content">
+                                                <strong>Recommendation Letter</strong>
+                                            </div>
+                                        </label>
+
+                                        <label class="criteria-item">
+                                            <input type="checkbox" id="mentorship_networking">
+                                            <div class="criteria-content">
+                                                <strong>Networking Access</strong>
+                                            </div>
+                                        </label>
+
+                                        <label class="criteria-item">
+                                            <input type="checkbox" id="mentorship_internship">
+                                            <div class="criteria-content">
+                                                <strong>Internship Opportunities</strong>
+                                            </div>
+                                        </label>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="navCard-inputGroup">
+                                    <label for="mentorship_additional_benefits">Additional Benefits</label>
+                                    <textarea id="mentorship_additional_benefits" rows="4"></textarea>
+                                </div>
+
+                                <div class="navCard-footer">
+                                    <button class="navCard-subBtn prevStep">← Previous</button>
+                                    <button type="button" id="publishMentorship" class="navCard-btn">
+                                        <div class="btn-content">
+                                            <span>Publish Mentorship</span>
+                                            <small><i class="ri-coin-fill"></i> 5 coins</small>
+                                        </div>
+                                        <i class="ri-send-plane-line"></i>
+                                    </button>
+                                    <button type="button" id="boostMentorship" class="navCard-btn Boost">
+                                        <div class="btn-content">
+                                            <span>Publish Boosted Mentorship</span>
+                                            <small><i class="ri-coin-fill"></i> 10 coins</small>
+                                        </div>
+                                        <i class="ri-rocket-2-line"></i>
+                                    </button>
+                                </div>
+
+                            </section>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="tasksPage" id="researchPage">
+
+            <div class="nt-header">
+                <div>
+                    <h2>Add New Research Task</h2>
+                    <p>Create a research task to define a study, hypothesis, methodology, and expected scientific output.</p>
+                </div>
+
+                <div class="nt-header-actions">
+                    <button type="button" class="nt-header-icon" id="cleanResearchForm" title="Clear all fields">
+                        <i class="ri-restart-line"></i>
+                    </button>
+
+                    <button type="button" class="nt-header-icon" id="saveResearchDraft" title="Save as draft">
+                        <i class="ri-draft-line"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="tasksForm">
+                <div class="horizontal-newTaskContainer">
+
+                    <nav class="horizontal-newTask" id="newResearchNavs">
+
+                        <button class="active" data-target="#researchIdentity">
+                            <span class="step-circle">1</span>
+                            <span class="step-label">Research Definition</span>
+                        </button>
+
+                        <button data-target="#researchScope">
+                            <span class="step-circle">2</span>
+                            <span class="step-label">Scope & Methodology</span>
+                        </button>
+
+                        <button data-target="#researchResources">
+                            <span class="step-circle">3</span>
+                            <span class="step-label">Resources & Data</span>
+                        </button>
+
+                        <button data-target="#researchValidation">
+                            <span class="step-circle">4</span>
+                            <span class="step-label">Validation & Review</span>
+                        </button>
+
+                        <button data-target="#researchOutcome">
+                            <span class="step-circle">5</span>
+                            <span class="step-label">Outputs & Publication</span>
+                        </button>
+
+                    </nav>
+
+                    <div class="horizontal-newTaskPages" id="newResearchPages">
+
+                        <div class="horizontal-newTaskPage active" id="researchIdentity">
+                            <section class="navCard">
+
+                                <h2>Research Definition</h2>
+
+                                <div class="navCard-inputGroup">
+                                    <label for="research_title">Research Title</label>
+                                    <input type="text" id="research_title" placeholder="Impact of AI on Urban Mobility">
+                                </div>
+
+                                <div class="navCard-inputGroup">
+                                    <label for="research_problem">Problem Statement</label>
+                                    <textarea id="research_problem" rows="4"
+                                        placeholder="Define the research problem, context, and motivation."></textarea>
+                                </div>
+
+                                <div class="navCard-inputGroup">
+                                    <label for="research_field">Research Field</label>
+                                    <select id="research_field">
+                                        <option value="">Select field</option>
+                                        <option>Computer Science</option>
+                                        <option>Medicine</option>
+                                        <option>Engineering</option>
+                                        <option>Economics</option>
+                                        <option>Social Sciences</option>
+                                        <option>Environmental Science</option>
+                                        <option>Other</option>
+                                    </select>
+                                </div>
+
+                                <div class="navCard-inputGroup_x2Auto3">
+                                    <div class="navCard-inputGroup">
+                                        <label for="research_start">Research Period</label>
+                                        <div class="navCard-inputGroup_x2">
+                                            <input type="datetime-local" id="research_start">
+                                            <input type="datetime-local" id="research_end">
+                                        </div>
+                                    </div>
+
+                                    <div class="navCard-inputGroup">
+                                        <label for="research_duration">Estimated Duration</label>
+                                        <div class="navCard-percentInput">
+                                            <input type="number" id="research_duration" placeholder="3">
+                                            <span>months</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="navCard-footer">
+                                    <button class="navCard-btn nextStep">Next →</button>
+                                </div>
+
+                            </section>
+                        </div>
+
+                        <div class="horizontal-newTaskPage" id="researchScope">
+                            <section class="navCard">
+
+                                <h2>Scope & Methodology</h2>
+
+                                <div class="navCard-inputGroup">
+                                    <label for="research_hypothesis">Hypothesis</label>
+                                    <textarea id="research_hypothesis" rows="3"
+                                        placeholder="What is your expected outcome or assumption?"></textarea>
+                                </div>
+
+                                <div class="navCard-inputGroup">
+                                    <label for="research_methodology">Methodology</label>
+                                    <textarea id="research_methodology" rows="5"
+                                        placeholder="Describe research methods: qualitative, quantitative, experiments, surveys, simulations..."></textarea>
+                                </div>
+
+                                <div class="inputRadio2">
+                                    <label class="Label">Research Type</label>
+
+                                    <div class="inputRadio2-group">
+
+                                        <input id="res_basic" name="research_type" type="radio" value="Basic">
+                                        <label for="res_basic">
+                                            Basic Research
+                                            <small class="subLabel">Theoretical exploration</small>
+                                        </label>
+
+                                        <input id="res_applied" name="research_type" type="radio" value="Applied">
+                                        <label for="res_applied">
+                                            Applied Research
+                                            <small class="subLabel">Practical problem solving</small>
+                                        </label>
+
+                                        <input id="res_experimental" name="research_type" type="radio" value="Experimental">
+                                        <label for="res_experimental">
+                                            Experimental
+                                            <small class="subLabel">Lab or field experiments</small>
+                                        </label>
+
+                                    </div>
+                                </div>
+
+                                <div class="navCard-footer">
+                                    <button class="navCard-subBtn prevStep">← Previous</button>
+                                    <button class="navCard-btn nextStep">Next →</button>
+                                </div>
+
+                            </section>
+                        </div>
+
+                        <div class="horizontal-newTaskPage" id="researchResources">
+                            <section class="navCard">
+
+                                <h2>Resources & Data</h2>
+
+                                <div class="navCard-sub">
+
+                                <div class="navCard-sub">
+                                    <h3>Skills</h3>
+                                    <div class="navCard-inputGroup">
+                                        <div>
+                                        <div id="researchSkills-skills"></div>
+                                        <button type="button" id="researchAddSkill" class="navCard-subBtn">➕ Add Skill</button>
+                                        </div>
+                                    </div>
+                                    <h3>Languages</h3>
+                                    <div class="navCard-inputGroup">
+                                    <div>
+                                        <div id="researchSkills-Langs"></div>
+                                        <button type="button" id="researchAddLang" class="navCard-subBtn">➕ Add Language</button>
+                                    </div>
+                                    </div>
+                                </div>
+
+                                    <h3>Data Requirements</h3>
+
+                                    <div class="navCard-inputGroup">
+                                        <label for="research_data_sources">Data Sources</label>
+                                        <textarea id="research_data_sources"
+                                            placeholder="Databases, surveys, experiments, APIs..."></textarea>
+                                    </div>
+
+                                    <div class="inputRadio2">
+                                        <label class="Label">Data Type</label>
+
+                                        <div class="inputRadio2-group">
+
+                                            <input id="data_quant" name="data_type" type="radio" value="Quantitative">
+                                            <label for="data_quant">Quantitative</label>
+
+                                            <input id="data_qual" name="data_type" type="radio" value="Qualitative">
+                                            <label for="data_qual">Qualitative</label>
+
+                                            <input id="data_mixed" name="data_type" type="radio" value="Mixed">
+                                            <label for="data_mixed">Mixed</label>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="navCard-footer">
+                                    <button class="navCard-subBtn prevStep">← Previous</button>
+                                    <button class="navCard-btn nextStep">Next →</button>
+                                </div>
+
+                            </section>
+                        </div>
+
+                        <div class="horizontal-newTaskPage" id="researchValidation">
+                            <section class="navCard">
+
+                                <h2>Validation & Review</h2>
+
+                                <div class="inputRadio2">
+                                    <label class="Label">Validation Method</label>
+
+                                    <div class="inputRadio2-group">
+
+                                        <input id="val_peer" name="research_validation" type="radio" value="Peer Review">
+                                        <label for="val_peer">Peer Review</label>
+
+                                        <input id="val_expert" name="research_validation" type="radio" value="Expert Review">
+                                        <label for="val_expert">Expert Review</label>
+
+                                        <input id="val_data" name="research_validation" type="radio" value="Data Validation">
+                                        <label for="val_data">Data Validation</label>
+
+                                        <input id="val_public" name="research_validation" type="radio" value="Public Review">
+                                        <label for="val_public">Public Review</label>
+
+                                    </div>
+                                </div>
+
+                                <div class="criteria-inputGroup">
+
+                                    <label class="Label">Acceptance Criteria</label>
+
+                                    <div class="criteria-list">
+
+                                        <label class="criteria-item">
+                                            <input type="checkbox" checked>
+                                            <div class="criteria-content">
+                                                <strong>Reproducibility</strong>
+                                                <span>Results can be replicated</span>
+                                            </div>
+                                        </label>
+
+                                        <label class="criteria-item">
+                                            <input type="checkbox" checked>
+                                            <div class="criteria-content">
+                                                <strong>Methodological rigor</strong>
+                                                <span>Proper scientific method applied</span>
+                                            </div>
+                                        </label>
+
+                                        <label class="criteria-item">
+                                            <input type="checkbox">
+                                            <div class="criteria-content">
+                                                <strong>Statistical significance</strong>
+                                                <span>Results meet confidence threshold</span>
+                                            </div>
+                                        </label>
+
+                                        <label class="criteria-item">
+                                            <input type="checkbox">
+                                            <div class="criteria-content">
+                                                <strong>Ethical compliance</strong>
+                                                <span>Meets ethical research standards</span>
+                                            </div>
+                                        </label>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="navCard-footer">
+                                    <button class="navCard-subBtn prevStep">← Previous</button>
+                                    <button class="navCard-btn nextStep">Next →</button>
+                                </div>
+
+                            </section>
+                        </div>
+
+                        <div class="horizontal-newTaskPage" id="researchOutcome">
+                            <section class="navCard">
+
+                                <h2>Outputs & Publication</h2>
+
+                                <div class="inputRadio2">
+                                    <label class="Label">Expected Output</label>
+
+                                    <div class="inputRadio2-group">
+
+                                        <input id="out_paper" name="research_output" type="radio" value="Paper">
+                                        <label for="out_paper">Research Paper</label>
+
+                                        <input id="out_report" name="research_output" type="radio" value="Report">
+                                        <label for="out_report">Technical Report</label>
+
+                                        <input id="out_dataset" name="research_output" type="radio" value="Dataset">
+                                        <label for="out_dataset">Dataset</label>
+
+                                        <input id="out_thesis" name="research_output" type="radio" value="Thesis">
+                                        <label for="out_thesis">Thesis</label>
+
+                                    </div>
+                                </div>
+
+                                <div class="navCard-inputGroup">
+                                    <label for="research_publication_target">Publication Target</label>
+                                    <input type="text" id="research_publication_target"
+                                        placeholder="Nature, IEEE, ArXiv, Internal Report...">
+                                </div>
+
+                                <div class="navCard-inputGroup">
+                                    <label for="research_notes">Additional Notes</label>
+                                    <textarea id="research_notes" rows="4"
+                                        placeholder="Constraints, limitations, collaboration notes..."></textarea>
+                                </div>
+
+                                <div class="navCard-footer">
+                                    <button class="navCard-subBtn prevStep">← Previous</button>
+                                    <button type="button" id="publishResearch" class="navCard-btn">
+                                        <div class="btn-content">
+                                            <span>Publish Research</span>
+                                            <small><i class="ri-coin-fill"></i> 5 coins</small>
+                                        </div>
+                                        <i class="ri-send-plane-line"></i>
+                                    </button>
+                                    <button type="button" id="boostResearch" class="navCard-btn Boost">
+                                        <div class="btn-content">
+                                            <span>Publish Boosted Research</span>
+                                            <small><i class="ri-coin-fill"></i> 10 coins</small>
+                                        </div>
+                                        <i class="ri-rocket-2-line"></i>
+                                    </button>
+                                </div>
+
+                            </section>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="operlya-footer">
+  <div class="footer-container">
+    <div class="footer-col brand">
+      <div class="footer-logo">
+        <img src="/icons/operlya_favicon.png" alt="Operlya logo">
+        <span>Operlya</span>
+      </div>
+      <p>
+        Build your resume, publish your professional profile, find opportunities, 
+        and manage real work — all in one platform.
+      </p>
+      <div class="footer-socials">
+        <a title="X" href="https://x.com/operlya"><i class="ri-twitter-x-line"></i></a>
+        <a title="Linkedin" href="https://linkedin.com/company/operlya/"><i class="ri-linkedin-line"></i></a>
+        <a title="Instagram" href="https://instagram.com/operlya"><i class="ri-instagram-line"></i></a>
+        <a title="Tiktok" href="https://tiktok.com/operlyaa"><i class="ri-tiktok-line"></i></a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h4>Discover</h4>
+      <a href="/talents/resume.html">Resume Builder</a>
+      <a href="/feed.html">Opportunities</a>
+    </div>
+
+    <div class="footer-col">
+      <h4>Resources</h4>
+      <a href="/contact.html">Help Center</a>
+      <a href="/career-tips.html">Career Tips</a>
+      <a href="/resume-builder.html">ATS Resume Guide</a>
+    </div>
+
+    <div class="footer-col">
+      <h4>Company</h4>
+      <a href="/about.html">About</a>
+      <a href="/contact.html">Contact</a>
+      <a href="/privacy.html">Privacy Policy</a>
+      <a href="/terms.html">Terms</a>
+    </div>
+
+    <div class="footer-col footer-cta">
+      <h4>Start your career system</h4>
+      <p>Create your profile and start getting opportunities today.</p>
+
+      <a href="/talents/resume.html" class="btn-primary">
+        <i class="ri-user-3-line"></i> Create Profile
+      </a>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2026 Operlya. All rights reserved.</p>
+
+    <div class="footer-bottom-links">
+      <a href="/privacy.html">Privacy</a>
+      <a href="/terms.html">Terms</a>
+      <a href="/cookies.html">Cookies</a>
+    </div>
+  </div>
+</footer>
+
+<script type="module" src="create.js"></script>
+<script type="module" src="/auth/login_modal.js"></script>
+
+<link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flag-icons/css/flag-icons.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@563&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&family=Inter:wght@563&family=Roboto:ital,wght@0,100..900;1,100..900&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap" rel="stylesheet">
+
+
+<link crossorigin='anonymous' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css' integrity='sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==' referrerpolicy='no-referrer' rel='stylesheet'/>
+<script src='https://apis.google.com/js/api.js'></script>
+
+</body>
+</html>

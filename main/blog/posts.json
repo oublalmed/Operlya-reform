@@ -1,0 +1,68 @@
+[
+  {
+    "slug": "why-work-feels-broken-work-operating-systems-future-of-productivity",
+    "url": "/blog/why-work-feels-broken-work-operating-systems-future-of-productivity.html",
+    "title": "The Hidden Reason Work Feels Broken: Why Work Operating Systems Are the Future of Productivity",
+    "subtitle": "We Built Tools Instead of Systems",
+    "description": "Modern work is fragmented across tools, creating cognitive overload and execution friction. Learn why Work Operating Systems may define the next era of productivity.",
+    "category": "Future of Work",
+    "tags": [
+      "Work OS",
+      "Productivity",
+      "Cognitive Load",
+      "Systems Thinking",
+      "Execution Systems"
+    ],
+    "image": "https://miro.medium.com/v2/resize:fit:1200/1*dZa8WV0XH4YocZ5ywvY07w.png",
+    "publishedAt": "2026-05-30",
+    "readTime": 8,
+    "featured": true,
+    "author": {
+      "name": "Operlya"
+    }
+  },
+  {
+    "slug": "operlya-a-different-way-to-think-about-work",
+    "url": "/blog/operlya-a-different-way-to-think-about-work.html",
+    "title": "Operlya: A Different Way to Think About Work",
+    "subtitle": "From Fragmentation to Flow",
+    "description": "Discover how Operlya connects opportunities, execution, and career growth into one unified work system designed to reduce fragmentation.",
+    "category": "Work Systems",
+    "tags": [
+      "Work Systems",
+      "Jobs",
+      "Opportunities",
+      "Execution",
+      "Product Design"
+    ],
+    "image": "https://png.pngtree.com/thumb_back/fh260/background/20230626/pngtree-aerial-view-of-an-impressive-collection-of-3d-rendered-devices-displaying-image_3682672.jpg",
+    "publishedAt": "2026-05-30",
+    "readTime": 6,
+    "featured": true,
+    "author": {
+      "name": "Operlya"
+    }
+  },
+  {
+    "slug": "future-of-work-not-tools-systems",
+    "url": "/blog/future-of-work-not-tools-systems.html",
+    "title": "The Future of Work Is Not Tools — It’s Systems",
+    "subtitle": "From Fragmentation to Structure",
+    "description": "Explore why modern productivity is failing and how Work Operating Systems are reshaping the future of work, execution, and career growth.",
+    "category": "Future of Work",
+    "tags": [
+      "Work OS",
+      "Productivity",
+      "Systems Thinking",
+      "Cognitive Load",
+      "Execution Systems"
+    ],
+    "image": "https://t3.ftcdn.net/jpg/04/42/29/76/360_F_442297692_uBlAUze5QzpNglvUZhN4E8Jy27pCTBSc.jpg",
+    "publishedAt": "2026-05-30",
+    "readTime": 7,
+    "featured": true,
+    "author": {
+      "name": "Operlya"
+    }
+  }
+]
