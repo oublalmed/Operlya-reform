@@ -13,6 +13,7 @@ const firebaseConfig = {
   measurementId: "G-MVH7XXTVVL"
 };
 let currentOpenedTaskId = null;
+let currentUser = null;
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const db = getFirestore(app);
@@ -322,7 +323,7 @@ function initNotifications(userId) {
     const notifItems = document.getElementById("notifItems");
     const notifCount = document.getElementById("notifCount");
 
-    if (!notifList || !notifCount) return;
+    if (!notifItems || !notifCount) return;
 
     notifItems.innerHTML = "";
 

@@ -331,7 +331,7 @@ function initNotifications(userId) {
     const notifItems = document.getElementById("notifItems");
     const notifCount = document.getElementById("notifCount");
 
-    if (!notifList || !notifCount) return;
+    if (!notifItems || !notifCount) return;
 
     notifItems.innerHTML = "";
 

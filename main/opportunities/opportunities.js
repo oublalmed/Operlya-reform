@@ -219,7 +219,7 @@ function initNotifications(userId) {
     const notifList = document.getElementById("notifList");
     const notifCount = document.getElementById("notifCount");
 
-    if (!notifList || !notifCount) return;
+    if (!notifItems || !notifCount) return;
 
     notifList.innerHTML = "";
 

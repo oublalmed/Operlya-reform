@@ -348,7 +348,7 @@ function initNotifications(userId) {
     const notifItems = document.getElementById("notifItems");
     const notifCount = document.getElementById("notifCount");
 
-    if (!notifList || !notifCount) return;
+    if (!notifItems || !notifCount) return;
 
     notifItems.innerHTML = "";
 
@@ -5191,8 +5191,6 @@ function UserForm_translateAffiliation(lang) {
     AFFILIATE_STATE.invites,
     AFFILIATE_STATE.conversions
   );
-  loadAffiliateCoinsChart(currentUserUid);
-  loadReferrersList(currentUserUid);
 }
 
 function UserForm_translateSecurity(lang) {
